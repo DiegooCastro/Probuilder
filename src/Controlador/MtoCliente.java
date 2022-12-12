@@ -31,10 +31,9 @@ public class MtoCliente
         boolean respuesta = false;
         try
         {
-            String val = "select * from Cliente where Nombre = ? and DUI = ?";
+            String val = "select * from Cliente where DUI = ?";
             ps = con.getConnection().prepareStatement(val);
-            ps.setString(1, var.getNombre());
-            ps.setString(2, var.getDUI());
+            ps.setString(1, var.getDUI());
             rs = ps.executeQuery();
             if (rs.next()) 
             {

@@ -44,7 +44,7 @@ public class MtoUsuarios
             }
             else
             {
-                sql = "select * from Usuario where Correo_Electronico = ? or Personal = ?";
+                sql = "select * from Usuario where Correo_Electronico = ? or Trabajador = ?";
                 ps = con.getConnection().prepareStatement(sql);
                 ps.setString(1, var.getCorreo());
                 ps.setInt(2, var.getIdTrabajador());
@@ -55,14 +55,13 @@ public class MtoUsuarios
                 }
                 else
                 {
-                    sql = "insert into Usuario (Estado,Personal,Tipo_Usuario,Usuario,Clave,Correo_Electronico) values(?,?,?,?,?,?)";
+                    sql = "insert into Usuario (Id_Usuario,Trabajador,Estado,Tipo,Usuario,Clave,Correo_Electronico) values(default,?,default,?,?,?,?)";
                     ps = con.getConnection().prepareStatement(sql);
-                    ps.setInt(1, var.getEstado());
-                    ps.setInt(2, var.getIdTrabajador());
-                    ps.setInt(3, var.getTipo());
-                    ps.setString(4, var.getUsuario());
-                    ps.setString(5, var.getClave());
-                    ps.setString(6, var.getCorreo());            
+                    ps.setInt(1, var.getIdTrabajador());
+                    ps.setInt(2, var.getTipo());
+                    ps.setString(3, var.getUsuario());
+                    ps.setString(4, var.getClave());
+                    ps.setString(5, var.getCorreo());            
                     if (!ps.execute()) 
                     {
                         new frmAlerta("Usuario registrado correctamente",1).setVisible(true);
@@ -79,6 +78,7 @@ public class MtoUsuarios
         catch(SQLException e)
         {
             new frmAlerta("Error critico de conexion",3).setVisible(true);
+            System.out.println(e);
         }
         return respuesta;
     }
@@ -92,33 +92,22 @@ public class MtoUsuarios
         boolean respuesta = false;
         try
         {
-            sql = "select * from Usuario where Id_Usuario != ? and Usuario = ?";
+            sql = "update Usuario  set Usuario = ? , Correo_Electronico = ?, Tipo = ?, Trabajador = ? where Id_Usuario = ?";
             ps = con.getConnection().prepareStatement(sql);
-            ps.setInt(1, var.getIdUsuario());
-            ps.setString(2, var.getUsuario());
-            rs = ps.executeQuery();
-            if (rs.next()) 
+            ps.setString(1, var.getUsuario());
+            ps.setString(2, var.getCorreo()); 
+            ps.setInt(3, var.getTipo());
+            ps.setInt(4, var.getIdTrabajador());
+            ps.setInt(5, var.getIdUsuario());
+            if (!ps.execute()) 
             {
-                new frmAlerta("El nombre de usuario ya esta en uso",2).setVisible(true);
-            }
-            else
-            {
-                sql = "update Usuario  set  Estado = ? , Usuario = ? , Correo_Electronico = ? where Id_Usuario = ?";
-                ps = con.getConnection().prepareStatement(sql);
-                ps.setInt(1, var.getEstado());
-                ps.setString(2, var.getUsuario());
-                ps.setString(3, var.getCorreo()); 
-                ps.setInt(4, var.getIdUsuario());
-                if (!ps.execute()) 
-                {
                     new frmAlerta("Usuario actualizado correctamente",1).setVisible(true);
                     respuesta = true;
-                }
-                else
-                {   
-                    new frmAlerta("Error al modificar datos",2).setVisible(true);
-                }       
-            }          
+            }
+            else
+            {   
+                new frmAlerta("Error al modificar datos",2).setVisible(true);
+            }                    
             con.getConnection().close();
         }
         catch(SQLException e)
@@ -130,16 +119,17 @@ public class MtoUsuarios
     
     /*** Metodo para eliminar un registro de la base de datos 
      * @param id identificador del registro al que se desea eliminar
+     * @param accion
      * @return variable de tipo boolean que confirma si se realizo la consulta 
      */   
-    public boolean eliminarUsuario(int id)
+    public boolean eliminarUsuario(int id, boolean accion)
     {
         boolean respuesta = false;
         try
         {
             sql = "update Usuario  set  Estado = ? where Id_Usuario = ?";
             ps = con.getConnection().prepareStatement(sql);
-            ps.setInt(1, 2);
+            ps.setBoolean(1, accion);
             ps.setInt(2, id);
             if (!ps.execute()) 
             {

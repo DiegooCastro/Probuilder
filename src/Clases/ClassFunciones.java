@@ -29,7 +29,21 @@ public class ClassFunciones
 {
     private String caracter,nombre = "",apellido ="",texto;
     private int palabra,i = 0;
-      
+    
+    
+    /** Metodo para obtener la fecha de un DateChooser y convertirla en String
+     * @param RSDateChooser es el datechooser del que se obtendra la fecha
+     * @return la fecha convertida en tipo string
+     */  
+    public Date obtenerFecha(RSDateChooser RSDateChooser)
+    {
+        java.util.Date fecha = RSDateChooser.getDatoFecha();
+        DateFormat f= new SimpleDateFormat("yyyy-MM-dd");
+        String FechaString = f.format(fecha);
+        Date date = Date.valueOf(FechaString);
+        return date;
+    }
+    
     /** Metodo para convertir la fecha de String a Date
      * @param Fecha es el valor de la fecha en tipo String
      * @return la fecha convertida en tipo date
@@ -60,20 +74,6 @@ public class ClassFunciones
         }
     }
     
-    
-    /** Metodo para obtener la fecha de un DateChooser y convertirla en String
-     * @param RSDateChooser es el datechooser del que se obtendra la fecha
-     * @return la fecha convertida en tipo string
-     */  
-    public Date obtenerFecha(RSDateChooser RSDateChooser)
-    {
-        java.util.Date fecha = RSDateChooser.getDatoFecha();
-        DateFormat f= new SimpleDateFormat("yyyy-MM-dd");
-        String FechaString = f.format(fecha);
-        Date date = Date.valueOf(FechaString);
-        return date;
-    }
-
     public String formatoDecimales(double precioTotal) 
     {
         DecimalFormat formato = new DecimalFormat("###.##");

@@ -80,7 +80,18 @@ public class ClassFuncionesSQL
                 Object[] o = new Object[rm.getColumnCount()];
                 for (int i = 0; i < o.length; i++) 
                 {
-                    o[i] = rs.getObject(i+1);
+                    if (rs.getObject(i+1).equals(true)) 
+                    {
+                        o[i] = "Disponible";
+                    }
+                    else if (rs.getObject(i+1).equals(false)) 
+                    {
+                        o[i] = "No disponible";
+                    }
+                    else
+                    {
+                        o[i] = rs.getObject(i+1);
+                    }
                 }
                 tabla.addRow(o);
             }
@@ -88,6 +99,7 @@ public class ClassFuncionesSQL
         catch(SQLException e)
         {
             new frmAlerta("Error al cargar tabla",3).setVisible(true);
+            System.out.println(e);
         }
     }
     
@@ -109,7 +121,7 @@ public class ClassFuncionesSQL
         }
         catch(SQLException e)
         {
-            new frmAlerta("Error al obtener identificador",3).setVisible(true);
+            System.out.println("Error al obtener identificador");
         }
         return id;
     }
@@ -255,7 +267,7 @@ public class ClassFuncionesSQL
     
     ClassSeguridad seg = new ClassSeguridad();
     
-    public boolean actualizarContraseña(String clave,String usuario)
+    public boolean actualizarClave(String clave,String usuario)
     {
         boolean retorno = false;
         try

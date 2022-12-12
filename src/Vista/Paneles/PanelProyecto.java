@@ -7,7 +7,6 @@ import Controlador.MtoProyecto;
 import Vista.Frames.frmAlerta;
 import Vista.Frames.frmBuscador;
 import Vista.Frames.frmGaleria;
-import java.sql.Date;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -371,19 +370,26 @@ public class PanelProyecto extends javax.swing.JPanel {
                 fun.separarCliente(jTFCliente, pro);
                 pro.setCliente(funSQL.getIdentificador("select * from cliente where Nombre = '"+pro.getNombreCliente()+"' and Apellido = '"+pro.getApellidoCliente()+"' and DUI = '"+DUI+"'"));
                 
-                if (frmDetalleProyecto.jTFDescripcion.getText() != null || frmDetalleProyecto.jTFUbicacion.getText() != null ) 
+                try 
                 {
-                    pro.setDescripcion(frmDetalleProyecto.jTFDescripcion.getText());
-                    pro.setUbicacion(frmDetalleProyecto.jTFUbicacion.getText());
+                    if (frmDetalleProyecto.jTFDescripcion.getText() != null || frmDetalleProyecto.jTFUbicacion.getText() != null ) 
+                    {
+                        pro.setDescripcion(frmDetalleProyecto.jTFDescripcion.getText());
+                        pro.setUbicacion(frmDetalleProyecto.jTFUbicacion.getText());
+                    }
+                    else
+                    {
+                        pro.setDescripcion(null);
+                        pro.setUbicacion(null);
+                    }
                 }
-                else
+                catch(Exception e)
                 {
-                    pro.setDescripcion(null);
-                    pro.setUbicacion(null);
+                    System.out.println("Detalle proyecto vacio!!!");
                 }
                
-                pro.setFechaFin(fun.obtenerFecha(jDateFin));
-                pro.setFechaInicio(fun.obtenerFecha(jDateInicio));
+                pro.setFechaFin(jDateFin.getDatoFecha());
+                pro.setFechaInicio(jDateInicio.getDatoFecha());
                 pro.setProyecto(jTFProyecto.getText());
                 pro.setSupervisor(funSQL.getIdentificador("select * from Usuario where Usuario = '"+jTFSupervisor.getText()+"'"));
                 pro.setTipo(cmbTipo.getSelectedIndex()+1);
@@ -415,15 +421,22 @@ public class PanelProyecto extends javax.swing.JPanel {
         {
             if (jDateInicio.getDatoFecha().before(jDateFin.getDatoFecha())) 
             {
-                if (frmDetalleProyecto.jTFDescripcion.getText() != null || frmDetalleProyecto.jTFUbicacion.getText() != null ) 
+                try 
                 {
-                    pro.setDescripcion(frmDetalleProyecto.jTFDescripcion.getText());
-                    pro.setUbicacion(frmDetalleProyecto.jTFUbicacion.getText());
+                    if (frmDetalleProyecto.jTFDescripcion.getText() != null || frmDetalleProyecto.jTFUbicacion.getText() != null ) 
+                    {
+                        pro.setDescripcion(frmDetalleProyecto.jTFDescripcion.getText());
+                        pro.setUbicacion(frmDetalleProyecto.jTFUbicacion.getText());
+                    }
+                    else
+                    {
+                        pro.setDescripcion(null);
+                        pro.setUbicacion(null);
+                    }
                 }
-                else
+                catch(Exception e)
                 {
-                    pro.setDescripcion(null);
-                    pro.setUbicacion(null);
+                    System.out.println("Detalle proyecto vacio!!!");
                 }
                 
                 fun.separarCliente(jTFCliente, pro);
@@ -474,8 +487,15 @@ public class PanelProyecto extends javax.swing.JPanel {
         jTFCliente.setText(null);  
         jDateInicio.setDatoFecha(null);
         jDateFin.setDatoFecha(null);
-        frmDetalleProyecto.jTFDescripcion.setText(null);
-        frmDetalleProyecto.jTFUbicacion.setText(null);
+        try
+        {
+            frmDetalleProyecto.jTFDescripcion.setText(null);
+            frmDetalleProyecto.jTFUbicacion.setText(null);
+        }
+        catch(Exception e)
+        {
+            System.out.println("No esta abierto el panel de detalle!!!");
+        }
         btnModificar.setEnabled(false);
         btnIngresar.setEnabled(true);
         idProyecto = -1;

@@ -132,13 +132,12 @@ public class MtoGastosMateriales
             }
             else
             {
-                sql = "insert into Gastos_Materiales (Presupuesto,Material,Cantidad,Precio_Total,Fecha_Modificacion) values(?,?,?,?,?)";
+                sql = "insert into Gastos_Materiales (Id_GastoMateriales,Presupuesto,Material,Cantidad,Precio_Total,Fecha_Modificacion) values(default,?,?,?,?,default)";
                 ps = con.getConnection().prepareStatement(sql);
                 ps.setInt(1, var.getPresupuesto());
                 ps.setInt(2, var.getMaterial());
                 ps.setInt(3, var.getCantidad());
                 ps.setDouble(4, var.getPrecioTotal());
-                ps.setDate(5, fun.getDate());
                 if (!ps.execute()) 
                 {
                     new frmAlerta("Detalle material ingresado correctamente",1).setVisible(true);
@@ -159,11 +158,11 @@ public class MtoGastosMateriales
         boolean retorno = false;
         try
         {
-            String sql = "update Gastos_Materiales set Cantidad = ? , Precio_Total = ? , Fecha_Modificacion = ? where Id_GastoMateriales = ?";
+            String sql = "update Gastos_Materiales set Material = ?,Cantidad = ? , Precio_Total = ? , Fecha_Modificacion = default where Id_GastoMateriales = ?";
             ps = con.getConnection().prepareStatement(sql);
-            ps.setInt(1, var.getCantidad());
-            ps.setDouble(2, var.getPrecioTotal());
-            ps.setDate(3, fun.getDate());
+            ps.setInt(1, var.getMaterial());
+            ps.setInt(2, var.getCantidad());
+            ps.setDouble(3, var.getPrecioTotal());
             ps.setInt(4, var.getIdMateriales());
             if (!ps.execute()) 
             {
@@ -202,37 +201,17 @@ public class MtoGastosMateriales
         return retorno;
     }
     
-    public String getPrecioUnitario(int idMaterial)
-    {
-        String precioUni = "0";
-        try
-        {
-            String sql = "select getPromedioPrecio('"+idMaterial+"')";
-            st = con.getConnection().createStatement();
-            rs = st.executeQuery(sql);
-            double precio = 0;
-            if (rs.next()) 
-            {
-                precio = rs.getDouble(1);
-            }
-            precioUni = funq.formatoDecimales(precio);
-        }
-        catch(SQLException e)
-        {
-            System.out.print(e);
-        }
-        return precioUni;
-    }
-    
-    public void actualizarBodega(int idMaterial,int cantidadDisponible)
+    public void actualizarBodega(int idMaterial,int disponible)
     {
         try
         {
-            String sql = "select actualizarBodega('"+cantidadDisponible+"','"+idMaterial+"')";
+            String sql = "update Materiales set cantidad_disponible = ? where id_material = ?";
             ps = con.getConnection().prepareStatement(sql);
+            ps.setInt(1, disponible);
+            ps.setInt(2, material);
             if (!ps.execute()) 
             {
-                //JOptionPane.showMessageDialog(null, "cantidad actualizada");
+                System.out.println("Cantidad de materiales actualizada");
             }
         }
         catch(SQLException e)

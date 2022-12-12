@@ -162,18 +162,18 @@ public class MtoPresupuesto
         String[] datos = new String[6];
         try
          {
-            String query = "select * from Presupuesto_Proyecto where Proyecto = ?";
+            String query = "select gastos_preliminares,mano_obra,precio_materiales,subtotal,impuestos,monto_total from Presupuesto_Proyecto where Proyecto = ?";
             ps = con.getConnection().prepareStatement(query);
             ps.setInt(1, var.getIdProyecto());
             rs = ps.executeQuery();
             if (rs.next()) 
             {
-                datos[0] = "$"+f.format(rs.getDouble(3));
-                datos[1] = "$"+f.format(rs.getDouble(4));
-                datos[2] = "$"+f.format(rs.getDouble(5));  
-                datos[3] = "$"+f.format(rs.getDouble(6));
-                datos[4] = "$"+f.format(rs.getDouble(7));
-                datos[5] = "$"+f.format(rs.getDouble(8));
+                datos[0] = "$"+f.format(rs.getDouble(1));
+                datos[1] = "$"+f.format(rs.getDouble(2));
+                datos[2] = "$"+f.format(rs.getDouble(3));  
+                datos[3] = "$"+f.format(rs.getDouble(4));
+                datos[4] = "$"+f.format(rs.getDouble(5));
+                datos[5] = "$"+f.format(rs.getDouble(6));
             }
             else
             {

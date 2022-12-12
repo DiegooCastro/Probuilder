@@ -52,25 +52,26 @@ public class frmAlerta extends javax.swing.JFrame {
         icono.setBounds(ubicacion,20, 150,150); 
         switch(opcion)
         {
-            case 1: // SUCCESS
+            // SUCCESS
+            case 1: 
                 materialButton3.setForeground(new java.awt.Color(51, 153, 0));
                 jPanel2.setBackground(new java.awt.Color(51, 153, 0));
                 ruta = "/Iconografia/IconSuccess.png";
             break;
-            
-            case 2: // WARNING
+            // WARNING
+            case 2: 
                 materialButton3.setForeground(new java.awt.Color(255, 153, 0));
                 jPanel2.setBackground(new java.awt.Color(255, 153, 0));
                 ruta = "/Iconografia/IconWarning.png";
             break;
-            
-            case 3: // ERROR
+            // ERROR
+            case 3: 
                 materialButton3.setForeground(new java.awt.Color(153, 0, 51));
                 jPanel2.setBackground(new java.awt.Color(153, 0, 51));
                 ruta = "/Iconografia/IconError.png";
             break;
-            
-            case 4: // INFORMATION
+            // INFORMATION
+            case 4: 
                 materialButton3.setForeground(new java.awt.Color(0, 204, 204));
                 jPanel2.setBackground(new java.awt.Color(0, 204, 204));
                 ruta = "/Iconografia/IconInformacion.png";

@@ -49,7 +49,7 @@ public class MtoMateriales
                 ps.setString(2, var.getNombre());
                 ps.setString(3, var.getDescripcion());
                 ps.setBytes(4, var.getFotoMaterial());
-                ps.setInt(5, var.getEstado());
+                ps.setBoolean(5, false);
                 ps.setInt(6, var.getDisponible());
                 if (!ps.execute()) 
                 {
@@ -118,7 +118,7 @@ public class MtoMateriales
         boolean retorno = false;
         try
         {
-            sql = "insert into Compras_Materiales (Material,Encargado,Proveedor,Cantidad_Comprada,Precio_Unitario,Monto_Total,Fecha_Compra) values(?,?,?,?,?,?,?)";
+            sql = "insert into Compras_Materiales (Material,Encargado,Proveedor,Cantidad_Comprada,Precio_Unitario,Monto_Total,Fecha_Compra) values(?,?,?,?,?,?,default)";
             ps = con.getConnection().prepareStatement(sql);
             ps.setInt(1, var.getMaterial());
             ps.setInt(2, var.getEncargado());
@@ -126,7 +126,6 @@ public class MtoMateriales
             ps.setInt(4, var.getCantidadComprada());
             ps.setDouble(5, var.getPrecioUnitari());
             ps.setDouble(6, var.getMontoCompra());
-            ps.setDate(7, funSql.getDate());
             if (!ps.execute()) 
             {
                 new frmAlerta("Compra de material registrada correctamente",1).setVisible(true);
@@ -168,19 +167,18 @@ public class MtoMateriales
         boolean retorno = false;
         try
         {
-            sql = "update Compras_Materiales set Proveedor = ? , Cantidad_Comprada = ? , Precio_Unitario = ? , Monto_Total = ?, Fecha_Compra = ? where Id_Compra = ?";
+            sql = "update Compras_Materiales set Proveedor = ? , Cantidad_Comprada = ? , Precio_Unitario = ? , Monto_Total = ?, Fecha_Compra = default where Id_Compra = ?";
             ps = con.getConnection().prepareStatement(sql);
             ps.setInt(1, var.getProveedor());
             ps.setInt(2, var.getCantidadComprada());
             ps.setDouble(3, var.getPrecioUnitari());
             ps.setDouble(4, var.getMontoCompra());
-            ps.setDate(5, funSql.getDate());
-            ps.setInt(6, var.getIdCompra());
+            ps.setInt(5, var.getIdCompra());
             if (!ps.execute()) 
             {
                 new frmAlerta("Compra de material modificada correctamente",1).setVisible(true);
                 retorno = true; 
-                actualizarAlmacenaje(var.getMaterial(),var.getCantidadReal());
+                ingresarAlmacenaje(var.getCantidadReal(),var.getMaterial());
             }                               
         }
         catch(HeadlessException | SQLException e)
@@ -190,27 +188,7 @@ public class MtoMateriales
         }
         return retorno;
     }
-       
-    public void actualizarAlmacenaje(int idMaterial,int cantidadComprada)
-    {
-        try
-        {
-            sql = "select actualizarCantidadAlmacenaje (?,?) ";
-            ps = con.getConnection().prepareStatement(sql);
-            ps.setInt(1, cantidadComprada);
-            ps.setInt(2, idMaterial);
-            if (!ps.execute()) 
-            {
-                System.out.println("Cantidad de materiales actualizada correctamente");
-            }
-            ps.close();
-        }
-        catch(HeadlessException | SQLException e)
-        {
-            new frmAlerta("Error al actualizar almacenaje de materiales",3).setVisible(true);
-            System.out.println(e);
-        }
-    }  
+    
     
     private int idMaterial,idUnidad,estado,disponible;
     private String nombre,descripcion;

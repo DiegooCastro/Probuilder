@@ -1,5 +1,4 @@
 package Vista.Frames;
-
 import Clases.ClassLogin;
 import Clases.ClassSeguridad;
 import FiveCodMover.FiveCodMoverJFrame;
@@ -17,13 +16,15 @@ import javax.swing.JOptionPane;
  *
  * @author Diego Castro
  */
-public class frmLogin extends javax.swing.JFrame {
+public class frmLogin extends javax.swing.JFrame 
+{
 
     //Declaracion de objetos de la clase
     ClassLogin log = new ClassLogin();
     ClassSeguridad seg = new ClassSeguridad();
     
-    public frmLogin() {
+    public frmLogin() 
+    {
         initComponents();
         this.setLocationRelativeTo(null);
         jTFClave.setEchoChar((char)0);
@@ -41,18 +42,26 @@ public class frmLogin extends javax.swing.JFrame {
             BufferedReader br = new BufferedReader(fr);
             String linea = br.readLine();     
 
-            if (linea != null) {
+            if (linea != null) 
+            {
                 String clave = "",usuario = "",caracter = "";
                 int palabra = 1;
             
-                for (int i = 0; i < linea.length(); i++) {     
+                for (int i = 0; i < linea.length(); i++) 
+                {     
                     caracter = String.valueOf(linea.charAt(i));
-                    if (caracter.trim().isEmpty()) {
+                    if (caracter.trim().isEmpty()) 
+                    {
                         palabra = 2;
-                    } else {
-                        if (palabra == 1) {
+                    } 
+                    else 
+                    {
+                        if (palabra == 1) 
+                        {
                             usuario = usuario+caracter;
-                        } else {
+                        } 
+                        else 
+                        {
                             clave = clave+caracter;
                         }
                     }
@@ -67,25 +76,33 @@ public class frmLogin extends javax.swing.JFrame {
         }
     }
     
-    private void guardarCredenciales() { 
-        try {
+    private void guardarCredenciales() 
+    { 
+        try 
+        {
             String ruta = "datos.txt";
             File file = new File(ruta);
-            if (jCheckBox1.isSelected()) {            
+            if (jCheckBox1.isSelected()) 
+            {            
                 String contenido = jTFUsuario.getText() + ' ' + jTFClave.getText();               
-                if (!file.exists()) {
+                if (!file.exists()) 
+                {
                     file.createNewFile();
-                }            
+                }    
                 FileWriter fw = new FileWriter(file);
                 BufferedWriter bw = new BufferedWriter(fw);
                 bw.write(contenido);
                 bw.close();
-            } else {
+            } 
+            else 
+            {
                 BufferedWriter bw = new BufferedWriter(new FileWriter(file));
                 bw.write("");
                 bw.close();
             }                                                      
-        } catch (Exception e) {
+        } 
+        catch (Exception e) 
+        {
             e.printStackTrace();
         }
     }   
@@ -98,8 +115,7 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        fSButtonMD1 = new LIB.FSButtonMD();
+        btnIniciarSesion = new LIB.FSButtonMD();
         jTFClave = new LIB.FSPasswordFieldMD();
         jTFUsuario = new LIB.FSTexFieldMD();
         jCheckBox1 = new javax.swing.JCheckBox();
@@ -141,27 +157,17 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(50, 75, 94));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Recuperar contraseña");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, -1, 40));
-
-        fSButtonMD1.setText("Acceder");
-        fSButtonMD1.setColorHover(new java.awt.Color(34, 55, 76));
-        fSButtonMD1.setColorNormal(new java.awt.Color(33, 51, 66));
-        fSButtonMD1.setColorPressed(new java.awt.Color(18, 31, 43));
-        fSButtonMD1.setColorTextHover(new java.awt.Color(255, 255, 255));
-        fSButtonMD1.addActionListener(new java.awt.event.ActionListener() {
+        btnIniciarSesion.setText("Acceder");
+        btnIniciarSesion.setColorHover(new java.awt.Color(34, 55, 76));
+        btnIniciarSesion.setColorNormal(new java.awt.Color(33, 51, 66));
+        btnIniciarSesion.setColorPressed(new java.awt.Color(18, 31, 43));
+        btnIniciarSesion.setColorTextHover(new java.awt.Color(255, 255, 255));
+        btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fSButtonMD1ActionPerformed(evt);
+                btnIniciarSesionActionPerformed(evt);
             }
         });
-        jPanel3.add(fSButtonMD1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 280, 50));
+        jPanel3.add(btnIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 280, 50));
 
         jTFClave.setBackground(new java.awt.Color(50, 75, 94));
         jTFClave.setForeground(new java.awt.Color(255, 255, 255));
@@ -183,7 +189,7 @@ public class frmLogin extends javax.swing.JFrame {
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setText("Recuerdame ");
-        jPanel3.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, -1, -1));
+        jPanel3.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -234,49 +240,44 @@ public class frmLogin extends javax.swing.JFrame {
         FiveCodMoverJFrame.MouseDraggedFrame(evt, this);
     }//GEN-LAST:event_jPanel2MouseDragged
 
-    private void fSButtonMD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fSButtonMD1ActionPerformed
-        if (jTFUsuario.getText().trim().isEmpty() || jTFClave.getText().trim().isEmpty()) {
+    private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
+        if (jTFUsuario.getText().trim().isEmpty() || jTFClave.getText().trim().isEmpty()) 
+        {
             new frmAlerta("Complete los campos solicitados",2).setVisible(true);
-        } else {
+        } 
+        else 
+        {
             log.setUsuario(jTFUsuario.getText());
             log.setClave(seg.encriptacionMD5(jTFClave.getText()));
-            if (log.iniciarSesion(log)) {
+            if (log.iniciarSesion(log)) 
+            {
                 int estado;
-                if (ClassLogin.estadoUsuario) {
+                if (ClassLogin.estadoUsuario) 
+                {
                     estado = 1;
-                } else {
+                } 
+                else 
+                {
                     estado = 0;
                 }
                 
-                switch(estado) {
+                switch(estado) 
+                {
                     case 1:
-                        if (jCheckBox1.isSelected()) {
-                            guardarCredenciales();
-                        }
+                        guardarCredenciales();
                         frmMenuPrincipal m = new frmMenuPrincipal();
                         m.setVisible(true);
                         this.dispose();
                     break;
                     
-                    case 2:
-                        JOptionPane.showMessageDialog(null, "El usuario se encuentra inactivo","Acceso denegado",1);
-                        //FrmCambiarClave form2 = new FrmCambiarClave(ClassLogin.nombreUsuario);
-                        //form2.setVisible(true);               
-                    break;
                     default:
                         JOptionPane.showMessageDialog(null,"Opcion no disponible...");
-                        break;
+                    break;
                 }
                 this.dispose();
             }
         }
-    }//GEN-LAST:event_fSButtonMD1ActionPerformed
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        frmRecuperacion c = new frmRecuperacion();
-        c.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         System.exit(0);
@@ -331,11 +332,10 @@ public class frmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private LIB.FSButtonMD fSButtonMD1;
+    private LIB.FSButtonMD btnIniciarSesion;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;

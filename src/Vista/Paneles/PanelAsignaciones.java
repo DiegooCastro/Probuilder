@@ -33,7 +33,6 @@ public class PanelAsignaciones extends javax.swing.JPanel {
     public PanelAsignaciones(String proyecto) {
         initComponents();
         jTFProyecto.setText(proyecto);
-        funSQL.cargarComboBox(consulta.comboBoxEstadoAsignacion(), cmbEstado);
         idProyecto = funSQL.getIdentificador(consulta.consultarIdProyecto(proyecto));
         idPresupuesto = funSQL.getIdentificador(consulta.consultarIdPresupuesto(idProyecto));
         modelo = (DefaultTableModel)Tabla.getModel();
@@ -92,7 +91,7 @@ public class PanelAsignaciones extends javax.swing.JPanel {
                     Date fechaInicio = fun.obtenerFecha(jDCFechaInicio);
                     Date fechaFin = fun.obtenerFecha(jDCFechaFin);
                     DecimalFormat f = new DecimalFormat("###,###.##");
-                    jTFTotal.setText(f.format(funSQL.obtenerPagoTotal(idPersonal, fechaInicio,fechaFin)));
+                    jTFTotal.setText(f.format(funSQL.obtenerPagoTotal(idPersonal,fechaInicio,fechaFin)));
                 }
                 catch(Exception e)
                 {   
@@ -240,6 +239,7 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         jTFProyecto.setPlaceholder(" Nombre Proyecto*");
         jPanel2.add(jTFProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 280, 40));
 
+        cmbEstado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "No realizada", "Realizada", " " }));
         cmbEstado.setEnabled(false);
         cmbEstado.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jPanel2.add(cmbEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 270, -1));

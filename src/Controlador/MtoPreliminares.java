@@ -26,7 +26,7 @@ public class MtoPreliminares
     ResultSet rs;
     
     private int presupuesto,idGastoPreliminar;
-    private double precioUni,precioTotal;
+    private double precioTotal;
     private String sql, descripcion,gastoPreliminar;
     
     /**
@@ -86,20 +86,6 @@ public class MtoPreliminares
     }
 
     /**
-     * @return the precioUni
-     */
-    public double getPrecioUni() {
-        return precioUni;
-    }
-
-    /**
-     * @param precioUni the precioUni to set
-     */
-    public void setPrecioUni(double precioUni) {
-        this.precioUni = precioUni;
-    }
-
-    /**
      * @return the precioTotal
      */
     public double getPrecioTotal() {
@@ -129,13 +115,12 @@ public class MtoPreliminares
             }
             else
             {
-                sql = "insert into Gastos_Preliminares (Presupuesto,Gasto,Precio_Total,Descripcion,Fecha_Modificacion) values(?,?,?,?,?)";
+                sql = "insert into Gastos_Preliminares (Id_GastoPreliminar,Presupuesto,Gasto,Precio_Total,Descripcion) values(default,?,?,?,?)";
                 ps = con.getConnection().prepareStatement(sql);
                 ps.setInt(1, var.getPresupuesto());
                 ps.setString(2, var.getGastoPreliminar());
                 ps.setDouble(3, var.getPrecioTotal());
                 ps.setString(4, var.getDescripcion());
-                ps.setDate(5, fun.getDate());
                 if (!ps.execute()) 
                 {
                     new frmAlerta("Gasto preliminar registrado correctamente",1).setVisible(true);
@@ -155,13 +140,12 @@ public class MtoPreliminares
         boolean retorno = false;
         try
         {
-            sql = "update Gastos_Preliminares set Gasto = ? , Precio_Total = ? , Descripcion = ? , Fecha_Modificacion = ? where Id_GastoPreliminar = ?";
+            sql = "update Gastos_Preliminares set Gasto = ? , Precio_Total = ? , Descripcion = ? where Id_GastoPreliminar = ?";
             ps = con.getConnection().prepareStatement(sql);
             ps.setString(1, var.getGastoPreliminar());
             ps.setDouble(2, var.getPrecioTotal());
             ps.setString(3, var.getDescripcion());
-            ps.setDate(4, fun.getDate());
-            ps.setInt(5, var.getIdGastoPreliminar());
+            ps.setInt(4, var.getIdGastoPreliminar());
             if (!ps.execute()) 
             {
                 new frmAlerta("Gasto preliminar modificado correctamente",1).setVisible(true);

@@ -8,7 +8,6 @@ import FiveCodMover.FiveCodMoverJFrame;
 import Vista.Paneles.PanelAlmacenaje;
 import Vista.Paneles.PanelRegistroCompras;
 import Vista.Paneles.PanelAsignaciones;
-import Vista.Paneles.PanelControlAsig;
 import Vista.Paneles.PanelMateriales;
 import Vista.Paneles.PanelPreliminares;
 import Vista.Paneles.PanelPresupuesto;
@@ -488,7 +487,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         btnControlAsig.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblClientes1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblClientes1.setForeground(new java.awt.Color(255, 255, 255));
+        lblClientes1.setForeground(new java.awt.Color(153, 153, 153));
         lblClientes1.setText("ASIGNACIONES");
         btnControlAsig.add(lblClientes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
 
@@ -710,16 +709,6 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     }
      
     /**
-     * Metodo para cargar el formulario de asignaciones 
-     */
-    private void cargarAsignaciones()
-    {
-        PanelControlAsig controlAsig = new PanelControlAsig();
-        cargarPaneles(controlAsig,pnlContenedor);
-        ocultarPanelesSide(PanelSideAsignaciones);
-    }
-    
-    /**
      * Metodo para cargar las diferentes opciones del menu presupuesto ademas de mostrar y ocultar los sub elementos
      */
     private void cargarPresupuesto()
@@ -911,13 +900,13 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         this.setExtendedState(1);
     }//GEN-LAST:event_lblMinimizarMouseClicked
 
-    private void btnControlAsigMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnControlAsigMouseClicked
-        cargarAsignaciones();
-    }//GEN-LAST:event_btnControlAsigMouseClicked
-
     private void lblConAlmacenajeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblConAlmacenajeMouseClicked
         cargarAlmacenaje();
     }//GEN-LAST:event_lblConAlmacenajeMouseClicked
+
+    private void btnControlAsigMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnControlAsigMouseClicked
+        //cargarAsignaciones();
+    }//GEN-LAST:event_btnControlAsigMouseClicked
 
     
     public static void main(String args[]) {

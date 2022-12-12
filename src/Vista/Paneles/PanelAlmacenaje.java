@@ -75,7 +75,6 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
         lblImagen = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jTFUnidad = new LIB.FSTexFieldMD();
-        btnBorrarCampos = new LIB.FSButtonMD();
         btnIngresar = new LIB.FSButtonMD();
         btnModificar = new LIB.FSButtonMD();
         jTFMaterial = new LIB.FSTexFieldMD();
@@ -169,22 +168,6 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
         jTFUnidad.setPlaceholder("");
         add(jTFUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 100, 220, 40));
 
-        btnBorrarCampos.setForeground(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/negocios-y-finanzas.png"))); // NOI18N
-        btnBorrarCampos.setText("  Reporte material");
-        btnBorrarCampos.setColorHover(new java.awt.Color(204, 204, 204));
-        btnBorrarCampos.setColorNormal(new java.awt.Color(255, 255, 255));
-        btnBorrarCampos.setColorPressed(new java.awt.Color(255, 255, 255));
-        btnBorrarCampos.setColorTextNormal(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
-        btnBorrarCampos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBorrarCamposActionPerformed(evt);
-            }
-        });
-        add(btnBorrarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 220, -1));
-
         btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
         btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Agregar.png"))); // NOI18N
         btnIngresar.setText("  Ingresar Material");
@@ -199,7 +182,7 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
                 btnIngresarActionPerformed(evt);
             }
         });
-        add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 210, -1));
+        add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 290, -1));
 
         btnModificar.setForeground(new java.awt.Color(0, 0, 0));
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
@@ -215,7 +198,7 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
                 btnModificarActionPerformed(evt);
             }
         });
-        add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, 220, -1));
+        add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 320, -1));
 
         jTFMaterial.setForeground(new java.awt.Color(0, 0, 0));
         jTFMaterial.setBordeColorFocus(new java.awt.Color(0, 0, 51));
@@ -307,7 +290,7 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
                 btnBorrarCampos1ActionPerformed(evt);
             }
         });
-        add(btnBorrarCampos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 200, -1));
+        add(btnBorrarCampos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, 280, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblSelectImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSelectImagenMouseClicked
@@ -318,10 +301,6 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
         frmCatalogoMini c = new frmCatalogoMini("unidad",1);
         c.setVisible(true);
     }//GEN-LAST:event_jLabel11MouseClicked
-
-    private void btnBorrarCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarCamposActionPerformed
-        
-    }//GEN-LAST:event_btnBorrarCamposActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (jTFMaterial.getText().isEmpty() || jTFDescripcion.getText().isEmpty())
@@ -334,7 +313,6 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
             obj.setIdUnidad(sql.getIdentificador("select * from Unidad_Medida where Unidad_Medida = '"+jTFUnidad.getText()+"'"));
             obj.setIdMaterial(idMaterial);
             obj.setNombre(jTFMaterial.getText());
-            obj.setEstado(2);
             obj.setDisponible(0);
             if (ruta == null)
             {
@@ -415,7 +393,6 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojerusan.RSTableMetro Tabla;
-    private LIB.FSButtonMD btnBorrarCampos;
     private LIB.FSButtonMD btnBorrarCampos1;
     private LIB.FSButtonMD btnIngresar;
     private LIB.FSButtonMD btnModificar;

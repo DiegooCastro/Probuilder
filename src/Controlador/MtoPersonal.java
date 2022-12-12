@@ -48,16 +48,14 @@ public class MtoPersonal
             }
             else
             {
-                sql = "insert into Personal (Id_Personal,Nombre,Apellido,Telefono,DUI,Profesion,Estado,Sueldo,Fecha_Contratacion) values(default,?,?,?,?,?,?,?,?)";
+                sql = "insert into Personal (Id_Personal,Nombre,Apellido,Telefono,DUI,Profesion,Estado,Sueldo) values(default,?,?,?,?,?,default,?)";
                 ps = con.getConnection().prepareStatement(sql);
                 ps.setString(1, var.getNombre());
                 ps.setString(2, var.getApellido());
                 ps.setString(3, var.getTelefono());
                 ps.setString(4, var.getDui());
-                ps.setInt(5, var.getProfesion());
-                ps.setBoolean(6, var.getEstado());                
-                ps.setDouble(7, var.getSueldo());
-                ps.setDate(8, var.getContratacion());
+                ps.setInt(5, var.getProfesion());                
+                ps.setDouble(6, var.getSueldo());
                 if (!ps.execute()) 
                 {
                     new frmAlerta("Empleado registrado correctamente",1).setVisible(true);
@@ -87,7 +85,7 @@ public class MtoPersonal
         boolean respuesta = false;
         try
         {
-            sql = "update Personal  set  Profesion = ? , Estado = ? , Nombre = ? , Apellido = ? , Telefono = ? , DUI = ? , Sueldo = ?, Fecha_Contratacion = ? where Id_Personal = ?";
+            sql = "update Personal  set  Profesion = ? , Estado = ? , Nombre = ? , Apellido = ? , Telefono = ? , DUI = ? , Sueldo = ? where Id_Personal = ?";
             ps = con.getConnection().prepareStatement(sql);
             ps.setInt(1, var.getProfesion());
             ps.setBoolean(2, var.getEstado());
@@ -96,8 +94,7 @@ public class MtoPersonal
             ps.setString(5, var.getTelefono());
             ps.setString(6, var.getDui());
             ps.setDouble(7, var.getSueldo());
-            ps.setDate(8, var.getContratacion());
-            ps.setInt(9, var.getIdPersonal());
+            ps.setInt(8, var.getIdPersonal());
             if (!ps.execute()) 
             {
                 new frmAlerta("Datos del empleado modificados correctamente",1).setVisible(true);
@@ -119,16 +116,17 @@ public class MtoPersonal
     
     /*** Metodo para eliminar un registro de la base de datos 
      * @param id identificador del registro al que se desea eliminar
+     * @param accion true o false
      * @return variable de tipo boolean que confirma si se realizo la consulta 
      */    
-    public boolean eliminarPersonal(int id)
+    public boolean eliminarPersonal(int id, boolean accion)
     {
         boolean respuesta = false;
         try
         {
-            String sql = "update Personal  set  Estado = ? where Id_Personal = ?";
-            ps = con.getConnection().prepareStatement(sql);
-            ps.setInt(1, 4);
+            String query = "update Personal  set  Estado = ? where Id_Personal = ?";
+            ps = con.getConnection().prepareStatement(query);
+            ps.setBoolean(1, accion);
             ps.setInt(2, id);
             if (!ps.execute()) 
             {

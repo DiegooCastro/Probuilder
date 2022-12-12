@@ -12,7 +12,6 @@ import FiveCodMover.FiveCodMoverJFrame;
 import static Vista.Frames.frmMenuPrincipal.lblConPresupuesto;
 import Vista.Paneles.PanelAsignaciones;
 import Vista.Paneles.PanelCliente;
-import Vista.Paneles.PanelControlAsig;
 import Vista.Paneles.PanelMateriales;
 import Vista.Paneles.PanelPresupuesto;
 import Vista.Paneles.PanelProyecto;
@@ -263,7 +262,7 @@ public class frmBuscador extends javax.swing.JFrame {
             case "materiales":
                 String cabecera3[] = {"Material","Unidad","Estado","Disponible"};
                 cargarCabecera(cabecera3,"Material","Estado");
-                fun.cargarTabla("select Nombre_Material,u.Unidad_Medida,e.Estado_Material,Cantidad_Disponible from Materiales m, Unidad_Medida u,Estado_Materiales e where m.Unidad = u.Id_UnidadMedida and e.Id_EstadoMateriales = m.Estado",tb);
+                fun.cargarTabla("select Nombre_Material,u.Unidad_Medida,m.Estado,Cantidad_Disponible from Materiales m, Unidad_Medida u where m.Unidad = u.Id_UnidadMedida ",tb);
             break;
             
             case "proyecto":
@@ -272,16 +271,10 @@ public class frmBuscador extends javax.swing.JFrame {
                 fun.cargarTabla("select Nombre_Proyecto,concat(c.Nombre ,' ',c.Apellido) as Cliente from proyecto p,Cliente c where p.Cliente = c.Id_Cliente",tb);
             break;
             
-            case "seguro":
-                String cabecera5[] = {"Seguro","Costo","Duracion"};
-                cargarCabecera(cabecera5,"Duracion","Seguro");
-                fun.cargarTabla("select Seguro,s.Costo,d.Duracion from Seguro s,Duracion_Seguro d where d.Id_Duracion = s.Duracion",tb);
-            break;
-            
             case "supervisor":
                 String cabecera6[] = {"Usuario","Nombre","DUI"};
                 cargarCabecera(cabecera6,"Usuario","Nombre");
-                fun.cargarTabla("select Usuario,concat(p.Nombre,' ',p.Apellido) as Nombre,DUI from Usuario u,Personal p where u.personal = p.id_personal",tb);
+                fun.cargarTabla("select Usuario,concat(p.Nombre,' ',p.Apellido) as Nombre,DUI from Usuario u,Personal p where u.trabajador = p.id_personal",tb);
             break;
             
             case "empresa":
@@ -289,11 +282,11 @@ public class frmBuscador extends javax.swing.JFrame {
                 cargarCabecera(cabecera7,"Empresa","Telefono");
                 if (caso == 1) 
                 {
-                    fun.cargarTabla("select Nombre_Empresa,Telefono,Correo_Empresa from Empresa ",tb);
+                    fun.cargarTabla("select Nombre,Telefono,Correo from Empresa ",tb);
                 }
                 else
                 {
-                    fun.cargarTabla("select Nombre_Empresa,Telefono,Correo_Empresa from Empresa where Tipo = 2 ",tb);
+                    fun.cargarTabla("select Nombre,Telefono,Correo from Empresa where Tipo = 2 ",tb);
                 }
             break;
         }
@@ -463,8 +456,6 @@ public class frmBuscador extends javax.swing.JFrame {
                             PanelMateriales.jTFUnidadMedida.setText(unidad);
                             SpinnerNumberModel spModel = new SpinnerNumberModel(1, 1, Integer.parseInt(disponible), 1);  
                             PanelMateriales.jSPCantidad.setModel(spModel);
-                            PanelMateriales.jTFPrecioUni.setText(String.valueOf(mat.getPrecioUnitario(fun.getIdentificador("select * from Materiales where Nombre_Material = '"+material+"'"))));
-                            PanelMateriales.jTFPrecioTotal.setText(String.valueOf(mat.getPrecioUnitario(fun.getIdentificador("select * from Materiales where Nombre_Material = '"+material+"'"))));
                         }  
                         else
                         {
@@ -484,15 +475,7 @@ public class frmBuscador extends javax.swing.JFrame {
                         obj.cargarPresupuesto(obj);
                         lblConPresupuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconDesbloqueado.png")));
                         frmMenuPrincipal.lblConPresupuesto.setVisible(true);
-                        
                         PanelPresupuesto.datos = obj.cargarPresupuesto(obj);
-                    }
-                    else
-                    {
-                        PanelControlAsig.cargarTabla(proyecto);
-                        PanelControlAsig.Proyecto = proyecto;
-                        PanelControlAsig.jTFProyecto.setText(proyecto);
-                        this.dispose();
                     }
                 break;
                              

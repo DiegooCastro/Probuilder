@@ -280,6 +280,13 @@
         </Component>
         <Component class="RSMaterialComponent.RSComboBoxMaterial" name="cmbEstado">
           <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="No realizada"/>
+                <StringItem index="1" value="Realizada"/>
+                <StringItem index="2" value=" "/>
+              </StringArray>
+            </Property>
             <Property name="enabled" type="boolean" value="false"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="16" style="1"/>

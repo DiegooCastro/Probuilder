@@ -221,7 +221,6 @@ public class PanelMateriales extends javax.swing.JPanel {
         });
         jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 320, 200, -1));
 
-        jTFPrecioUni.setEditable(false);
         jTFPrecioUni.setForeground(new java.awt.Color(0, 0, 0));
         jTFPrecioUni.setBordeColorFocus(new java.awt.Color(0, 0, 51));
         jTFPrecioUni.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -321,21 +320,13 @@ public class PanelMateriales extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jSPCantidadStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSPCantidadStateChanged
-        if (jTFPrecioUni.getText().isEmpty() && Integer.parseInt(jSPCantidad.getValue().toString()) != 0) 
-        {
-            new frmAlerta("Seleccione un material",2).setVisible(true);
-            jSPCantidad.setValue(Integer.parseInt("0"));
-        }
-        else
-        {
-            calcularTotal();
-        }
+        calcularTotal();    
     }//GEN-LAST:event_jSPCantidadStateChanged
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         int cantidadUtilizar = Integer.parseInt(jSPCantidad.getValue().toString());
         cantidadBodega = Integer.parseInt(jTFCantidadDisponible.getText());
-        var.setDisponible(cantidadBodega - cantidadUtilizar);
+        var.setDisponible(cantidadBodega-cantidadUtilizar);
         var.setCantidad(cantidadUtilizar);
         var.setMaterial(fun.getIdentificador("select * from Materiales where Nombre_Material = '"+jTFMaterial.getText()+"'"));
         var.setPrecioTotal(Double.parseDouble(jTFPrecioTotal.getText()));
@@ -391,11 +382,12 @@ public class PanelMateriales extends javax.swing.JPanel {
             cantidadBodega = Integer.parseInt(Tabla.getValueAt(fila, 6).toString());
             cantidadInicial = Integer.parseInt(Tabla.getValueAt(fila, 3).toString());
         
-        
+            double precioUni = Double.parseDouble(Tabla.getValueAt(fila, 4).toString()) / Integer.parseInt(Tabla.getValueAt(fila, 3).toString());
+            jTFPrecioUni.setText(String.valueOf(precioUni));
+            
             spModel = new SpinnerNumberModel(cantidadInicial, 1, cantidadBodega+cantidadInicial, 1);  
             jSPCantidad.setModel(spModel);
         
-            jTFPrecioUni.setText(String.valueOf(var.getPrecioUnitario(fun.getIdentificador("select * from Materiales where Nombre_Material = '"+jTFMaterial.getText()+"'"))));
             jTFPrecioTotal.setText(Tabla.getValueAt(fila, 4).toString());
             jTFUnidadMedida.setText(Tabla.getValueAt(fila, 5).toString());
             jTFCantidadDisponible.setText(Tabla.getValueAt(fila, 6).toString());

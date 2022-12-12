@@ -7,7 +7,6 @@ package Controlador;
 
 import Clases.ClassConexion;
 import Vista.Frames.frmAlerta;
-import Vista.Paneles.PanelControlAsig;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -43,24 +42,23 @@ public class MtoAsignaciones
             }
             else
             {
-                sql = "insert into Asignaciones_Proyecto (Proyecto , Asignacion , Estado_Asignacion , Encargado , Fecha_Inicio , Fecha_Fin , SueldoTotal)values (?,?,?,?,?,?,?)";
+                sql = "insert into Asignaciones_Proyecto (Proyecto , Asignacion , Estado_Asignacion , Encargado , Fecha_Inicio , Fecha_Fin , SueldoTotal)values (?,?,default,?,?,?,?)";
                 ps = con.getConnection().prepareStatement(sql);
                 ps.setInt(1, obj.getProyecto());
                 ps.setInt(2, obj.getAsignacion());
-                ps.setInt(3, obj.getEstado());
-                ps.setInt(4, obj.getEncargado());
-                ps.setDate(5, obj.getFechaInicio());
-                ps.setDate(6, obj.getFechaFin());
-                ps.setDouble(7, obj.getGastoTotal());
+                ps.setInt(3, obj.getEncargado());
+                ps.setDate(4, obj.getFechaInicio());
+                ps.setDate(5, obj.getFechaFin());
+                ps.setDouble(6, obj.getGastoTotal());
                 if (!ps.execute()) 
                 {
                     new frmAlerta("Asignacion registrada correctamente",1).setVisible(true);                   
-                    sql ="update Personal set Estado = 2 where Id_Personal = '"+obj.getEncargado()+"'";
+                    sql ="update Personal set Estado = false where Id_Personal = '"+obj.getEncargado()+"'";
                     ps = con.getConnection().prepareStatement(sql);
                     if (!ps.execute()) 
                     {
                         System.out.println("Estado Actualizado");
-                        sql = "update Personal set Estado = 2 where Id_Personal = ?";
+                        sql = "update Personal set Estado = false where Id_Personal = ?";
                         ps = con.getConnection().prepareStatement(sql);
                         ps.setInt(1, obj.getEncargado());
                         ps.executeUpdate();
@@ -79,13 +77,18 @@ public class MtoAsignaciones
     public boolean modificarAsignacion(MtoAsignaciones obj, int id)
     {
         boolean retorno = false;
+        boolean estado = true;
+        if (obj.getEncargado() == 1) 
+        {
+            estado = false;
+        }
         try
         {
             String sql = "update Asignaciones_Proyecto set Asignacion = ?, Estado_Asignacion = ?, Encargado = ?, Fecha_Inicio = ?, Fecha_Fin = ? , SueldoTotal = ? where Id_Asignaciones = ?";
             ps = con.getConnection().prepareStatement(sql);
             ps.setInt(1, obj.getAsignacion());
             ps.setInt(2, obj.getEstado());
-            ps.setInt(3, obj.getEncargado());
+            ps.setBoolean(3, estado);
             ps.setDate(4, obj.getFechaInicio());
             ps.setDate(5, obj.getFechaFin());
             ps.setDouble(6, obj.getGastoTotal());

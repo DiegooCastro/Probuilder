@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package Clases;
+import Vista.Frames.frmAlerta;
 import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -70,46 +70,52 @@ public class ClassLogin
             ps = con.getConnection().prepareStatement(query);
             ps.setString(1, obj.getUsuario());
             rs = ps.executeQuery();
-            if (rs.next()) //Si es verdadero existe el usuario en la base
+            //Si es verdadero existe el usuario en la base
+            if (rs.next()) 
             {
-                idUsuario = rs.getInt(1); //Obtenemos el id del usuario
-                query = "select * from Usuario where Usuario = ? and Estado = true"; //Estado true usuario activo
+                //Obtenemos el id del usuario
+                idUsuario = rs.getInt(1); 
+                // Estado true usuario activo
+                query = "select * from Usuario where Usuario = ? and Estado = true"; 
                 ps = con.getConnection().prepareStatement(query);
                 ps.setString(1,obj.getUsuario());
                 rs = ps.executeQuery();
-                if (rs.next()) //Si es verdadero el usuario no esta bloqueado ni inactivo
+                // Si es verdadero el usuario no esta bloqueado 
+                if (rs.next()) 
                 {
-                    query = "select * from Usuario where Usuario = ? and Clave = ?"; //Hacemos la consulta de usuario y contraseña
+                    // Hacemos la consulta de usuario y contraseña
+                    query = "select * from Usuario where Usuario = ? and Clave = ?"; 
                     ps = con.getConnection().prepareStatement(query);
                     ps.setString(1, obj.getUsuario());
                     ps.setString(2, obj.getClave());
                     rs = ps.executeQuery();
-                    if (rs.next()) //Si es verdadero el inicio de sesion esta completo
+                    // Si es verdadero el inicio de sesion esta completo
+                    if (rs.next()) 
                     {
-                        idUsuario = rs.getInt(1); //Obtenemos los datos del usuario
+                        // Obtenemos los datos del usuario
+                        idUsuario = rs.getInt(1); 
                         estadoUsuario = rs.getBoolean(2);
                         nombreUsuario = rs.getString(4);
-                        JOptionPane.showMessageDialog(null, "Acceso concedido","Bienvenido",1);
                         respuesta = true;
                     }
                     else
                     {               
-                        JOptionPane.showMessageDialog(null, "La contraseña ingresada es incorrecta","Acceso denegado",2);
+                        new frmAlerta("La contraseña es incorrecta",2).setVisible(true); 
                     }
                 }
                 else
                 {
-                    JOptionPane.showMessageDialog(null, "El usuario se encuentra inactivo o bloqueado","Acceso denegado",2);
+                    new frmAlerta("Su usuario esta bloqueado",3).setVisible(true); 
                 }
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "El usuario no existe en la base de datos","Acceso denegado",2);
+                new frmAlerta("Usuario no encontrado",2).setVisible(true); 
             }
         }
         catch(HeadlessException | SQLException e)
         {
-            JOptionPane.showMessageDialog(null,"Error critico"+e);
+            System.out.println("Error critico al iniciar sesion :" + e);
         }
         return respuesta; 
     }

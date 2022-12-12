@@ -4,8 +4,6 @@ import Clases.ClassFuncionesSQL;
 import Clases.ClassImagenes;
 import Controlador.MtoMateriales;
 import Vista.Frames.frmBuscador;
-import Vista.Frames.frmFiltroBusqueda;
-import Vista.Frames.frmMenuPrincipal;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.table.DefaultTableModel;
@@ -18,10 +16,17 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
 
     public PanelRegistroCompras() {
         initComponents();
-        cargarTabla();
-        //jTFEncargado.setText("Castroll");
-        spModel = new SpinnerNumberModel(0, 0, 1000, 1);  
-        jSPCantidad.setModel(spModel);
+        try 
+        {
+            cargarTabla();
+            //jTFEncargado.setText("Castroll");
+            spModel = new SpinnerNumberModel(0, 0, 1000, 1);  
+            jSPCantidad.setModel(spModel);
+        } 
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -52,7 +57,6 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         btnModificar = new LIB.FSButtonMD();
         jScrollPane3 = new javax.swing.JScrollPane();
         Tabla = new rojerusan.RSTableMetro();
-        btnReporte = new LIB.FSButtonMD();
         lblCampo1 = new javax.swing.JLabel();
         jTFUnidad = new LIB.FSTexFieldMD();
         jTFBusquedaMaterial = new LIB.FSTexFieldMD();
@@ -157,6 +161,7 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
 
         jTFPrecioTotal.setForeground(new java.awt.Color(0, 0, 0));
         jTFPrecioTotal.setBordeColorFocus(new java.awt.Color(0, 51, 51));
+        jTFPrecioTotal.setEnabled(false);
         jTFPrecioTotal.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jTFPrecioTotal.setPlaceholder("");
         add(jTFPrecioTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, 260, 40));
@@ -175,7 +180,7 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
                 btnIngresarActionPerformed(evt);
             }
         });
-        add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 210, -1));
+        add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 310, -1));
 
         btnBorrarCampos.setForeground(new java.awt.Color(0, 0, 0));
         btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_BorrarCampos.png"))); // NOI18N
@@ -191,7 +196,7 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
                 btnBorrarCamposActionPerformed(evt);
             }
         });
-        add(btnBorrarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 210, -1));
+        add(btnBorrarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 290, -1));
 
         btnModificar.setForeground(new java.awt.Color(0, 0, 0));
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
@@ -207,7 +212,7 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
                 btnModificarActionPerformed(evt);
             }
         });
-        add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 210, -1));
+        add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 330, 300, -1));
 
         Tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -267,22 +272,6 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 670, 260));
 
-        btnReporte.setForeground(new java.awt.Color(0, 0, 0));
-        btnReporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/negocios-y-finanzas.png"))); // NOI18N
-        btnReporte.setText("  Reporte Compras");
-        btnReporte.setColorHover(new java.awt.Color(204, 204, 204));
-        btnReporte.setColorNormal(new java.awt.Color(255, 255, 255));
-        btnReporte.setColorPressed(new java.awt.Color(255, 255, 255));
-        btnReporte.setColorTextNormal(new java.awt.Color(0, 0, 0));
-        btnReporte.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnReporte.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
-        btnReporte.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReporteActionPerformed(evt);
-            }
-        });
-        add(btnReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 330, 210, -1));
-
         lblCampo1.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
         lblCampo1.setText("Material");
         add(lblCampo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 410, -1, 50));
@@ -311,7 +300,7 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
                 jLabel10MouseClicked(evt);
             }
         });
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(934, 450, 40, 80));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(934, 440, 40, 90));
     }// </editor-fold>//GEN-END:initComponents
     
     //Declaracion de objetos de clases a utilizar
@@ -402,7 +391,6 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         else
         {
             int cantidadReal = Integer.parseInt(jSPCantidad.getValue().toString()) - cantidadInicial  ;
-            
             mat.setIdCompra(idRegistro);
             mat.setCantidadComprada(Integer.parseInt(jSPCantidad.getValue().toString()));
             mat.setCantidadReal(cantidadReal);
@@ -436,10 +424,6 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         btnModificar.setEnabled(true);
     }//GEN-LAST:event_TablaMouseClicked
 
-    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
-
-    }//GEN-LAST:event_btnReporteActionPerformed
-
     private void jTFBusquedaMaterialKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTFBusquedaMaterialKeyTyped
         if (jTFBusquedaMaterial.getText().length() > 1) 
         {
@@ -453,8 +437,7 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
     }//GEN-LAST:event_jTFBusquedaMaterialKeyTyped
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
-        frmFiltroBusqueda c = new frmFiltroBusqueda();
-        c.setVisible(true);
+
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jTFEncargadoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTFEncargadoKeyTyped
@@ -474,7 +457,6 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
     private LIB.FSButtonMD btnBorrarCampos;
     private LIB.FSButtonMD btnIngresar;
     private LIB.FSButtonMD btnModificar;
-    private LIB.FSButtonMD btnReporte;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

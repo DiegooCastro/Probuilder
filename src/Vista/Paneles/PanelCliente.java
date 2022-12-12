@@ -153,7 +153,7 @@ public class PanelCliente extends javax.swing.JPanel {
 
         btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
         btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Agregar.png"))); // NOI18N
-        btnIngresar.setText("  Ingresar Empresa");
+        btnIngresar.setText("  Ingresar Cliente");
         btnIngresar.setColorHover(new java.awt.Color(204, 204, 204));
         btnIngresar.setColorNormal(new java.awt.Color(255, 255, 255));
         btnIngresar.setColorPressed(new java.awt.Color(255, 255, 255));
@@ -169,7 +169,7 @@ public class PanelCliente extends javax.swing.JPanel {
 
         btnModificar.setForeground(new java.awt.Color(0, 0, 0));
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
-        btnModificar.setText("  Modificar Empresa");
+        btnModificar.setText("  Modificar Cliente");
         btnModificar.setColorHover(new java.awt.Color(204, 204, 204));
         btnModificar.setColorNormal(new java.awt.Color(255, 255, 255));
         btnModificar.setColorPressed(new java.awt.Color(255, 255, 255));
@@ -302,7 +302,7 @@ public class PanelCliente extends javax.swing.JPanel {
             {
                 try
                 {
-                    cli.setEmpresa(SQL.getIdentificador("select * from Empresa where Nombre_Empresa = '"+jTFEmpresa.getText()+"'"));
+                    cli.setEmpresa(SQL.getIdentificador("select * from Empresa where Nombre = '"+jTFEmpresa.getText()+"'"));
                     cli.setCorreo(jTFCorreo.getText());
                     cli.setTelefono(jTFTelefono.getText());
                     cli.setNombre(jTFNombre.getText());
@@ -338,7 +338,7 @@ public class PanelCliente extends javax.swing.JPanel {
             {
                 try
                 {
-                    cli.setEmpresa(SQL.getIdentificador("select * from Empresa where Nombre_Empresa = '"+jTFEmpresa.getText()+"'"));
+                    cli.setEmpresa(SQL.getIdentificador("select * from Empresa where Nombre = '"+jTFEmpresa.getText()+"'"));
                     cli.setCorreo(jTFCorreo.getText());
                     cli.setTelefono(jTFTelefono.getText());
                     cli.setNombre(jTFNombre.getText());

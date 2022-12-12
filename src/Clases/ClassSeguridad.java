@@ -14,7 +14,7 @@ import org.apache.commons.codec.digest.DigestUtils;
  * @author Diego Castro
  * @since 20/07/2020
  */
-public class ClassSeguridad 
+public class ClassSeguridad
 {
     /** Metodo para encriptar una cadena de texto enviada como parametro
      * @param clave contiene la clave que se desea encritar

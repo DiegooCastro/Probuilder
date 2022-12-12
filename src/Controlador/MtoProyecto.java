@@ -29,27 +29,26 @@ public class MtoProyecto
             String sql;
             if (var.getUbicacion() != null || var.getDescripcion() != null) 
             {
-                sql = "insert into Proyecto (Estado , Cliente , Supervisor ,Tipo_Proyecto , Nombre_Proyecto , FechaInicio , FechaFin ,Ubicacion , Descripcion_Proyecto) values(?,?,?,?,?,?,?,?,?)";
+                sql = "insert into Proyecto (Id_proyecto, Estado , Cliente , Supervisor ,Tipo_Proyecto , Nombre_Proyecto , FechaInicio , FechaFin ,Ubicacion , Descripcion_Proyecto) values(default,default,?,?,?,?,?,?,?,?)";
             }
             else
             {
-                sql = "insert into Proyecto (Estado , Cliente , Supervisor ,Tipo_Proyecto , Nombre_Proyecto ,FechaInicio , FechaFin) values(?,?,?,?,?,?,?)";
+                sql = "insert into Proyecto (Id_proyecto, Estado , Cliente , Supervisor ,Tipo_Proyecto , Nombre_Proyecto ,FechaInicio , FechaFin) values(default,default,?,?,?,?,?,?)";
             }
             
             ps = con.getConnection().prepareStatement(sql);
-            ps.setInt(1, var.getEstado());
-            ps.setInt(2, var.getCliente());
-            ps.setInt(3, var.getSupervisor());
-            ps.setInt(4, var.getTipo());
-            ps.setString(5, var.getProyecto());
-            ps.setDate(6, var.getFechaInicio());
-            ps.setDate(7, var.getFechaFin());
+            ps.setInt(1, var.getCliente());
+            ps.setInt(2, var.getSupervisor());
+            ps.setInt(3, var.getTipo());
+            ps.setString(4, var.getProyecto());
+            ps.setObject(5, var.getFechaInicio());
+            ps.setObject(6, var.getFechaFin());
             
             
             if (var.getUbicacion() != null || var.getDescripcion() != null) 
             {
-                ps.setString(8, var.getUbicacion());
-                ps.setString(9, var.getDescripcion());
+                ps.setString(7, var.getUbicacion());
+                ps.setString(8, var.getDescripcion());
             }
             
             if (!ps.execute()) 
@@ -75,31 +74,30 @@ public class MtoProyecto
             
             if (var.getUbicacion() != null || var.getDescripcion() != null) 
             {
-                sql = "update Proyecto set Estado = ? , Cliente = ? ,Supervisor = ? , Tipo_Proyecto = ? ,Nombre_Proyecto = ? , FechaInicio = ?, FechaFin = ?,Ubicacion = ? ,Descripcion_Proyecto = ? where Id_Proyecto = ?";
+                sql = "update Proyecto set Cliente = ? ,Supervisor = ? , Tipo_Proyecto = ? ,Nombre_Proyecto = ? , FechaInicio = ?, FechaFin = ?,Ubicacion = ? ,Descripcion_Proyecto = ? where Id_Proyecto = ?";
             }
             else
             {
-                 sql = "update Proyecto set Estado = ? , Cliente = ? ,Supervisor = ? , Tipo_Proyecto = ? ,Nombre_Proyecto = ? , FechaInicio = ?, FechaFin = ? where Id_Proyecto = ?";
+                 sql = "update Proyecto set Cliente = ? ,Supervisor = ? , Tipo_Proyecto = ? ,Nombre_Proyecto = ? , FechaInicio = ?, FechaFin = ? where Id_Proyecto = ?";
             }
             
             ps = con.getConnection().prepareStatement(sql);
-            ps.setInt(1, var.getEstado());
-            ps.setInt(2, var.getCliente());
-            ps.setInt(3, var.getSupervisor());
-            ps.setInt(4, var.getTipo());
-            ps.setString(5, var.getProyecto());
-            ps.setDate(6, var.getFechaInicio());
-            ps.setDate(7, var.getFechaFin());                
+            ps.setInt(1, var.getCliente());
+            ps.setInt(2, var.getSupervisor());
+            ps.setInt(3, var.getTipo());
+            ps.setString(4, var.getProyecto());
+            ps.setObject(5, var.getFechaInicio());
+            ps.setObject(6, var.getFechaFin());                
             
             if (var.getUbicacion() != null || var.getDescripcion() != null) 
             {
-                ps.setString(8, var.getUbicacion());
-                ps.setString(9, var.getDescripcion());
-                ps.setInt(10, var.getId());
+                ps.setString(7, var.getUbicacion());
+                ps.setString(8, var.getDescripcion());
+                ps.setInt(9, var.getId());
             }
             else
             {
-                ps.setInt(8, var.getId());
+                ps.setInt(7, var.getId());
             }
             
             if (!ps.execute()) 
@@ -119,7 +117,7 @@ public class MtoProyecto
     //Declaracion de atributos
     private String proyecto,descripcion,ubicacion,nombreCliente,apellidoCliente;
     private int estado,supervisor,tipo,cliente,id;
-    private Date fechaInicio,fechaFin;
+    private Object fechaInicio,fechaFin;
     
     /**
      * @return the id
@@ -264,28 +262,28 @@ public class MtoProyecto
     /**
      * @return the fechaInicio
      */
-    public Date getFechaInicio() {
+    public Object getFechaInicio() {
         return fechaInicio;
     }
 
     /**
      * @param fechaInicio the fechaInicio to set
      */
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(Object fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
     /**
      * @return the fechaFin
      */
-    public Date getFechaFin() {
+    public Object getFechaFin() {
         return fechaFin;
     }
 
     /**
      * @param fechaFin the fechaFin to set
      */
-    public void setFechaFin(Date fechaFin) {
+    public void setFechaFin(Object fechaFin) {
         this.fechaFin = fechaFin;
     }
 }

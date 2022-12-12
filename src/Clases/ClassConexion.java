@@ -29,7 +29,7 @@ public class ClassConexion
         try
         {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            con=DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=Proyecto", "sa", "2002");
+            con=DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=pruebina", "sa", "2002");
         }
         catch (ClassNotFoundException | SQLException e)
         {
@@ -44,7 +44,7 @@ public class ClassConexion
         try 
         { 
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Smart_Power","postgres", "2002");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/pr","postgres", "2002");
         } 
         catch (SQLException ex)     
         {

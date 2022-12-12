@@ -11,7 +11,6 @@ import FiveCodMover.FiveCodMoverJFrame;
 import Vista.Paneles.PanelAlmacenaje;
 import Vista.Paneles.PanelAsignaciones;
 import Vista.Paneles.PanelPersonal;
-import Vista.PreLogin.PnlPrimerRoot;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
@@ -147,7 +146,7 @@ public class frmCatalogoMini extends javax.swing.JFrame {
                     }
                     else
                     {
-                        PnlPrimerRoot.txtProfesion.setText(registro);
+                        //PnlPrimerRoot.txtProfesion.setText(registro);
                     }
                 break;
             
