@@ -5,12 +5,10 @@
  */
 package Views.Panels;
 
-import Helpers.Funciones;
 import Helpers.FuncionesSQL;
 import Models.Preliminares;
 import Models.Presupuesto;
-import Views.Frames.frmAlerta;
-import javax.swing.JOptionPane;
+import Views.Frames.frmAlert;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -261,7 +259,7 @@ public class PanelPreliminares extends javax.swing.JPanel {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (jTFGastoPreliminar.getText().isEmpty() || jTFDescripcion.getText().isEmpty() || jTFPrecioTotal.getText().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             var.setPresupuesto(idPresupuesto);
             var.setGastoPreliminar(jTFGastoPreliminar.getText());
@@ -281,7 +279,7 @@ public class PanelPreliminares extends javax.swing.JPanel {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         if (jTFGastoPreliminar.getText().isEmpty() || jTFDescripcion.getText().isEmpty() || jTFPrecioTotal.getText().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             var.setPresupuesto(idPresupuesto);
             var.setGastoPreliminar(jTFGastoPreliminar.getText());
@@ -305,7 +303,7 @@ public class PanelPreliminares extends javax.swing.JPanel {
                 borrarCampos();
             }
         } else {
-            new frmAlerta("Seleccione el registro que desea eliminar", 2).setVisible(true);
+            new frmAlert("Seleccione el registro que desea eliminar", 2).setVisible(true);
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 

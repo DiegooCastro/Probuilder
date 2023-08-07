@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  *
@@ -35,5 +36,12 @@ public abstract class Database {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
         return con;
+    }
+    
+    // Metodo para encriptar la clave con MD5
+    public String encryption(String clave)
+    {
+        String encriptacion = DigestUtils.md5Hex(clave);
+        return encriptacion;
     }
 }

@@ -9,7 +9,7 @@ import Helpers.Funciones;
 import Helpers.FuncionesSQL;
 import Models.GastosMateriales;
 import Models.Presupuesto;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import Views.Frames.frmBuscador;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;

@@ -7,7 +7,7 @@ package Views.Panels;
 
 import Helpers.FuncionesSQL;
 import Models.Presupuesto;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import Views.Frames.frmBuscador;
 import Views.Frames.frmCostoProyecto;
 
@@ -162,7 +162,7 @@ public class PanelPresupuesto extends javax.swing.JPanel {
             frmCostoProyecto c = new frmCostoProyecto(subtotales);
             c.setVisible(true);
         } else {
-            new frmAlerta("Seleccione uno de los proyectos", 2).setVisible(true);
+            new frmAlert("Seleccione uno de los proyectos", 2).setVisible(true);
         }
     }//GEN-LAST:event_btnBorrarCampos1ActionPerformed
 

@@ -8,7 +8,7 @@ package Models;
 import Helpers.Database;
 import Helpers.Funciones;
 import Helpers.FuncionesSQL;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,7 +36,7 @@ public class Materiales extends Database {
             ps.setInt(2, var.getIdUnidad());
             rs = ps.executeQuery();
             if (rs.next()) {
-                new frmAlerta("El material ya se encuentra registrado", 2).setVisible(true);
+                new frmAlert("El material ya se encuentra registrado", 2).setVisible(true);
             } else {
                 sql = "insert into Materiales (Unidad , Nombre_Material, Descripcion, Foto_Material, Estado,Cantidad_Disponible) values(?,?,?,?,?,?)";
                 ps = super.getConnection().prepareStatement(sql);
@@ -47,7 +47,7 @@ public class Materiales extends Database {
                 ps.setBoolean(5, false);
                 ps.setInt(6, var.getDisponible());
                 if (!ps.execute()) {
-                    new frmAlerta("Material registrado correctamente", 1).setVisible(true);
+                    new frmAlert("Material registrado correctamente", 1).setVisible(true);
                     retorno = true;
                 }
             }
@@ -66,7 +66,7 @@ public class Materiales extends Database {
             ps.setInt(2, var.getIdMaterial());
             rs = ps.executeQuery();
             if (rs.next()) {
-                new frmAlerta("El material ya se encuentra registrado", 2).setVisible(true);
+                new frmAlert("El material ya se encuentra registrado", 2).setVisible(true);
             } else {
                 sql = "update Materiales set Unidad = ? , Nombre_Material = ? , Descripcion = ? where Id_Material = ?";
                 ps = super.getConnection().prepareStatement(sql);
@@ -84,13 +84,13 @@ public class Materiales extends Database {
                             ps.executeUpdate();
                         }
                     }
-                    new frmAlerta("Material modificado correctamente", 1).setVisible(true);
+                    new frmAlert("Material modificado correctamente", 1).setVisible(true);
                     retorno = true;
                 }
             }
 
         } catch (HeadlessException | SQLException e) {
-            new frmAlerta("El material se encuentra registrado", 2).setVisible(true);
+            new frmAlert("El material se encuentra registrado", 2).setVisible(true);
         }
         return retorno;
     }
@@ -107,12 +107,12 @@ public class Materiales extends Database {
             ps.setDouble(5, var.getPrecioUnitari());
             ps.setDouble(6, var.getMontoCompra());
             if (!ps.execute()) {
-                new frmAlerta("Compra de material registrada correctamente", 1).setVisible(true);
+                new frmAlert("Compra de material registrada correctamente", 1).setVisible(true);
                 retorno = true;
                 ingresarAlmacenaje(var.getCantidadComprada(), var.getMaterial());
             }
         } catch (HeadlessException | SQLException e) {
-            new frmAlerta("Error al ingresar compra de material", 3).setVisible(true);
+            new frmAlert("Error al ingresar compra de material", 3).setVisible(true);
             System.out.println(e);
         }
         return retorno;
@@ -129,7 +129,7 @@ public class Materiales extends Database {
             }
             ps.close();
         } catch (HeadlessException | SQLException e) {
-            new frmAlerta("Error al modificar la cantidad de materiales", 3).setVisible(true);
+            new frmAlert("Error al modificar la cantidad de materiales", 3).setVisible(true);
             System.out.println(e);
         }
     }
@@ -145,12 +145,12 @@ public class Materiales extends Database {
             ps.setDouble(4, var.getMontoCompra());
             ps.setInt(5, var.getIdCompra());
             if (!ps.execute()) {
-                new frmAlerta("Compra de material modificada correctamente", 1).setVisible(true);
+                new frmAlert("Compra de material modificada correctamente", 1).setVisible(true);
                 retorno = true;
                 ingresarAlmacenaje(var.getCantidadReal(), var.getMaterial());
             }
         } catch (HeadlessException | SQLException e) {
-            new frmAlerta("Error al modificar compra de material", 3).setVisible(true);
+            new frmAlert("Error al modificar compra de material", 3).setVisible(true);
             System.out.println(e);
         }
         return retorno;

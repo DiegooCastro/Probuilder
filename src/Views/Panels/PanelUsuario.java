@@ -3,7 +3,7 @@ package Views.Panels;
 import Helpers.Funciones;
 import Helpers.FuncionesSQL;
 import Models.Usuarios;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import Views.Frames.frmBuscador;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -285,19 +285,19 @@ public class PanelUsuario extends javax.swing.JPanel {
 
     private void lblBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblBuscarMouseClicked
         if (jTFUsuario.getText().trim().isEmpty()) {
-            new frmAlerta("Debes ingresar el usuario que deseas buscar ", 2).setVisible(true);
+            new frmAlert("Debes ingresar el usuario que deseas buscar ", 2).setVisible(true);
         } else {
             if (idUsuario == -1) {
-                new frmAlerta("Selecciona un registro", 1).setVisible(true);
+                new frmAlert("Selecciona un registro", 1).setVisible(true);
             } else {
                 String usuario = '%' + jTFUsuario.getText() + '%';
                 String correo = '%' + jTFCorreo.getText() + '%';
                 String dui = '%' + jTFDUI.getText() + '%';
                 if (funSQL.busquedaFiltrada(tb, "select * from Vista_Usuarios where Usuario like '" + usuario + "' or Correo_Electronico like '" + correo + "' or DUI like '" + dui + "'")) {
-                    new frmAlerta("Se encontraron los siguientes registros", 1).setVisible(true);
+                    new frmAlert("Se encontraron los siguientes registros", 1).setVisible(true);
                     Borrar_Campos();
                 } else {
-                    new frmAlerta("No se encontro ningun registro", 2).setVisible(true);
+                    new frmAlert("No se encontro ningun registro", 2).setVisible(true);
                 }
             }
         }
@@ -305,7 +305,7 @@ public class PanelUsuario extends javax.swing.JPanel {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (jTFUsuario.getText().trim().isEmpty() || jTFCorreo.getText().trim().isEmpty() || jTFDUI.getText().trim().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             if (jTFCorreo.getText().endsWith("@gmail.com")) {
                 try {
@@ -319,10 +319,10 @@ public class PanelUsuario extends javax.swing.JPanel {
                         Borrar_Campos();
                     }
                 } catch (Exception e) {
-                    new frmAlerta("Ingrese el tipo de dato correcto", 3).setVisible(true);
+                    new frmAlert("Ingrese el tipo de dato correcto", 3).setVisible(true);
                 }
             } else {
-                new frmAlerta("Ingrese un correo electronico valido", 2).setVisible(true);
+                new frmAlert("Ingrese un correo electronico valido", 2).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
@@ -333,7 +333,7 @@ public class PanelUsuario extends javax.swing.JPanel {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         if (jTFUsuario.getText().trim().isEmpty() || jTFCorreo.getText().trim().isEmpty() || jTFDUI.getText().trim().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             if (jTFCorreo.getText().endsWith("@gmail.com")) {
                 try {
@@ -347,10 +347,10 @@ public class PanelUsuario extends javax.swing.JPanel {
                         Borrar_Campos();
                     }
                 } catch (Exception e) {
-                    new frmAlerta("Ingrese el tipo de dato correcto", 3).setVisible(true);
+                    new frmAlert("Ingrese el tipo de dato correcto", 3).setVisible(true);
                 }
             } else {
-                new frmAlerta("Ingrese un correo electronico valido", 2).setVisible(true);
+                new frmAlert("Ingrese un correo electronico valido", 2).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnModificarActionPerformed
@@ -383,7 +383,7 @@ public class PanelUsuario extends javax.swing.JPanel {
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         if (fila < 0) {
-            new frmAlerta("Selecciona el registro que deseas eliminar", 2).setVisible(true);
+            new frmAlert("Selecciona el registro que deseas eliminar", 2).setVisible(true);
         } else {
             if (JOptionPane.showConfirmDialog(null, "Deseas eliminar este registro", "Confirme", JOptionPane.YES_NO_OPTION) == 0) {
                 boolean accion;

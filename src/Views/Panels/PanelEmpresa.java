@@ -4,7 +4,7 @@ import Helpers.Funciones;
 import Helpers.FuncionesSQL;
 import Helpers.Imagen;
 import Models.Empresa;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -302,7 +302,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (jTFEmpresa.getText().trim().isEmpty() || jTFUbicacion.getText().trim().isEmpty() || jTFTelefono.getText().trim().isEmpty() || jTFTelefono.getText().trim().isEmpty() || jTFTelefono2.getText().trim().isEmpty()) {
-            new frmAlerta("Complete los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete los campos solicitados", 2).setVisible(true);
         } else {
             if (jTFCorreo.getText().endsWith("@gmail.com")) {
                 try {
@@ -324,14 +324,14 @@ public class PanelEmpresa extends javax.swing.JPanel {
                     Borrar_Campos();
                 }
             } else {
-                new frmAlerta("Ingrese un correo electronico valido", 2).setVisible(true);
+                new frmAlert("Ingrese un correo electronico valido", 2).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         if (jTFEmpresa.getText().trim().isEmpty() || jTFUbicacion.getText().trim().isEmpty() || jTFTelefono.getText().trim().isEmpty() || jTFTelefono.getText().trim().isEmpty() || jTFTelefono2.getText().trim().isEmpty()) {
-            new frmAlerta(" Complete los campos solicitados", 2).setVisible(true);
+            new frmAlert(" Complete los campos solicitados", 2).setVisible(true);
         } else {
             if (jTFCorreo.getText().endsWith("@gmail.com")) {
                 try {
@@ -354,7 +354,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
                     Borrar_Campos();
                 }
             } else {
-                new frmAlerta("Ingrese un correo electronico valido", 2).setVisible(true);
+                new frmAlert("Ingrese un correo electronico valido", 2).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnModificarActionPerformed
@@ -391,15 +391,15 @@ public class PanelEmpresa extends javax.swing.JPanel {
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         if (jTFEmpresa.getText().trim().isEmpty()) {
-            new frmAlerta("Ingrese el nombre de la empresa", 2).setVisible(true);
+            new frmAlert("Ingrese el nombre de la empresa", 2).setVisible(true);
         } else {
             String nombreEmpresa = "%" + jTFEmpresa.getText() + "%";
             String telefonoEmpresa = "%" + jTFTelefono.getText() + "%";
             String tipoEmpresa = cmbTipo.getSelectedItem().toString();
             if (SQL.busquedaFiltrada(tb, "select * from Vista_Empresa where nombre_empresa like '" + nombreEmpresa + "' or Telefono = '" + telefonoEmpresa + "' and Tipo_Empresa = '" + tipoEmpresa + "'")) {
-                new frmAlerta("Se encontraron los siguentes registros", 3).setVisible(true);
+                new frmAlert("Se encontraron los siguentes registros", 3).setVisible(true);
             } else {
-                new frmAlerta("No se encontro ningun registro", 3).setVisible(true);
+                new frmAlert("No se encontro ningun registro", 3).setVisible(true);
             }
         }
     }//GEN-LAST:event_jLabel8MouseClicked

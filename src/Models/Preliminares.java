@@ -7,7 +7,7 @@ package Models;
 
 import Helpers.Database;
 import Helpers.FuncionesSQL;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -33,7 +33,7 @@ public class Preliminares extends Database {
             ps.setInt(2, var.getPresupuesto());
             rs = ps.executeQuery();
             if (rs.next()) {
-                new frmAlerta("El gasto ya esta registrado en el presupuesto", 2).setVisible(true);
+                new frmAlert("El gasto ya esta registrado en el presupuesto", 2).setVisible(true);
             } else {
                 sql = "insert into Gastos_Preliminares (Id_GastoPreliminar,Presupuesto,Gasto,Precio_Total,Descripcion) values(default,?,?,?,?)";
                 ps = super.getConnection().prepareStatement(sql);
@@ -42,7 +42,7 @@ public class Preliminares extends Database {
                 ps.setDouble(3, var.getPrecioTotal());
                 ps.setString(4, var.getDescripcion());
                 if (!ps.execute()) {
-                    new frmAlerta("Gasto preliminar registrado correctamente", 1).setVisible(true);
+                    new frmAlert("Gasto preliminar registrado correctamente", 1).setVisible(true);
                     retorno = true;
                 }
             }
@@ -62,7 +62,7 @@ public class Preliminares extends Database {
             ps.setString(3, var.getDescripcion());
             ps.setInt(4, var.getIdGastoPreliminar());
             if (!ps.execute()) {
-                new frmAlerta("Gasto preliminar modificado correctamente", 1).setVisible(true);
+                new frmAlert("Gasto preliminar modificado correctamente", 1).setVisible(true);
                 retorno = true;
             }
         } catch (HeadlessException | SQLException e) {
@@ -78,7 +78,7 @@ public class Preliminares extends Database {
             ps = super.getConnection().prepareStatement(sql);
             ps.setInt(1, var.getIdGastoPreliminar());
             if (!ps.execute()) {
-                new frmAlerta("Gasto preliminar eliminado correctamente", 2).setVisible(true);
+                new frmAlert("Gasto preliminar eliminado correctamente", 2).setVisible(true);
                 retorno = true;
             }
         } catch (HeadlessException | SQLException e) {

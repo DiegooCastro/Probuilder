@@ -5,7 +5,7 @@ import Helpers.Funciones;
 import Helpers.FuncionesSQL;
 import Helpers.Imagen;
 import Models.Proyecto;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import Views.Frames.frmBuscador;
 import Views.Frames.frmGaleria;
 import javax.swing.table.DefaultTableModel;
@@ -357,7 +357,7 @@ public class PanelProyecto extends javax.swing.JPanel {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (jTFProyecto.getText().trim().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             if (jDateInicio.getDatoFecha().before(jDateFin.getDatoFecha())) {
                 fun.separarCliente(jTFCliente, pro);
@@ -385,7 +385,7 @@ public class PanelProyecto extends javax.swing.JPanel {
                     borrarCampos();
                 }
             } else {
-                new frmAlerta("Ingresa fecha inicio menor a la final", 4).setVisible(true);
+                new frmAlert("Ingresa fecha inicio menor a la final", 4).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
@@ -397,7 +397,7 @@ public class PanelProyecto extends javax.swing.JPanel {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         if (jTFProyecto.getText().trim().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             if (jDateInicio.getDatoFecha().before(jDateFin.getDatoFecha())) {
                 try {
@@ -427,7 +427,7 @@ public class PanelProyecto extends javax.swing.JPanel {
                     borrarCampos();
                 }
             } else {
-                new frmAlerta("Ingresa fecha inicio menor a la final", 4).setVisible(true);
+                new frmAlert("Ingresa fecha inicio menor a la final", 4).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnModificarActionPerformed
@@ -437,7 +437,7 @@ public class PanelProyecto extends javax.swing.JPanel {
             frmGaleria c = new frmGaleria(idImagenes, idProyecto);
             c.setVisible(true);
         } else {
-            new frmAlerta("Debes seleccionar un proyecto", 2).setVisible(true);
+            new frmAlert("Debes seleccionar un proyecto", 2).setVisible(true);
         }
     }//GEN-LAST:event_btnImagenesActionPerformed
 

@@ -3,7 +3,7 @@ package Views.Panels;
 import Helpers.FuncionesSQL;
 import Helpers.Imagen;
 import Models.Materiales;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import Views.Frames.frmCatalogoMini;
 import javax.swing.table.DefaultTableModel;
 
@@ -302,7 +302,7 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (jTFMaterial.getText().isEmpty() || jTFDescripcion.getText().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             obj.setDescripcion(jTFDescripcion.getText());
             obj.setIdUnidad(sql.getIdentificador("select * from Unidad_Medida where Unidad_Medida = '" + jTFUnidad.getText() + "'"));
@@ -323,7 +323,7 @@ public class PanelAlmacenaje extends javax.swing.JPanel {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         if (jTFMaterial.getText().isEmpty() || jTFDescripcion.getText().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             obj.setDescripcion(jTFDescripcion.getText());
             obj.setIdUnidad(sql.getIdentificador("select * from Unidad_Medida where Unidad_Medida = '" + jTFUnidad.getText() + "'"));

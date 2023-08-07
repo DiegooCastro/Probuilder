@@ -7,7 +7,7 @@ package Models;
 
 import Helpers.Database;
 import Helpers.FuncionesSQL;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -42,7 +42,7 @@ public class Usuarios extends Database {
             ps.setString(1, var.getUsuario());
             rs = ps.executeQuery();
             if (rs.next()) {
-                new frmAlerta("El usuario ya esta registrado en el sistema", 2).setVisible(true);
+                new frmAlert("El usuario ya esta registrado en el sistema", 2).setVisible(true);
             } else {
                 sql = "select * from Usuario where Correo_Electronico = ? or Trabajador = ?";
                 ps = super.getConnection().prepareStatement(sql);
@@ -50,7 +50,7 @@ public class Usuarios extends Database {
                 ps.setInt(2, var.getIdTrabajador());
                 rs = ps.executeQuery();
                 if (rs.next()) {
-                    new frmAlerta("El empleado esta asignado a un usuario", 2).setVisible(true);
+                    new frmAlert("El empleado esta asignado a un usuario", 2).setVisible(true);
                 } else {
                     sql = "insert into Usuario (Id_Usuario,Trabajador,Estado,Tipo,Usuario,Clave,Correo_Electronico) values(default,?,default,?,?,?,?)";
                     ps = super.getConnection().prepareStatement(sql);
@@ -60,16 +60,16 @@ public class Usuarios extends Database {
                     ps.setString(4, var.getClave());
                     ps.setString(5, var.getCorreo());
                     if (!ps.execute()) {
-                        new frmAlerta("Usuario registrado correctamente", 1).setVisible(true);
+                        new frmAlert("Usuario registrado correctamente", 1).setVisible(true);
                         respuesta = true;
                     } else {
-                        new frmAlerta("Error al registrar usuario", 3).setVisible(true);
+                        new frmAlert("Error al registrar usuario", 3).setVisible(true);
                     }
                 }
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
             System.out.println(e);
         }
         return respuesta;
@@ -91,14 +91,14 @@ public class Usuarios extends Database {
             ps.setInt(4, var.getIdTrabajador());
             ps.setInt(5, var.getIdUsuario());
             if (!ps.execute()) {
-                new frmAlerta("Usuario actualizado correctamente", 1).setVisible(true);
+                new frmAlert("Usuario actualizado correctamente", 1).setVisible(true);
                 respuesta = true;
             } else {
-                new frmAlerta("Error al modificar datos", 2).setVisible(true);
+                new frmAlert("Error al modificar datos", 2).setVisible(true);
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
         }
         return respuesta;
     }
@@ -118,14 +118,14 @@ public class Usuarios extends Database {
             ps.setBoolean(1, accion);
             ps.setInt(2, id);
             if (!ps.execute()) {
-                new frmAlerta("Usuario desactivado correctamente", 1).setVisible(true);
+                new frmAlert("Usuario desactivado correctamente", 1).setVisible(true);
                 respuesta = true;
             } else {
-                new frmAlerta("Error al desactivar usuario", 3).setVisible(true);
+                new frmAlert("Error al desactivar usuario", 3).setVisible(true);
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
         }
         return respuesta;
     }

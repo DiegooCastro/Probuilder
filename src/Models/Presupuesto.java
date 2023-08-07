@@ -6,7 +6,7 @@
 package Models;
 
 import Helpers.Database;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -41,10 +41,10 @@ public class Presupuesto extends Database {
                 datos[4] = "$" + f.format(rs.getDouble(5));
                 datos[5] = "$" + f.format(rs.getDouble(6));
             } else {
-                new frmAlerta("No hay presupuesto", 3).setVisible(true);
+                new frmAlert("No hay presupuesto", 3).setVisible(true);
             }
         } catch (HeadlessException | SQLException e) {
-            new frmAlerta("Error critico al cargar presupuesto", 3).setVisible(true);
+            new frmAlert("Error critico al cargar presupuesto", 3).setVisible(true);
             System.out.println(e);
         }
         return datos;
@@ -61,7 +61,7 @@ public class Presupuesto extends Database {
                 retorno = true;
             }
         } catch (HeadlessException | SQLException e) {
-            new frmAlerta("Error critico al actualizar totales", 3).setVisible(true);
+            new frmAlert("Error critico al actualizar totales", 3).setVisible(true);
             System.out.println(e);
         }
         return retorno;

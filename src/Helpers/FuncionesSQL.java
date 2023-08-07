@@ -5,7 +5,7 @@
  */
 package Helpers;
 
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,7 +31,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class FuncionesSQL extends Database {
 
-    Encriptacion seg = new Encriptacion();
     private ResultSetMetaData rm;
     private PreparedStatement ps;
     private Statement st;
@@ -53,7 +52,7 @@ public class FuncionesSQL extends Database {
                 cmb.addItem(rs.getString(2));
             }
         } catch (SQLException e) {
-            new frmAlerta("Error critico al cargar combobox", 3).setVisible(true);
+            new frmAlert("Error critico al cargar combobox", 3).setVisible(true);
         }
     }
 
@@ -83,7 +82,7 @@ public class FuncionesSQL extends Database {
                 tabla.addRow(o);
             }
         } catch (SQLException e) {
-            new frmAlerta("Error al cargar tabla", 3).setVisible(true);
+            new frmAlert("Error al cargar tabla", 3).setVisible(true);
             System.out.println(e);
         }
     }
@@ -132,7 +131,7 @@ public class FuncionesSQL extends Database {
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error al realizar busqueda filtrada", 3).setVisible(true);
+            new frmAlert("Error al realizar busqueda filtrada", 3).setVisible(true);
         }
         return respuesta;
     }
@@ -148,7 +147,7 @@ public class FuncionesSQL extends Database {
                 correo = rs.getString(1);
             }
         } catch (Exception e) {
-            new frmAlerta("Error critico al obtener correo", 3).setVisible(true);
+            new frmAlert("Error critico al obtener correo", 3).setVisible(true);
         }
         return correo;
     }
@@ -166,7 +165,7 @@ public class FuncionesSQL extends Database {
             int dias = Integer.parseInt(String.valueOf((TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS))));
             o[1] = (o[0] / 30) * dias;
         } catch (SQLException e) {
-            new frmAlerta("Error obtener pago total", 3).setVisible(true);
+            new frmAlert("Error obtener pago total", 3).setVisible(true);
         }
         return o[1];
     }
@@ -182,7 +181,7 @@ public class FuncionesSQL extends Database {
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error al obtener funcion de fecha", 3).setVisible(true);
+            new frmAlert("Error al obtener funcion de fecha", 3).setVisible(true);
         }
         return fecha;
     }
@@ -212,10 +211,10 @@ public class FuncionesSQL extends Database {
             t.close();
             respuesta = true;
         } catch (AddressException ex) {
-            new frmAlerta("Error critico al enviar correo", 3).setVisible(true);
+            new frmAlert("Error critico al enviar correo", 3).setVisible(true);
             JOptionPane.showMessageDialog(null, ex);
         } catch (MessagingException ex) {
-            new frmAlerta("Error critico al enviar correo", 3).setVisible(true);
+            new frmAlert("Error critico al enviar correo", 3).setVisible(true);
             JOptionPane.showMessageDialog(null, ex);
         }
         return respuesta;
@@ -224,7 +223,7 @@ public class FuncionesSQL extends Database {
     public boolean actualizarClave(String clave, String usuario) {
         boolean retorno = false;
         try {
-            String claveEncriptada = seg.encriptacionMD5(clave);
+            String claveEncriptada = super.encryption(clave);
             String sql = "update Usuario set clave = ? where usuario = ?";
             ps = super.getConnection().prepareStatement(sql);
             ps.setString(1, claveEncriptada);
@@ -233,7 +232,7 @@ public class FuncionesSQL extends Database {
                 retorno = true;
             }
         } catch (SQLException e) {
-            new frmAlerta("Error critico al actualizar clave", 2).setVisible(true);
+            new frmAlert("Error critico al actualizar clave", 2).setVisible(true);
         }
         return retorno;
     }

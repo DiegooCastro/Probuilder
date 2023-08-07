@@ -8,7 +8,7 @@ package Models;
 import Helpers.Database;
 import Helpers.Funciones;
 import Helpers.FuncionesSQL;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -37,7 +37,7 @@ public class GastosMateriales extends Database {
             ps.setInt(2, var.getPresupuesto());
             rs = ps.executeQuery();
             if (rs.next()) {
-                new frmAlerta("El material ya se encuentra asignado al presupuesto", 2).setVisible(true);
+                new frmAlert("El material ya se encuentra asignado al presupuesto", 2).setVisible(true);
             } else {
                 sql = "insert into Gastos_Materiales (Id_GastoMateriales,Presupuesto,Material,Cantidad,Precio_Total,Fecha_Modificacion) values(default,?,?,?,?,default)";
                 ps = super.getConnection().prepareStatement(sql);
@@ -46,7 +46,7 @@ public class GastosMateriales extends Database {
                 ps.setInt(3, var.getCantidad());
                 ps.setDouble(4, var.getPrecioTotal());
                 if (!ps.execute()) {
-                    new frmAlerta("Detalle material ingresado correctamente", 1).setVisible(true);
+                    new frmAlert("Detalle material ingresado correctamente", 1).setVisible(true);
                     retorno = true;
                     actualizarBodega(var.getMaterial(), var.getDisponible());
                 }
@@ -67,7 +67,7 @@ public class GastosMateriales extends Database {
             ps.setDouble(3, var.getPrecioTotal());
             ps.setInt(4, var.getIdMateriales());
             if (!ps.execute()) {
-                new frmAlerta("Detalle de material modificado correctamente", 1).setVisible(true);
+                new frmAlert("Detalle de material modificado correctamente", 1).setVisible(true);
                 retorno = true;
                 actualizarBodega(var.getMaterial(), var.getDisponible());
             }
@@ -85,7 +85,7 @@ public class GastosMateriales extends Database {
             ps = super.getConnection().prepareStatement(sql);
             ps.setInt(1, var.getIdMateriales());
             if (!ps.execute()) {
-                new frmAlerta("Detalle de material eliminado correctamente", 1).setVisible(true);
+                new frmAlert("Detalle de material eliminado correctamente", 1).setVisible(true);
                 retorno = true;
                 actualizarBodega(var.getMaterial(), var.getDisponible());
             }

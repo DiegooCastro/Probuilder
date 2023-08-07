@@ -6,7 +6,7 @@
 package Models;
 
 import Helpers.Database;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -34,7 +34,7 @@ public class Asignaciones extends Database {
             ps.setDate(5, obj.getFechaFin());
             rs = ps.executeQuery();
             if (rs.next()) {
-                new frmAlerta("El encargado posee una asignacion en el proyecto", 2).setVisible(true);
+                new frmAlert("El encargado posee una asignacion en el proyecto", 2).setVisible(true);
             } else {
                 sql = "insert into Asignaciones_Proyecto (Proyecto , Asignacion , Estado_Asignacion , Encargado , Fecha_Inicio , Fecha_Fin , SueldoTotal)values (?,?,default,?,?,?,?)";
                 ps = super.getConnection().prepareStatement(sql);
@@ -45,7 +45,7 @@ public class Asignaciones extends Database {
                 ps.setDate(5, obj.getFechaFin());
                 ps.setDouble(6, obj.getGastoTotal());
                 if (!ps.execute()) {
-                    new frmAlerta("Asignacion registrada correctamente", 1).setVisible(true);
+                    new frmAlert("Asignacion registrada correctamente", 1).setVisible(true);
                     sql = "update Personal set Estado = false where Id_Personal = '" + obj.getEncargado() + "'";
                     ps = super.getConnection().prepareStatement(sql);
                     if (!ps.execute()) {
@@ -81,7 +81,7 @@ public class Asignaciones extends Database {
             ps.setDouble(6, obj.getGastoTotal());
             ps.setInt(7, id);
             if (!ps.execute()) {
-                new frmAlerta("Asignacion actividad modificada correctamente", 1).setVisible(true);
+                new frmAlert("Asignacion actividad modificada correctamente", 1).setVisible(true);
                 retorno = true;
             }
         } catch (SQLException e) {
@@ -97,7 +97,7 @@ public class Asignaciones extends Database {
             ps = super.getConnection().prepareStatement(sql);
             ps.setInt(1, id);
             if (!ps.execute()) {
-                new frmAlerta("Asignacion eliminada correctamente", 1).setVisible(true);
+                new frmAlert("Asignacion eliminada correctamente", 1).setVisible(true);
                 retorno = true;
             }
         } catch (SQLException e) {
@@ -126,7 +126,7 @@ public class Asignaciones extends Database {
                 System.out.println("Datos estadisticos obtenidos correctamente");
             }
         } catch (SQLException e) {
-            new frmAlerta("Error critico al obtener datos", 3).setVisible(true);
+            new frmAlert("Error critico al obtener datos", 3).setVisible(true);
             System.out.println(e);
         }
         return retorno;
@@ -144,7 +144,7 @@ public class Asignaciones extends Database {
                 System.out.println("Fecha de finalizacion obtenida correctamente");
             }
         } catch (SQLException e) {
-            new frmAlerta("Error critico al obtener datos", 3).setVisible(true);
+            new frmAlert("Error critico al obtener datos", 3).setVisible(true);
             System.out.println(e);
         }
         return retorno;
@@ -170,7 +170,7 @@ public class Asignaciones extends Database {
                     ps.setInt(1, obj.getEncargado());
                     ps.executeUpdate();
                 }
-                new frmAlerta("Asignacion modificada correctamente", 1).setVisible(true);
+                new frmAlert("Asignacion modificada correctamente", 1).setVisible(true);
                 retorno = true;
             }
         } catch (SQLException e) {

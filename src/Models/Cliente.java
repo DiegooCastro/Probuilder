@@ -6,7 +6,7 @@
 package Models;
 
 import Helpers.Database;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -36,7 +36,7 @@ public class Cliente extends Database {
             ps.setString(1, var.getDUI());
             rs = ps.executeQuery();
             if (rs.next()) {
-                new frmAlerta("El cliente ingresado esta registrado", 2).setVisible(true);
+                new frmAlert("El cliente ingresado esta registrado", 2).setVisible(true);
             } else {
                 String sql = "insert into Cliente (Empresa,Nombre,Apellido,Telefono,DUI,Correo_Electronico) values(?,?,?,?,?,?)";
                 ps = super.getConnection().prepareStatement(sql);
@@ -47,15 +47,15 @@ public class Cliente extends Database {
                 ps.setString(5, var.getDUI());
                 ps.setString(6, var.getCorreo());
                 if (!ps.execute()) {
-                    new frmAlerta("Cliente registrado correctamente", 1).setVisible(true);
+                    new frmAlert("Cliente registrado correctamente", 1).setVisible(true);
                     respuesta = true;
                 } else {
-                    new frmAlerta("Error al ingresar los datos del cliente", 3).setVisible(true);
+                    new frmAlert("Error al ingresar los datos del cliente", 3).setVisible(true);
                 }
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
             System.out.println(e);
         }
         return respuesta;
@@ -81,14 +81,14 @@ public class Cliente extends Database {
             ps.setString(6, var.getCorreo());
             ps.setInt(7, id);
             if (!ps.execute()) {
-                new frmAlerta("Datos del cliente modificados correctamente", 1).setVisible(true);
+                new frmAlert("Datos del cliente modificados correctamente", 1).setVisible(true);
                 respuesta = true;
             } else {
-                new frmAlerta("Error al modificar los datos del cliente", 3).setVisible(true);
+                new frmAlert("Error al modificar los datos del cliente", 3).setVisible(true);
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
             System.out.println(e);
         }
         return respuesta;

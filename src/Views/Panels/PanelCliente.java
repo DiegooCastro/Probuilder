@@ -3,7 +3,7 @@ package Views.Panels;
 import Helpers.Funciones;
 import Helpers.FuncionesSQL;
 import Models.Cliente;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import Views.Frames.frmBuscador;
 import javax.swing.table.DefaultTableModel;
 
@@ -291,7 +291,7 @@ public class PanelCliente extends javax.swing.JPanel {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (jTFEmpresa.getText().trim().isEmpty() || jTFNombre.getText().trim().isEmpty() || jTFCorreo.getText().trim().isEmpty() || jTFTelefono.getText().trim().isEmpty() || jTFApellido.getText().trim().isEmpty() || jTFDUI.getText().trim().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             if (jTFCorreo.getText().endsWith("@gmail.com")) {
                 try {
@@ -306,18 +306,18 @@ public class PanelCliente extends javax.swing.JPanel {
                         Borrar_Campos();
                     }
                 } catch (Exception e) {
-                    new frmAlerta("Ingrese el tipo de dato correctamente", 3).setVisible(true);
+                    new frmAlert("Ingrese el tipo de dato correctamente", 3).setVisible(true);
                     System.out.println(e);
                 }
             } else {
-                new frmAlerta("Ingrese un correo valido", 2).setVisible(true);
+                new frmAlert("Ingrese un correo valido", 2).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         if (jTFEmpresa.getText().trim().isEmpty() || jTFNombre.getText().trim().isEmpty() || jTFCorreo.getText().trim().isEmpty() || jTFTelefono.getText().trim().isEmpty() || jTFApellido.getText().trim().isEmpty() || jTFDUI.getText().trim().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             if (jTFCorreo.getText().endsWith("@gmail.com")) {
                 try {
@@ -332,10 +332,10 @@ public class PanelCliente extends javax.swing.JPanel {
                         Borrar_Campos();
                     }
                 } catch (Exception e) {
-                    new frmAlerta("Ingrese el tipo de dato correctamente", 3).setVisible(true);
+                    new frmAlert("Ingrese el tipo de dato correctamente", 3).setVisible(true);
                 }
             } else {
-                new frmAlerta("Ingrese un correo electronico valido", 2).setVisible(true);
+                new frmAlert("Ingrese un correo electronico valido", 2).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnModificarActionPerformed
@@ -377,15 +377,15 @@ public class PanelCliente extends javax.swing.JPanel {
 
     private void btnBusquedaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBusquedaMouseClicked
         if (jTFNombre.getText().trim().isEmpty()) {
-            new frmAlerta("Ingrese el nombre del cliente", 1).setVisible(true);
+            new frmAlert("Ingrese el nombre del cliente", 1).setVisible(true);
         } else {
             String nombre = "%" + jTFNombre.getText() + "%";
             String apellido = "%" + jTFApellido.getText() + "%";
             if (SQL.busquedaFiltrada(tb, "select * from Vista_Cliente where Nombre like '" + nombre + "' and Apellido like '" + apellido + "'")) {
-                new frmAlerta("Se encontraron los siguientes resultados", 4).setVisible(true);
+                new frmAlert("Se encontraron los siguientes resultados", 4).setVisible(true);
                 Borrar_Campos();
             } else {
-                new frmAlerta("No se encontro ningun cliente", 2).setVisible(true);
+                new frmAlert("No se encontro ningun cliente", 2).setVisible(true);
                 cargarTabla();
             }
         }

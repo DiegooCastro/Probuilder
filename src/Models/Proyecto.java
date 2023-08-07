@@ -6,7 +6,7 @@
 package Models;
 
 import Helpers.Database;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -41,11 +41,11 @@ public class Proyecto extends Database {
                 ps.setString(8, var.getDescripcion());
             }
             if (!ps.execute()) {
-                new frmAlerta("Proyecto ingresado correctamente", 1).setVisible(true);
+                new frmAlert("Proyecto ingresado correctamente", 1).setVisible(true);
                 retorno = true;
             }
         } catch (SQLException e) {
-            new frmAlerta("Error al ingresar los datos", 3).setVisible(true);
+            new frmAlert("Error al ingresar los datos", 3).setVisible(true);
             System.out.println(e);
         }
         return retorno;
@@ -75,11 +75,11 @@ public class Proyecto extends Database {
                 ps.setInt(7, var.getId());
             }
             if (!ps.execute()) {
-                new frmAlerta("Proyecto modificado correctamente", 1).setVisible(true);
+                new frmAlert("Proyecto modificado correctamente", 1).setVisible(true);
                 retorno = true;
             }
         } catch (SQLException e) {
-            new frmAlerta("Error al modificar los datos", 3).setVisible(true);
+            new frmAlert("Error al modificar los datos", 3).setVisible(true);
             System.out.println(e);
         }
         return retorno;

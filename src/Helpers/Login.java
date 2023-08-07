@@ -5,7 +5,7 @@
  */
 package Helpers;
 
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -64,6 +64,7 @@ public class Login extends Database {
      * @return si el inicio de sesion fue exitoso
      */
     public boolean iniciarSesion(Login obj) {
+        obj.setClave(super.encryption(obj.getClave()));
         boolean respuesta = false;
         try {
             query = "select * from Usuario where Usuario = ?";
@@ -95,13 +96,13 @@ public class Login extends Database {
                         nombreUsuario = rs.getString(4);
                         respuesta = true;
                     } else {
-                        new frmAlerta("La contraseña es incorrecta", 2).setVisible(true);
+                        new frmAlert("La contraseña es incorrecta", 2).setVisible(true);
                     }
                 } else {
-                    new frmAlerta("Su usuario esta bloqueado", 3).setVisible(true);
+                    new frmAlert("Su usuario esta bloqueado", 3).setVisible(true);
                 }
             } else {
-                new frmAlerta("Usuario no encontrado", 2).setVisible(true);
+                new frmAlert("El usuario ingresado no existe", 2).setVisible(true);
             }
         } catch (HeadlessException | SQLException e) {
             System.out.println("Error critico al iniciar sesion :" + e);

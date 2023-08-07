@@ -6,7 +6,7 @@
 package Models;
 
 import Helpers.Database;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,7 +38,7 @@ public class Empresa extends Database {
             ps.setString(1, var.getEmpresa());
             rs = ps.executeQuery();
             if (rs.next()) {
-                new frmAlerta(" La empresa ya esta registrada en el sistema", 2).setVisible(true);
+                new frmAlert(" La empresa ya esta registrada en el sistema", 2).setVisible(true);
             } else {
                 sql = "insert into Empresa (Id_Empresa,Tipo,Nombre,Ubicacion,Telefono,Correo,Telefono2,Logo) values(default,?,?,?,?,?,?,?)";
                 ps = super.getConnection().prepareStatement(sql);
@@ -50,13 +50,13 @@ public class Empresa extends Database {
                 ps.setString(6, var.getTelefono2());
                 ps.setBytes(7, var.getCargarLogo());
                 if (!ps.execute()) {
-                    new frmAlerta("Empresa registrada correctamente", 1).setVisible(true);
+                    new frmAlert("Empresa registrada correctamente", 1).setVisible(true);
                     respuesta = true;
                 }
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
             System.out.println(e);
         }
         return respuesta;
@@ -78,7 +78,7 @@ public class Empresa extends Database {
             ps.setInt(2, var.getIdEmpresa());
             rs = ps.executeQuery();
             if (rs.next()) {
-                new frmAlerta("El nombre de la empresa ya esta en uso", 2).setVisible(true);
+                new frmAlert("El nombre de la empresa ya esta en uso", 2).setVisible(true);
             } else {
                 sql = "update Empresa set Nombre = ? , Tipo = ? , Ubicacion= ?,Telefono = ?,Correo = ? , Telefono2 = ? where Id_Empresa = ?";
                 ps = super.getConnection().prepareStatement(sql);
@@ -90,7 +90,7 @@ public class Empresa extends Database {
                 ps.setString(6, var.getTelefono2());
                 ps.setInt(7, var.getIdEmpresa());
                 if (!ps.execute()) {
-                    new frmAlerta("Datos de la empresa modificados correctamente", 1).setVisible(true);
+                    new frmAlert("Datos de la empresa modificados correctamente", 1).setVisible(true);
                     respuesta = true;
                     if (var.getCargarLogo() != null) {
                         sql = "update Empresa set Logo = ? where Id_Empresa = ?";
@@ -102,12 +102,12 @@ public class Empresa extends Database {
                         }
                     }
                 } else {
-                    new frmAlerta("Error al modificar los datos", 3).setVisible(true);
+                    new frmAlert("Error al modificar los datos", 3).setVisible(true);
                 }
                 super.getConnection().close();
             }
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
             System.out.println(e);
         }
         return respuesta;
@@ -136,9 +136,9 @@ public class Empresa extends Database {
                 respuesta = true;
             }
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
         } catch (Exception e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
         }
         return respuesta;
     }

@@ -6,7 +6,7 @@ import Helpers.FuncionesSQL;
 import javax.swing.JOptionPane;
 import Models.Personal;
 import Helpers.Funciones;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import Views.Frames.frmCatalogoMini;
 
 /**
@@ -325,16 +325,16 @@ public class PanelPersonal extends javax.swing.JPanel {
 
     private void lblBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblBuscarMouseClicked
         if (jTFAccion.getText().trim().isEmpty()) {
-            new frmAlerta("Debes ingresar el nombre de la empresa que deseas buscar", 2).setVisible(true);
+            new frmAlert("Debes ingresar el nombre de la empresa que deseas buscar", 2).setVisible(true);
         } else {
             String nombre = '%' + jTFAccion.getText() + '%';
             String apellido = '%' + jTFApellido.getText() + '%';
             String dui = '%' + jTFDUI.getText() + '%';
             if (sql.busquedaFiltrada(tb, "select * from Vista_Personal where nombre like '" + nombre + "' or apellido like '" + apellido + "' or DUI like '" + dui + "'")) {
-                new frmAlerta("Se encontraron los siguientes registros", 1).setVisible(true);
+                new frmAlert("Se encontraron los siguientes registros", 1).setVisible(true);
                 BorrarCampos();
             } else {
-                new frmAlerta("No se encontro ningun registro en la base de datos", 3).setVisible(true);
+                new frmAlert("No se encontro ningun registro en la base de datos", 3).setVisible(true);
             }
         }
     }//GEN-LAST:event_lblBuscarMouseClicked
@@ -342,7 +342,7 @@ public class PanelPersonal extends javax.swing.JPanel {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (jTFAccion.getText().trim().isEmpty() || jTFApellido.getText().trim().isEmpty() || jTFTelefono.getText().trim().isEmpty() || jTFDUI.getText().trim().isEmpty() || jTFProfesion.getText().trim().isEmpty()) {
-            new frmAlerta("Completa todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Completa todos los campos solicitados", 2).setVisible(true);
         } else {
             try {
                 personal.setNombre(jTFAccion.getText());
@@ -356,7 +356,7 @@ public class PanelPersonal extends javax.swing.JPanel {
                     BorrarCampos();
                 }
             } catch (NumberFormatException e) {
-                new frmAlerta("Ingrese el tipo de dato correctamente", 3).setVisible(true);
+                new frmAlert("Ingrese el tipo de dato correctamente", 3).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
@@ -368,7 +368,7 @@ public class PanelPersonal extends javax.swing.JPanel {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         if (jTFAccion.getText().trim().isEmpty() || jTFApellido.getText().trim().isEmpty() || jTFTelefono.getText().trim().isEmpty() || jTFDUI.getText().trim().isEmpty() || jTFProfesion.getText().trim().isEmpty()) {
-            new frmAlerta("Completa todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Completa todos los campos solicitados", 2).setVisible(true);
         } else {
             try {
                 personal.setNombre(jTFNombre.getText());
@@ -383,14 +383,14 @@ public class PanelPersonal extends javax.swing.JPanel {
                     BorrarCampos();
                 }
             } catch (NumberFormatException e) {
-                new frmAlerta("Ingrese el tipo de dato correctamente", 3).setVisible(true);
+                new frmAlert("Ingrese el tipo de dato correctamente", 3).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         if (fila < 0) {
-            new frmAlerta("Selecciona el registro que deseas eliminar", 2).setVisible(true);
+            new frmAlert("Selecciona el registro que deseas eliminar", 2).setVisible(true);
         } else {
             if (JOptionPane.showConfirmDialog(null, "Deseas eliminar este registro", "Confirme", JOptionPane.YES_NO_OPTION) == 0) {
                 boolean accion;

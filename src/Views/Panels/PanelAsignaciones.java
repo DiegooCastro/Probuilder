@@ -10,7 +10,7 @@ import Helpers.Funciones;
 import Helpers.FuncionesSQL;
 import Models.Asignaciones;
 import Models.Presupuesto;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import Views.Frames.frmCatalogoMini;
 import Views.Frames.frmBuscador;
 import java.sql.Date;
@@ -38,7 +38,6 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         modelo = (DefaultTableModel) Tabla.getModel();
         this.proyecto = proyecto;
         cargarTabla();
-
         jTF[0] = jTFAsignacion;
         jTF[1] = jTFTotal;
         jTF[2] = jTFSueldo;
@@ -419,7 +418,7 @@ public class PanelAsignaciones extends javax.swing.JPanel {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if (jTFEncargado.getText().trim().isEmpty() || jTFAsignacion.getText().trim().isEmpty()) {
-            new frmAlerta("Complete todos los campos solicitados", 2).setVisible(true);
+            new frmAlert("Complete todos los campos solicitados", 2).setVisible(true);
         } else {
             if (jDCFechaInicio.getDatoFecha().before(jDCFechaFin.getDatoFecha())) {
                 if (!jTFTotal.getText().trim().isEmpty()) {
@@ -438,10 +437,10 @@ public class PanelAsignaciones extends javax.swing.JPanel {
                         borrarCampos();
                     }
                 } else {
-                    new frmAlerta("Calcule el gasto total a pagar", 2).setVisible(true);
+                    new frmAlert("Calcule el gasto total a pagar", 2).setVisible(true);
                 }
             } else {
-                new frmAlerta("La fecha inicial es mayor a la fecha final", 2).setVisible(true);
+                new frmAlert("La fecha inicial es mayor a la fecha final", 2).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
@@ -471,17 +470,17 @@ public class PanelAsignaciones extends javax.swing.JPanel {
                         borrarCampos();
                     }
                 } else {
-                    new frmAlerta("Calcule el gasto total a pagar", 2).setVisible(true);
+                    new frmAlert("Calcule el gasto total a pagar", 2).setVisible(true);
                 }
             } else {
-                new frmAlerta("La fecha inicial es mayor a la fecha final", 2).setVisible(true);
+                new frmAlert("La fecha inicial es mayor a la fecha final", 2).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         if (id == -1) {
-            new frmAlerta("Debes seleccionar el registro que deseas eliminar", 2).setVisible(true);
+            new frmAlert("Debes seleccionar el registro que deseas eliminar", 2).setVisible(true);
         } else {
             if (asig.eliminarAsignacion(id)) {
                 actualizarPresupuesto();

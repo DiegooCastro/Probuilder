@@ -6,7 +6,7 @@
 package Models;
 
 import Helpers.Database;
-import Views.Frames.frmAlerta;
+import Views.Frames.frmAlert;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -55,15 +55,15 @@ public class Personal extends Database {
                 ps.setInt(5, var.getProfesion());
                 ps.setDouble(6, var.getSueldo());
                 if (!ps.execute()) {
-                    new frmAlerta("Empleado registrado correctamente", 1).setVisible(true);
+                    new frmAlert("Empleado registrado correctamente", 1).setVisible(true);
                     respuesta = true;
                 } else {
-                    new frmAlerta("Error al ingresar al cliente", 2).setVisible(true);
+                    new frmAlert("Error al ingresar al cliente", 2).setVisible(true);
                 }
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
             System.out.println(e);
         }
         return respuesta;
@@ -90,14 +90,14 @@ public class Personal extends Database {
             ps.setDouble(7, var.getSueldo());
             ps.setInt(8, var.getIdPersonal());
             if (!ps.execute()) {
-                new frmAlerta("Datos del empleado modificados correctamente", 1).setVisible(true);
+                new frmAlert("Datos del empleado modificados correctamente", 1).setVisible(true);
                 respuesta = true;
             } else {
-                new frmAlerta("Error al ingresar al cliente", 3).setVisible(true);
+                new frmAlert("Error al ingresar al cliente", 3).setVisible(true);
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error critico de conexion", 3).setVisible(true);
+            new frmAlert("Error critico de conexion", 3).setVisible(true);
             System.out.println(e);
         }
         return respuesta;
@@ -118,14 +118,14 @@ public class Personal extends Database {
             ps.setBoolean(1, accion);
             ps.setInt(2, id);
             if (!ps.execute()) {
-                new frmAlerta("Registro inabilitado correctamente", 1).setVisible(true);
+                new frmAlert("Registro inabilitado correctamente", 1).setVisible(true);
                 respuesta = true;
             } else {
-                new frmAlerta("Error al ingresar al cliente", 3).setVisible(true);
+                new frmAlert("Error al ingresar al cliente", 3).setVisible(true);
             }
             super.getConnection().close();
         } catch (SQLException e) {
-            new frmAlerta("Error al eliminar al cliente", 3).setVisible(true);
+            new frmAlert("Error al eliminar al cliente", 3).setVisible(true);
             System.out.println(e);
         }
         return respuesta;
