@@ -1,7 +1,12 @@
 /* BASE DE DATOS POSTGRESQL PARA PROYECTO PROBUILDER
+*  Autor: Diego Castro
 *  Ultima actualizacion 11/12/2022
 *  Vistas, Triggers y funciones incluidas
 */
+
+create database db_probuilder;
+use db_probuilder;
+
 create table Profesion(
 Id_Profesion serial not null primary key,
 Profesion varchar(40) not null
