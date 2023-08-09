@@ -24,10 +24,11 @@ import javax.swing.JPanel;
  */
 public class frmMenuPrincipal extends javax.swing.JFrame {
 
-    public frmMenuPrincipal() {
+    public frmMenuPrincipal(String usuario) {
         initComponents();
         this.setLocationRelativeTo(null);
-        metodoInicial();
+        lblUsuario.setText("Usuario: " + usuario);
+        inicializarMenu();
         ocultarSubMenu(pnlTodos);
         ocultarSide(pnlSide);
     }
@@ -56,7 +57,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
      * Metodo que se encarga de ingresar los paneles btn dentro de las matrices
      * y colocar el borde
      */
-    private void metodoInicial() {
+    private void inicializarMenu() {
         this.getRootPane().setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLACK));
 
         pnlPresupuesto[0] = btnManoObra;
@@ -128,11 +129,11 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         lblAlmacenaje = new javax.swing.JLabel();
         lblConAlmacenaje = new javax.swing.JLabel();
         btnRegistroMat = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblRegistro = new javax.swing.JLabel();
+        IconoRegistro = new javax.swing.JLabel();
         btnCompraMat = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblCompraMateriales = new javax.swing.JLabel();
+        lblIconCompraMateriales = new javax.swing.JLabel();
         btnProyectos = new javax.swing.JPanel();
         lblProyecto = new javax.swing.JLabel();
         btnPresupuesto = new javax.swing.JPanel();
@@ -152,8 +153,9 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         pnlContenedor = new javax.swing.JPanel();
         pnlSuperior = new javax.swing.JPanel();
         lblCerrar = new javax.swing.JLabel();
-        lblByCastroll = new javax.swing.JLabel();
+        lblUsuario = new javax.swing.JLabel();
         lblMinimizar = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -181,25 +183,25 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         PanelIconos.setBackground(new java.awt.Color(28, 30, 42));
         PanelIconos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        IconoEmpresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/empresa.png"))); // NOI18N
+        IconoEmpresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/empresa.png"))); // NOI18N
         PanelIconos.add(IconoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, 50));
 
-        IconoTrabajadores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconTrabajadores.png"))); // NOI18N
+        IconoTrabajadores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/trabajador.png"))); // NOI18N
         PanelIconos.add(IconoTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 50));
 
-        IconoClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/empresarios.png"))); // NOI18N
+        IconoClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/enProceso.png"))); // NOI18N
         PanelIconos.add(IconoClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, 50));
 
-        IconoProyecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/torre.png"))); // NOI18N
+        IconoProyecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/proyecto.png"))); // NOI18N
         PanelIconos.add(IconoProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, 50));
 
-        IconoPrespuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconPresupuesto.png"))); // NOI18N
+        IconoPrespuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconPresupuesto.png"))); // NOI18N
         PanelIconos.add(IconoPrespuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, 50));
 
-        IconoAlmacen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/entrega.png"))); // NOI18N
+        IconoAlmacen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/entrega.png"))); // NOI18N
         PanelIconos.add(IconoAlmacen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, 50));
 
-        IconoCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/cerrar-sesion (3).png"))); // NOI18N
+        IconoCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cerrarSesion.png"))); // NOI18N
         IconoCerrarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 IconoCerrarSesionMouseClicked(evt);
@@ -207,28 +209,28 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         PanelIconos.add(IconoCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 630, -1, 60));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconControlAsignaciones.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/actividadRealizada.png"))); // NOI18N
         PanelIconos.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 252, -1, 40));
 
-        PanelSidePresupuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Xd.jpg"))); // NOI18N
+        PanelSidePresupuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Xd.jpg"))); // NOI18N
         PanelIconos.add(PanelSidePresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, -1));
 
-        PanelSideEmpresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Xd.jpg"))); // NOI18N
+        PanelSideEmpresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Xd.jpg"))); // NOI18N
         PanelIconos.add(PanelSideEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
 
-        PanelSideClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Xd.jpg"))); // NOI18N
+        PanelSideClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Xd.jpg"))); // NOI18N
         PanelIconos.add(PanelSideClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, -1));
 
-        PanelSideTrababajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Xd.jpg"))); // NOI18N
+        PanelSideTrababajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Xd.jpg"))); // NOI18N
         PanelIconos.add(PanelSideTrababajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
 
-        PanelSideProyectos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Xd.jpg"))); // NOI18N
+        PanelSideProyectos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Xd.jpg"))); // NOI18N
         PanelIconos.add(PanelSideProyectos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, -1));
 
-        PanelSideAsignaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Xd.jpg"))); // NOI18N
+        PanelSideAsignaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Xd.jpg"))); // NOI18N
         PanelIconos.add(PanelSideAsignaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, -1));
 
-        PanelSideAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Xd.jpg"))); // NOI18N
+        PanelSideAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Xd.jpg"))); // NOI18N
         PanelIconos.add(PanelSideAlmacenaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, -1));
 
         pnlMenu.add(PanelIconos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, -1));
@@ -271,7 +273,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnTrabajadores.add(lblTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
 
-        lblConTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconExpandir.png"))); // NOI18N
+        lblConTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/expandirSubmenu.png"))); // NOI18N
         lblConTrabajador.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblConTrabajadorMouseClicked(evt);
@@ -293,7 +295,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         lblPersonal.setText("PERSONAL");
         btnPersonal.add(lblPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, 50));
 
-        IconoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/obrero.png"))); // NOI18N
+        IconoPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/servicios.png"))); // NOI18N
         btnPersonal.add(IconoPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 50));
 
         btnUsuarios.setBackground(new java.awt.Color(35, 37, 49));
@@ -310,7 +312,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         lblUsuarios.setText("USUARIOS");
         btnUsuarios.add(lblUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, 50));
 
-        IconoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/icono_user.png"))); // NOI18N
+        IconoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/usuario.png"))); // NOI18N
         btnUsuarios.add(IconoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 50));
 
         btnClientes.setBackground(new java.awt.Color(44, 47, 62));
@@ -346,7 +348,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnAlmacen.add(lblAlmacenaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
 
-        lblConAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconExpandir.png"))); // NOI18N
+        lblConAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/expandirSubmenu.png"))); // NOI18N
         lblConAlmacenaje.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblConAlmacenajeMouseClicked(evt);
@@ -363,13 +365,13 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnRegistroMat.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("REGISTRO ");
-        btnRegistroMat.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 100, 30));
+        lblRegistro.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        lblRegistro.setText("REGISTRO ");
+        btnRegistroMat.add(lblRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 100, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconRegistroMat.png"))); // NOI18N
-        btnRegistroMat.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        IconoRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconRegistroMat.png"))); // NOI18N
+        btnRegistroMat.add(IconoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         btnCompraMat.setBackground(new java.awt.Color(35, 37, 49));
         btnCompraMat.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -380,13 +382,13 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnCompraMat.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("COMPRA");
-        btnCompraMat.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, 30));
+        lblCompraMateriales.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblCompraMateriales.setForeground(new java.awt.Color(255, 255, 255));
+        lblCompraMateriales.setText("COMPRA");
+        btnCompraMat.add(lblCompraMateriales, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconCompraMat.png"))); // NOI18N
-        btnCompraMat.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        lblIconCompraMateriales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/compraMat.png"))); // NOI18N
+        btnCompraMat.add(lblIconCompraMateriales, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
 
         btnProyectos.setBackground(new java.awt.Color(44, 47, 62));
         btnProyectos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -416,7 +418,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         lblPresupuesto.setText("PRESUPUESTO");
         btnPresupuesto.add(lblPresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 150, 50));
 
-        lblConPresupuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconBloqueado.png"))); // NOI18N
+        lblConPresupuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/bloqueado.png"))); // NOI18N
         lblConPresupuesto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblConPresupuestoMouseClicked(evt);
@@ -438,7 +440,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnManoObra.add(lblManoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, 30));
 
-        lblIconManoObra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconManoObra.png"))); // NOI18N
+        lblIconManoObra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconManoObra.png"))); // NOI18N
         btnManoObra.add(lblIconManoObra, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 4, -1, 40));
 
         btnGastoPreliminar.setBackground(new java.awt.Color(35, 37, 49));
@@ -455,7 +457,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnGastoPreliminar.add(lblPreliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, 30));
 
-        lblIconPreliminares.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconPreliminares.png"))); // NOI18N
+        lblIconPreliminares.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconPreliminares.png"))); // NOI18N
         btnGastoPreliminar.add(lblIconPreliminares, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         btnMaterial.setBackground(new java.awt.Color(28, 30, 42));
@@ -472,7 +474,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnMaterial.add(lblMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, 30));
 
-        lblIconMateriales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconMateriales.png"))); // NOI18N
+        lblIconMateriales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconMateriales.png"))); // NOI18N
         btnMaterial.add(lblIconMateriales, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         btnControlAsig.setBackground(new java.awt.Color(44, 47, 62));
@@ -560,39 +562,54 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         );
         pnlContenedorLayout.setVerticalGroup(
             pnlContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 690, Short.MAX_VALUE)
+            .addGap(0, 670, Short.MAX_VALUE)
         );
 
-        PanelPrincipal.add(pnlContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1010, 690));
+        PanelPrincipal.add(pnlContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 1010, 670));
 
         pnlSuperior.setBackground(new java.awt.Color(28, 30, 42));
 
-        lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/X.png"))); // NOI18N
+        lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cerrarMenu.png"))); // NOI18N
         lblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblCerrarMouseClicked(evt);
             }
         });
 
-        lblByCastroll.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblByCastroll.setForeground(new java.awt.Color(255, 255, 255));
-        lblByCastroll.setText("MADE BY: CASTROLL");
+        lblUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsuario.setText("Usuario: Castroll");
 
-        lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconMinimizar.png"))); // NOI18N
+        lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconMinimizar.png"))); // NOI18N
         lblMinimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblMinimizarMouseClicked(evt);
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(51, 153, 0));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 23, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 22, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout pnlSuperiorLayout = new javax.swing.GroupLayout(pnlSuperior);
         pnlSuperior.setLayout(pnlSuperiorLayout);
         pnlSuperiorLayout.setHorizontalGroup(
             pnlSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSuperiorLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(lblByCastroll)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1005, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblUsuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1004, Short.MAX_VALUE)
                 .addComponent(lblMinimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -602,7 +619,11 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
             pnlSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblCerrar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
             .addComponent(lblMinimizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(lblByCastroll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlSuperiorLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         PanelPrincipal.add(pnlSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1340, 60));
@@ -713,7 +734,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
                 cargarPaneles(pre, pnlContenedor);
                 mostrarPresupuesto++;
                 lblConPresupuesto.setVisible(true);
-                lblConPresupuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconBloqueado.png")));
+                lblConPresupuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/bloqueado.png")));
 
                 break;
 
@@ -743,8 +764,8 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         ocultarPanelesSide(PanelSideTrababajador);
         ocultarSubMenu(pnlTodos);
         if (mostrarTrabajador == 1) {
-            lblConAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconExpandir.png")));
-            lblConTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconContraer.png")));
+            lblConAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/expandirSubmenu.png")));
+            lblConTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/contraerSubmenu.png")));
             lblConPresupuesto.setVisible(false);
             mostrarSubMenu(pnlTrabajadores);
             mostrarTrabajador = 2;
@@ -762,13 +783,13 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         ocultarPanelesSide(PanelSideAlmacenaje);
         ocultarSubMenu(pnlTodos);
         if (mostrarAlmacen == 1) {
-            lblConTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconExpandir.png")));
-            lblConAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconContraer.png")));
+            lblConTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/expandirSubmenu.png")));
+            lblConAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/contraerSubmenu.png")));
             lblConPresupuesto.setVisible(false);
             mostrarSubMenu(pnlAlmacenaje);
             mostrarAlmacen = 2;
         } else {
-            lblConAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconExpandir.png")));
+            lblConAlmacenaje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/expandirSubmenu.png")));
             mostrarAlmacen = 1;
         }
     }
@@ -917,7 +938,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmMenuPrincipal().setVisible(true);
+                new frmMenuPrincipal(args[0]).setVisible(true);
             }
         });
     }
@@ -930,6 +951,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel IconoPersonal;
     private javax.swing.JLabel IconoPrespuesto;
     private javax.swing.JLabel IconoProyecto;
+    private javax.swing.JLabel IconoRegistro;
     private javax.swing.JLabel IconoTrabajadores;
     private javax.swing.JLabel IconoUsuario;
     private javax.swing.JPanel PanelIconos;
@@ -957,21 +979,19 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel btnRegistroMat;
     private javax.swing.JPanel btnTrabajadores;
     private javax.swing.JPanel btnUsuarios;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblAlmacenaje;
-    private javax.swing.JLabel lblByCastroll;
     private javax.swing.JLabel lblCerrar;
     private javax.swing.JLabel lblClientes;
     private javax.swing.JLabel lblClientes1;
+    private javax.swing.JLabel lblCompraMateriales;
     private javax.swing.JLabel lblConAlmacenaje;
     public static javax.swing.JLabel lblConPresupuesto;
     private javax.swing.JLabel lblConTrabajador;
     private javax.swing.JLabel lblEmpresa;
     private javax.swing.JLabel lblEspacio;
+    private javax.swing.JLabel lblIconCompraMateriales;
     private javax.swing.JLabel lblIconManoObra;
     private javax.swing.JLabel lblIconMateriales;
     private javax.swing.JLabel lblIconPreliminares;
@@ -982,7 +1002,9 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblPreliminar;
     private javax.swing.JLabel lblPresupuesto;
     private javax.swing.JLabel lblProyecto;
+    private javax.swing.JLabel lblRegistro;
     private javax.swing.JLabel lblTrabajador;
+    private javax.swing.JLabel lblUsuario;
     private javax.swing.JLabel lblUsuarios;
     private javax.swing.JPanel pnlContenedor;
     private javax.swing.JPanel pnlMenu;

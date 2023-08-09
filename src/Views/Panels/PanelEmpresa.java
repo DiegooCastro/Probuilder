@@ -67,6 +67,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
         btnIngresar = new LIB.FSButtonMD();
         jLabel11 = new javax.swing.JLabel();
         jTFBusqueda = new LIB.FSTexFieldMD();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -80,7 +81,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jLabel5.setText("Telefono");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 229, -1, 30));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, 30));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jLabel7.setText("Telefono 2");
@@ -88,25 +89,25 @@ public class PanelEmpresa extends javax.swing.JPanel {
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jLabel6.setText("Correo");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 158, -1, 50));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 168, -1, 40));
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jLabel2.setText("Empresa");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, 20));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jLabel3.setText("Ubicacion");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, -1, 30));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, -1, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconPrimerEmpresa.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, -1, 60));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/empresa.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, -1, 70));
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitulo.setText("GESTION DE EMPRESA");
-        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, 60));
+        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, 50));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Busqueda.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/busqueda.png"))); // NOI18N
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel8MouseClicked(evt);
@@ -115,7 +116,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 380, -1, 40));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Add.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/agregar.png"))); // NOI18N
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel9MouseClicked(evt);
@@ -131,7 +132,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
 
         cmbTipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tipo de empresa", " " }));
         cmbTipo.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        add(cmbTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 180, 250, 40));
+        add(cmbTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 250, 40));
 
         Tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -150,6 +151,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
             }
         });
         Tabla.setAltoHead(30);
+        Tabla.setColorBackgoundHead(new java.awt.Color(44, 47, 62));
         Tabla.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         Tabla.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         Tabla.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
@@ -218,7 +220,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
         add(jTFTelefono2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 260, 40));
 
         btnBorrarCampos.setForeground(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_BorrarCampos.png"))); // NOI18N
+        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonLimpiar.png"))); // NOI18N
         btnBorrarCampos.setText("  Borrar Campos");
         btnBorrarCampos.setColorHover(new java.awt.Color(204, 204, 204));
         btnBorrarCampos.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -234,7 +236,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
         add(btnBorrarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 230, -1));
 
         btnModificar.setForeground(new java.awt.Color(0, 0, 0));
-        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonActualizar.png"))); // NOI18N
         btnModificar.setText("  Modificar Empresa");
         btnModificar.setColorHover(new java.awt.Color(204, 204, 204));
         btnModificar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -250,7 +252,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
         add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, 230, -1));
 
         btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Agregar.png"))); // NOI18N
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonAgregar.png"))); // NOI18N
         btnIngresar.setText("  Ingresar Empresa");
         btnIngresar.setColorHover(new java.awt.Color(204, 204, 204));
         btnIngresar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -279,6 +281,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
             }
         });
         add(jTFBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 370, 180, 50));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 410, 10));
     }// </editor-fold>//GEN-END:initComponents
 
     //Metodo para borrar los campos del formulario
@@ -431,6 +434,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private LIB.FSTexFieldMD jTFBusqueda;
     private LIB.FSTexFieldMD jTFCorreo;
     private LIB.FSTexFieldMD jTFEmpresa;

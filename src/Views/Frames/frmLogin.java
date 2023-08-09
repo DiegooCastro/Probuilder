@@ -24,10 +24,10 @@ public class frmLogin extends javax.swing.JFrame {
     public frmLogin() {
         initComponents();
         this.setLocationRelativeTo(null);
-        jTFClave.setEchoChar((char) 0);
+        txtContraseña.setEchoChar((char) 0);
         getRootPane().setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.BLACK));
         cargarCredenciales();
-        jTFClave.setEchoChar('*');
+        txtContraseña.setEchoChar('*');
     }
 
     private void cargarCredenciales() {
@@ -51,9 +51,9 @@ public class frmLogin extends javax.swing.JFrame {
                             clave = clave + caracter;
                         }
                     }
-                    jTFUsuario.setText(usuario);
-                    jTFClave.setText(clave);
-                    jTFClave.setEchoChar('*');
+                    txtUsuario.setText(usuario);
+                    txtContraseña.setText(clave);
+                    txtContraseña.setEchoChar('*');
                     id = 2;
                 }
             }
@@ -66,8 +66,8 @@ public class frmLogin extends javax.swing.JFrame {
         try {
             String ruta = "datos.txt";
             File file = new File(ruta);
-            if (jCheckBox1.isSelected()) {
-                String contenido = jTFUsuario.getText() + ' ' + jTFClave.getText();
+            if (cbRecordarme.isSelected()) {
+                String contenido = txtUsuario.getText() + ' ' + txtContraseña.getText();
                 if (!file.exists()) {
                     file.createNewFile();
                 }
@@ -93,12 +93,12 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        btnIniciarSesion = new LIB.FSButtonMD();
-        jTFClave = new LIB.FSPasswordFieldMD();
-        jTFUsuario = new LIB.FSTexFieldMD();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        btnLogin = new LIB.FSButtonMD();
+        txtContraseña = new LIB.FSPasswordFieldMD();
+        txtUsuario = new LIB.FSTexFieldMD();
+        cbRecordarme = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblRecuperacion = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -136,49 +136,49 @@ public class frmLogin extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(50, 75, 94));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnIniciarSesion.setText("Acceder");
-        btnIniciarSesion.setColorHover(new java.awt.Color(34, 55, 76));
-        btnIniciarSesion.setColorNormal(new java.awt.Color(33, 51, 66));
-        btnIniciarSesion.setColorPressed(new java.awt.Color(18, 31, 43));
-        btnIniciarSesion.setColorTextHover(new java.awt.Color(255, 255, 255));
-        btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+        btnLogin.setText("Acceder");
+        btnLogin.setColorHover(new java.awt.Color(34, 55, 76));
+        btnLogin.setColorNormal(new java.awt.Color(33, 51, 66));
+        btnLogin.setColorPressed(new java.awt.Color(18, 31, 43));
+        btnLogin.setColorTextHover(new java.awt.Color(255, 255, 255));
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIniciarSesionActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
-        jPanel3.add(btnIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 280, 50));
+        jPanel3.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 280, 50));
 
-        jTFClave.setBackground(new java.awt.Color(50, 75, 94));
-        jTFClave.setForeground(new java.awt.Color(255, 255, 255));
-        jTFClave.setBordeColorFocus(new java.awt.Color(204, 204, 204));
-        jTFClave.setFont(new java.awt.Font("Segoe UI Emoji", 1, 16)); // NOI18N
-        jTFClave.setPlaceholder(" Contraseña*");
-        jPanel3.add(jTFClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 192, 310, 40));
+        txtContraseña.setBackground(new java.awt.Color(50, 75, 94));
+        txtContraseña.setForeground(new java.awt.Color(255, 255, 255));
+        txtContraseña.setBordeColorFocus(new java.awt.Color(204, 204, 204));
+        txtContraseña.setFont(new java.awt.Font("Segoe UI Emoji", 1, 16)); // NOI18N
+        txtContraseña.setPlaceholder(" Contraseña*");
+        jPanel3.add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 192, 310, 40));
 
-        jTFUsuario.setBackground(new java.awt.Color(50, 75, 94));
-        jTFUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        jTFUsuario.setBordeColorFocus(new java.awt.Color(204, 204, 204));
-        jTFUsuario.setBordeColorNoFocus(new java.awt.Color(50, 75, 94));
-        jTFUsuario.setFont(new java.awt.Font("Segoe UI Emoji", 1, 16)); // NOI18N
-        jTFUsuario.setPlaceholder(" Usuario*");
-        jTFUsuario.setSelectedTextColor(new java.awt.Color(50, 75, 94));
-        jPanel3.add(jTFUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 102, 303, 40));
+        txtUsuario.setBackground(new java.awt.Color(50, 75, 94));
+        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        txtUsuario.setBordeColorFocus(new java.awt.Color(204, 204, 204));
+        txtUsuario.setBordeColorNoFocus(new java.awt.Color(50, 75, 94));
+        txtUsuario.setFont(new java.awt.Font("Segoe UI Emoji", 1, 16)); // NOI18N
+        txtUsuario.setPlaceholder(" Usuario*");
+        txtUsuario.setSelectedTextColor(new java.awt.Color(50, 75, 94));
+        jPanel3.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 102, 303, 40));
 
-        jCheckBox1.setBackground(new java.awt.Color(50, 75, 94));
-        jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBox1.setText("Recuerdame ");
-        jPanel3.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, -1, -1));
+        cbRecordarme.setBackground(new java.awt.Color(50, 75, 94));
+        cbRecordarme.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cbRecordarme.setForeground(new java.awt.Color(255, 255, 255));
+        cbRecordarme.setText("Recuerdame ");
+        jPanel3.add(cbRecordarme, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Login");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, 40));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("¿Olvidaste tu contraseña?");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, -1, -1));
+        lblRecuperacion.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        lblRecuperacion.setForeground(new java.awt.Color(255, 255, 255));
+        lblRecuperacion.setText("¿Olvidaste tu contraseña?");
+        jPanel3.add(lblRecuperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, -1, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 450));
 
@@ -224,12 +224,12 @@ public class frmLogin extends javax.swing.JFrame {
         FiveCodMoverJFrame.MouseDraggedFrame(evt, this);
     }//GEN-LAST:event_jPanel2MouseDragged
 
-    private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
-        if (jTFUsuario.getText().trim().isEmpty() || jTFClave.getText().trim().isEmpty()) {
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        if (txtUsuario.getText().trim().isEmpty() || txtContraseña.getText().trim().isEmpty()) {
             new frmAlert("Complete los campos solicitados", 2).setVisible(true);
         } else {
-            log.setUsuario(jTFUsuario.getText());
-            log.setClave(jTFClave.getText());
+            log.setUsuario(txtUsuario.getText());
+            log.setClave(txtContraseña.getText());
             if (log.iniciarSesion(log)) {
                 int estado;
                 if (Login.estadoUsuario) {
@@ -241,7 +241,7 @@ public class frmLogin extends javax.swing.JFrame {
                 switch (estado) {
                     case 1:
                         guardarCredenciales();
-                        frmMenuPrincipal m = new frmMenuPrincipal();
+                        frmMenuPrincipal m = new frmMenuPrincipal(txtUsuario.getText());
                         m.setVisible(true);
                         this.dispose();
                         break;
@@ -253,7 +253,7 @@ public class frmLogin extends javax.swing.JFrame {
                 this.dispose();
             }
         }
-    }//GEN-LAST:event_btnIniciarSesionActionPerformed
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         this.setExtendedState(1);
@@ -308,9 +308,8 @@ public class frmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private LIB.FSButtonMD btnIniciarSesion;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLabel1;
+    private LIB.FSButtonMD btnLogin;
+    private javax.swing.JCheckBox cbRecordarme;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
@@ -318,7 +317,8 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private LIB.FSPasswordFieldMD jTFClave;
-    private LIB.FSTexFieldMD jTFUsuario;
+    private javax.swing.JLabel lblRecuperacion;
+    private LIB.FSPasswordFieldMD txtContraseña;
+    private LIB.FSTexFieldMD txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

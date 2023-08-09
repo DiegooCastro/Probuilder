@@ -123,7 +123,7 @@ public class frmBuscador extends javax.swing.JFrame {
 
         lblCampo1.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
         lblCampo1.setText("Campo 1");
-        PanelPrincipal.add(lblCampo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, 50));
+        PanelPrincipal.add(lblCampo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_SmallBusqueda.png"))); // NOI18N
         PanelPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 30, 35));
@@ -152,7 +152,7 @@ public class frmBuscador extends javax.swing.JFrame {
 
         lblCampo2.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
         lblCampo2.setText("Campo 2");
-        PanelPrincipal.add(lblCampo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, 50));
+        PanelPrincipal.add(lblCampo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, 50));
 
         btnSeleccionarRegistro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnSeleccionarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Seleccionar.png"))); // NOI18N
