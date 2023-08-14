@@ -197,7 +197,7 @@ public class FuncionesSQL extends Database {
 
             Session session = Session.getDefaultInstance(p);
             String remitente = "botcastroll24@gmail.com"; //Correo
-            String pass = "Extreme8000"; //Clave
+            String pass = "castro$20"; //Clave
 
             MimeMessage mess = new MimeMessage(session);
             mess.setFrom(new InternetAddress(remitente));
@@ -212,27 +212,28 @@ public class FuncionesSQL extends Database {
             respuesta = true;
         } catch (AddressException ex) {
             new frmAlert("Error critico al enviar correo", 3).setVisible(true);
-            JOptionPane.showMessageDialog(null, ex);
+            System.out.println("Error critico: " + ex);
         } catch (MessagingException ex) {
             new frmAlert("Error critico al enviar correo", 3).setVisible(true);
-            JOptionPane.showMessageDialog(null, ex);
+            System.out.println("Error critico: " + ex);
         }
         return respuesta;
     }
 
-    public boolean actualizarClave(String clave, String usuario) {
+    public boolean actualizarClave(String clave, String correo) {
         boolean retorno = false;
         try {
             String claveEncriptada = super.encryption(clave);
-            String sql = "update Usuario set clave = ? where usuario = ?";
+            String sql = "update Usuario set clave = ? where correo_electronico = ?";
             ps = super.getConnection().prepareStatement(sql);
             ps.setString(1, claveEncriptada);
-            ps.setString(2, usuario);
+            ps.setString(2, correo);
             if (!ps.execute()) {
                 retorno = true;
             }
         } catch (SQLException e) {
             new frmAlert("Error critico al actualizar clave", 2).setVisible(true);
+            System.out.println("Error critico: " + e);
         }
         return retorno;
     }

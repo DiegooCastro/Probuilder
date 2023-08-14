@@ -178,6 +178,11 @@ public class frmLogin extends javax.swing.JFrame {
         lblRecuperacion.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         lblRecuperacion.setForeground(new java.awt.Color(255, 255, 255));
         lblRecuperacion.setText("¿Olvidaste tu contraseña?");
+        lblRecuperacion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRecuperacionMouseClicked(evt);
+            }
+        });
         jPanel3.add(lblRecuperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, -1, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 450));
@@ -270,6 +275,12 @@ public class frmLogin extends javax.swing.JFrame {
     private void jPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MousePressed
         FiveCodMoverJFrame.MousePressed(evt);
     }//GEN-LAST:event_jPanel1MousePressed
+
+    private void lblRecuperacionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRecuperacionMouseClicked
+        frmRecuperacion a = new frmRecuperacion();
+        a.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_lblRecuperacionMouseClicked
 
     /**
      * @param args the command line arguments
