@@ -219,7 +219,7 @@ public class frmGaleria extends javax.swing.JFrame {
         });
         PanelTituloGaleria.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTituloGaleria.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTituloGaleria.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTituloGaleria.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloGaleria.setText("Visor de Imagenes");
         PanelTituloGaleria.add(lblTituloGaleria, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, -1, 48));

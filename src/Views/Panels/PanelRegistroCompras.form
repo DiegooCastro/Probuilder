@@ -38,7 +38,7 @@
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Proveedor"/>
       </Properties>
@@ -51,7 +51,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Unidad Medida"/>
       </Properties>
@@ -64,7 +64,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Encargado"/>
       </Properties>
@@ -77,7 +77,7 @@
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Precio Unitario $:"/>
       </Properties>
@@ -90,7 +90,7 @@
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cantidad "/>
       </Properties>
@@ -103,7 +103,7 @@
     <Component class="javax.swing.JLabel" name="lblSelectProveedor">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Add_Elemento.png"/>
+          <Image iconType="3" name="/Icons/abrirCatalogo.png"/>
         </Property>
       </Properties>
       <Events>
@@ -118,7 +118,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Precio Total  $:"/>
       </Properties>
@@ -137,14 +137,14 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="310" y="30" width="-1" height="50"/>
+          <AbsoluteConstraints x="310" y="20" width="-1" height="60"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblSelectMaterial">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Add_Elemento.png"/>
+          <Image iconType="3" name="/Icons/abrirCatalogo.png"/>
         </Property>
       </Properties>
       <Events>
@@ -174,7 +174,7 @@
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Material"/>
       </Properties>
@@ -187,12 +187,12 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/IconRegistroCompras.png"/>
+          <Image iconType="3" name="/Icons/IconRegistroCompras.png"/>
         </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="620" y="30" width="-1" height="50"/>
+          <AbsoluteConstraints x="630" y="20" width="-1" height="60"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -205,7 +205,7 @@
           <Color blue="33" green="33" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=""/>
       </Properties>
@@ -225,7 +225,7 @@
           <Color blue="33" green="33" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=""/>
       </Properties>
@@ -248,7 +248,7 @@
           <Color blue="33" green="33" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=""/>
       </Properties>
@@ -270,7 +270,7 @@
           <Color blue="33" green="33" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=""/>
       </Properties>
@@ -296,7 +296,7 @@
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=""/>
       </Properties>
@@ -315,7 +315,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Icono_Agregar.png"/>
+          <Image iconType="3" name="/Icons/botonAgregar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="  Ingresar Compra"/>
         <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -334,7 +334,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
       </Properties>
       <Events>
@@ -352,7 +352,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Icono_BorrarCampos.png"/>
+          <Image iconType="3" name="/Icons/botonLimpiar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="  Borrar Campos"/>
         <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -371,7 +371,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
       </Properties>
       <Events>
@@ -389,7 +389,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Iconos_Actualizar.png"/>
+          <Image iconType="3" name="/Icons/botonActualizar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="  Modificar Compra"/>
         <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -408,7 +408,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
       </Properties>
       <Events>
@@ -450,6 +450,9 @@
               </Table>
             </Property>
             <Property name="altoHead" type="int" value="30"/>
+            <Property name="colorBackgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3e" green="2f" red="2c" type="rgb"/>
+            </Property>
             <Property name="colorFilasBackgound2" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
@@ -556,7 +559,7 @@
     <Component class="javax.swing.JLabel" name="lblCampo1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Material"/>
       </Properties>
@@ -576,7 +579,7 @@
           <Color blue="33" green="33" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=""/>
       </Properties>
@@ -598,7 +601,7 @@
           <Color blue="33" green="33" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=""/>
       </Properties>
@@ -617,7 +620,7 @@
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Icono_SmallBusqueda.png"/>
+          <Image iconType="3" name="/Icons/busqueda.png"/>
         </Property>
       </Properties>
       <Events>
@@ -626,6 +629,13 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="934" y="440" width="40" height="90"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator1">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="260" y="80" width="460" height="10"/>
         </Constraint>
       </Constraints>
     </Component>

@@ -26,7 +26,7 @@
     <Component class="javax.swing.JLabel" name="lblSelectEmpresa">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Add_Elemento.png"/>
+          <Image iconType="3" name="/Icons/abrirCatalogo.png"/>
         </Property>
       </Properties>
       <Events>
@@ -125,19 +125,19 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="320" y="30" width="301" height="39"/>
+          <AbsoluteConstraints x="320" y="19" width="301" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Icono_Clientes.png"/>
+          <Image iconType="3" name="/Icons/iconClientes.png"/>
         </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="640" y="30" width="-1" height="-1"/>
+          <AbsoluteConstraints x="620" y="12" width="-1" height="60"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -150,7 +150,7 @@
           <Color blue="33" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=" Nombre Cliente*"/>
       </Properties>
@@ -169,7 +169,7 @@
           <Color blue="33" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=" Correo Cliente*"/>
       </Properties>
@@ -188,7 +188,7 @@
           <Color blue="33" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=" Apellido Cliente*"/>
       </Properties>
@@ -207,7 +207,7 @@
           <Color blue="33" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=" DUI Cliente*"/>
       </Properties>
@@ -229,7 +229,7 @@
           <Color blue="33" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=" Telefono Cliente*"/>
       </Properties>
@@ -248,7 +248,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Icono_Agregar.png"/>
+          <Image iconType="3" name="/Icons/botonAgregar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="  Ingresar Cliente"/>
         <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -267,7 +267,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
       </Properties>
       <Events>
@@ -285,7 +285,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Iconos_Actualizar.png"/>
+          <Image iconType="3" name="/Icons/botonActualizar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="  Modificar Cliente"/>
         <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -305,7 +305,7 @@
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
       </Properties>
       <Events>
@@ -323,7 +323,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Icono_BorrarCampos.png"/>
+          <Image iconType="3" name="/Icons/botonLimpiar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="  Borrar Campos"/>
         <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -342,7 +342,7 @@
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="17" style="1"/>
+          <Font name="Segoe UI" size="17" style="1"/>
         </Property>
       </Properties>
       <Events>
@@ -380,6 +380,9 @@
               </Table>
             </Property>
             <Property name="altoHead" type="int" value="30"/>
+            <Property name="colorBackgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3e" green="2f" red="2c" type="rgb"/>
+            </Property>
             <Property name="colorFilasBackgound2" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
@@ -473,7 +476,7 @@
           <Color blue="33" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="16" style="1"/>
+          <Font name="Segoe UI" size="16" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=""/>
       </Properties>
@@ -495,7 +498,7 @@
           <Color blue="66" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Roboto Bold" size="15" style="1"/>
+          <Font name="Segoe UI" size="15" style="1"/>
         </Property>
         <Property name="placeholder" type="java.lang.String" value=" Busqueda (DUI) "/>
       </Properties>
@@ -511,7 +514,7 @@
     <Component class="javax.swing.JLabel" name="btnBusqueda">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Iconografia/Icono_Busqueda.png"/>
+          <Image iconType="3" name="/Icons/busqueda.png"/>
         </Property>
       </Properties>
       <Events>
@@ -520,6 +523,13 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="760" y="340" width="-1" height="50"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator1">
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="280" y="70" width="420" height="10"/>
         </Constraint>
       </Constraints>
     </Component>

@@ -59,6 +59,7 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         jTFUnidad = new LIB.FSTexFieldMD();
         jTFBusquedaMaterial = new LIB.FSTexFieldMD();
         jLabel10 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -67,27 +68,27 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel6.setText("Proveedor");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel3.setText("Unidad Medida");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel2.setText("Encargado");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, -1, 30));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel8.setText("Precio Unitario $:");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel7.setText("Cantidad ");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
 
-        lblSelectProveedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Add_Elemento.png"))); // NOI18N
+        lblSelectProveedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/abrirCatalogo.png"))); // NOI18N
         lblSelectProveedor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSelectProveedorMouseClicked(evt);
@@ -95,15 +96,15 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         });
         add(lblSelectProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 120, 40, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel4.setText("Precio Total  $:");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, -1, -1));
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitulo.setText("REGISTRO DE COMPRAS");
-        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, 50));
+        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, 60));
 
-        lblSelectMaterial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Add_Elemento.png"))); // NOI18N
+        lblSelectMaterial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/abrirCatalogo.png"))); // NOI18N
         lblSelectMaterial.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSelectMaterialMouseClicked(evt);
@@ -119,36 +120,36 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         });
         add(jSPCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 260, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel5.setText("Material");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconRegistroCompras.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 50));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconRegistroCompras.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, -1, 60));
 
         jTFPrecioUni.setForeground(new java.awt.Color(0, 0, 0));
         jTFPrecioUni.setBordeColorFocus(new java.awt.Color(0, 51, 51));
-        jTFPrecioUni.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFPrecioUni.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFPrecioUni.setPlaceholder("");
         add(jTFPrecioUni, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 260, 40));
 
         jTFMaterial.setEditable(false);
         jTFMaterial.setForeground(new java.awt.Color(0, 0, 0));
         jTFMaterial.setBordeColorFocus(new java.awt.Color(0, 51, 51));
-        jTFMaterial.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFMaterial.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFMaterial.setPlaceholder("");
         add(jTFMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 220, 40));
 
         jTFProveedor.setEditable(false);
         jTFProveedor.setForeground(new java.awt.Color(0, 0, 0));
         jTFProveedor.setBordeColorFocus(new java.awt.Color(0, 51, 51));
-        jTFProveedor.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFProveedor.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFProveedor.setPlaceholder("");
         add(jTFProveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 110, 220, 40));
 
         jTFEncargado.setForeground(new java.awt.Color(0, 0, 0));
         jTFEncargado.setBordeColorFocus(new java.awt.Color(0, 51, 51));
-        jTFEncargado.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFEncargado.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFEncargado.setPlaceholder("");
         jTFEncargado.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -160,19 +161,19 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         jTFPrecioTotal.setForeground(new java.awt.Color(0, 0, 0));
         jTFPrecioTotal.setBordeColorFocus(new java.awt.Color(0, 51, 51));
         jTFPrecioTotal.setEnabled(false);
-        jTFPrecioTotal.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFPrecioTotal.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFPrecioTotal.setPlaceholder("");
         add(jTFPrecioTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, 260, 40));
 
         btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Agregar.png"))); // NOI18N
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonAgregar.png"))); // NOI18N
         btnIngresar.setText("  Ingresar Compra");
         btnIngresar.setColorHover(new java.awt.Color(204, 204, 204));
         btnIngresar.setColorNormal(new java.awt.Color(255, 255, 255));
         btnIngresar.setColorPressed(new java.awt.Color(255, 255, 255));
         btnIngresar.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnIngresar.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnIngresar.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnIngresar.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarActionPerformed(evt);
@@ -181,14 +182,14 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 310, -1));
 
         btnBorrarCampos.setForeground(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_BorrarCampos.png"))); // NOI18N
+        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonLimpiar.png"))); // NOI18N
         btnBorrarCampos.setText("  Borrar Campos");
         btnBorrarCampos.setColorHover(new java.awt.Color(204, 204, 204));
         btnBorrarCampos.setColorNormal(new java.awt.Color(255, 255, 255));
         btnBorrarCampos.setColorPressed(new java.awt.Color(255, 255, 255));
         btnBorrarCampos.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnBorrarCampos.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnBorrarCampos.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnBorrarCampos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBorrarCamposActionPerformed(evt);
@@ -197,14 +198,14 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         add(btnBorrarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 290, -1));
 
         btnModificar.setForeground(new java.awt.Color(0, 0, 0));
-        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonActualizar.png"))); // NOI18N
         btnModificar.setText("  Modificar Compra");
         btnModificar.setColorHover(new java.awt.Color(204, 204, 204));
         btnModificar.setColorNormal(new java.awt.Color(255, 255, 255));
         btnModificar.setColorPressed(new java.awt.Color(255, 255, 255));
         btnModificar.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnModificar.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnModificar.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnModificar.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarActionPerformed(evt);
@@ -229,6 +230,7 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
             }
         });
         Tabla.setAltoHead(30);
+        Tabla.setColorBackgoundHead(new java.awt.Color(44, 47, 62));
         Tabla.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         Tabla.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         Tabla.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
@@ -270,20 +272,20 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 670, 260));
 
-        lblCampo1.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        lblCampo1.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         lblCampo1.setText("Material");
         add(lblCampo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 410, -1, 50));
 
         jTFUnidad.setEditable(false);
         jTFUnidad.setForeground(new java.awt.Color(0, 0, 0));
         jTFUnidad.setBordeColorFocus(new java.awt.Color(0, 51, 51));
-        jTFUnidad.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFUnidad.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFUnidad.setPlaceholder("");
         add(jTFUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 250, 260, 40));
 
         jTFBusquedaMaterial.setForeground(new java.awt.Color(0, 0, 0));
         jTFBusquedaMaterial.setBordeColorFocus(new java.awt.Color(0, 51, 51));
-        jTFBusquedaMaterial.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFBusquedaMaterial.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFBusquedaMaterial.setPlaceholder("");
         jTFBusquedaMaterial.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -292,13 +294,14 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
         });
         add(jTFBusquedaMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 170, 40));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_SmallBusqueda.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/busqueda.png"))); // NOI18N
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel10MouseClicked(evt);
             }
         });
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(934, 440, 40, 90));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 460, 10));
     }// </editor-fold>//GEN-END:initComponents
 
     //Declaracion de objetos de clases a utilizar
@@ -449,6 +452,7 @@ public class PanelRegistroCompras extends javax.swing.JPanel {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSpinner jSPCantidad;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSeparator jSeparator1;
     public static LIB.FSTexFieldMD jTFBusquedaMaterial;
     public static LIB.FSTexFieldMD jTFEncargado;
     public static LIB.FSTexFieldMD jTFMaterial;

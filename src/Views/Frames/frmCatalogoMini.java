@@ -191,31 +191,31 @@ public class frmCatalogoMini extends javax.swing.JFrame {
             }
         });
 
-        lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Boton-Cerrar.png"))); // NOI18N
+        lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/iconCerrar.png"))); // NOI18N
         lblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblCerrarMouseClicked(evt);
             }
         });
 
-        lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Boton-Minimizar.png"))); // NOI18N
+        lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconMinimizar.png"))); // NOI18N
 
         javax.swing.GroupLayout PnlBarraLayout = new javax.swing.GroupLayout(PnlBarra);
         PnlBarra.setLayout(PnlBarraLayout);
         PnlBarraLayout.setHorizontalGroup(
             PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlBarraLayout.createSequentialGroup()
-                .addContainerGap(657, Short.MAX_VALUE)
-                .addComponent(lblMinimizar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(654, Short.MAX_VALUE)
+                .addComponent(lblMinimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         PnlBarraLayout.setVerticalGroup(
             PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlBarraLayout.createSequentialGroup()
-                .addGroup(PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(lblMinimizar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblCerrar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
+                .addGroup(PnlBarraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMinimizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -238,6 +238,8 @@ public class frmCatalogoMini extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setBackgoundHead(new java.awt.Color(44, 47, 62));
+        jTable1.setBackgoundHover(new java.awt.Color(44, 47, 62));
         jTable1.setColorPrimaryText(new java.awt.Color(0, 0, 0));
         jTable1.setColorSecundaryText(new java.awt.Color(0, 0, 0));
         jTable1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -260,7 +262,7 @@ public class frmCatalogoMini extends javax.swing.JFrame {
 
         jTFCampo1.setForeground(new java.awt.Color(0, 0, 0));
         jTFCampo1.setBordeColorFocus(new java.awt.Color(0, 51, 51));
-        jTFCampo1.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        jTFCampo1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jTFCampo1.setPlaceholder("");
         jTFCampo1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -269,11 +271,11 @@ public class frmCatalogoMini extends javax.swing.JFrame {
         });
         jPanel1.add(jTFCampo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 230, 40));
 
-        lblCampo1.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        lblCampo1.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         lblCampo1.setText("Campo 1");
         jPanel1.add(lblCampo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 50));
 
-        lblSeleccionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Seleccionar.png"))); // NOI18N
+        lblSeleccionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/seleccionar.png"))); // NOI18N
         lblSeleccionar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSeleccionarMouseClicked(evt);
@@ -281,8 +283,8 @@ public class frmCatalogoMini extends javax.swing.JFrame {
         });
         jPanel1.add(lblSeleccionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, -1, -1));
 
-        btnModificar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
+        btnModificar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonActualizar.png"))); // NOI18N
         btnModificar.setText("  Modificar Registro");
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -291,8 +293,8 @@ public class frmCatalogoMini extends javax.swing.JFrame {
         });
         jPanel1.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 270, 40));
 
-        btnIngresar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Agregar.png"))); // NOI18N
+        btnIngresar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonAgregar.png"))); // NOI18N
         btnIngresar.setText("  Ingresar Registro");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

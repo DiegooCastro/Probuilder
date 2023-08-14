@@ -75,27 +75,27 @@ public class PanelEmpresa extends javax.swing.JPanel {
         PanelBotones.setLayout(new java.awt.GridLayout(1, 0));
         add(PanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 476, 1827, -1));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel4.setText("Tipo Empresa");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, 50));
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel5.setText("Telefono");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, 30));
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel7.setText("Telefono 2");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, 30));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel6.setText("Correo");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 168, -1, 40));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel2.setText("Empresa");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, -1, 20));
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel3.setText("Ubicacion");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, -1, 20));
 
@@ -126,12 +126,12 @@ public class PanelEmpresa extends javax.swing.JPanel {
 
         jTFUbicacion.setForeground(new java.awt.Color(0, 0, 0));
         jTFUbicacion.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFUbicacion.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFUbicacion.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFUbicacion.setPlaceholder(" Ubicacion ");
         add(jTFUbicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 260, 40));
 
         cmbTipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tipo de empresa", " " }));
-        cmbTipo.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        cmbTipo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         add(cmbTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 250, 40));
 
         Tabla.setModel(new javax.swing.table.DefaultTableModel(
@@ -187,7 +187,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
 
         jTFTelefono.setForeground(new java.awt.Color(0, 0, 0));
         jTFTelefono.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFTelefono.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFTelefono.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFTelefono.setPlaceholder(" Telefono Empresa*");
         jTFTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -198,19 +198,19 @@ public class PanelEmpresa extends javax.swing.JPanel {
 
         jTFEmpresa.setForeground(new java.awt.Color(0, 0, 0));
         jTFEmpresa.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFEmpresa.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFEmpresa.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFEmpresa.setPlaceholder(" Nombre Empresa*");
         add(jTFEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 260, 40));
 
         jTFCorreo.setForeground(new java.awt.Color(0, 0, 0));
         jTFCorreo.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFCorreo.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFCorreo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFCorreo.setPlaceholder(" Correo Empresa*");
         add(jTFCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 260, 40));
 
         jTFTelefono2.setForeground(new java.awt.Color(0, 0, 0));
         jTFTelefono2.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFTelefono2.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFTelefono2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFTelefono2.setPlaceholder(" Telefono 2 Empresa*");
         jTFTelefono2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -267,7 +267,7 @@ public class PanelEmpresa extends javax.swing.JPanel {
         });
         add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 220, -1));
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel11.setText("Logo");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, -1, 30));
 

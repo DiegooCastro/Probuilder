@@ -74,6 +74,7 @@ public class PanelPersonal extends javax.swing.JPanel {
         jTFDUI = new LIB.FSTexFieldMD();
         jTFProfesion = new LIB.FSTexFieldMD();
         jTFNombre = new LIB.FSTexFieldMD();
+        jSeparator1 = new javax.swing.JSeparator();
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -88,56 +89,56 @@ public class PanelPersonal extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel4.setText("Profesion");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, -1, -1));
 
-        lblSelectProfesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Add_Elemento.png"))); // NOI18N
+        lblSelectProfesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/abrirCatalogo.png"))); // NOI18N
         lblSelectProfesion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSelectProfesionMouseClicked(evt);
             }
         });
-        add(lblSelectProfesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 110, -1, 40));
+        add(lblSelectProfesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 100, -1, 50));
 
-        lblBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_SmallBusqueda.png"))); // NOI18N
+        lblBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/busqueda.png"))); // NOI18N
         lblBuscar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblBuscarMouseClicked(evt);
             }
         });
-        add(lblBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 40, -1));
+        add(lblBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, 40, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel2.setText("Nombre");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 111, -1, 30));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel3.setText("Apellido");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, 40));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel6.setText("Telefono");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, 30));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel7.setText("DUI");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel8.setText("Sueldo $:");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, -1, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono-Personal.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/trabajador.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, -1, 50));
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitulo.setText("GESTION DE PERSONAL");
-        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 290, 40));
+        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 290, 50));
 
         jTFTelefono.setForeground(new java.awt.Color(0, 0, 0));
         jTFTelefono.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFTelefono.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFTelefono.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFTelefono.setPlaceholder(" Telefono Empleado*");
         jTFTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -147,14 +148,14 @@ public class PanelPersonal extends javax.swing.JPanel {
         add(jTFTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 160, 270, 40));
 
         btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Agregar.png"))); // NOI18N
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonAgregar.png"))); // NOI18N
         btnIngresar.setText("  Ingresar Personal");
         btnIngresar.setColorHover(new java.awt.Color(204, 204, 204));
         btnIngresar.setColorNormal(new java.awt.Color(255, 255, 255));
         btnIngresar.setColorPressed(new java.awt.Color(255, 255, 255));
         btnIngresar.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnIngresar.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnIngresar.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnIngresar.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarActionPerformed(evt);
@@ -163,14 +164,14 @@ public class PanelPersonal extends javax.swing.JPanel {
         add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 210, -1));
 
         btnBorrarCampos.setForeground(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_BorrarCampos.png"))); // NOI18N
+        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonLimpiar.png"))); // NOI18N
         btnBorrarCampos.setText("  Borrar Campos");
         btnBorrarCampos.setColorHover(new java.awt.Color(204, 204, 204));
         btnBorrarCampos.setColorNormal(new java.awt.Color(255, 255, 255));
         btnBorrarCampos.setColorPressed(new java.awt.Color(255, 255, 255));
         btnBorrarCampos.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnBorrarCampos.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnBorrarCampos.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnBorrarCampos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBorrarCamposActionPerformed(evt);
@@ -179,7 +180,7 @@ public class PanelPersonal extends javax.swing.JPanel {
         add(btnBorrarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 210, -1));
 
         btnModificar.setForeground(new java.awt.Color(0, 0, 0));
-        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonActualizar.png"))); // NOI18N
         btnModificar.setText("  Modificar Personal");
         btnModificar.setColorHover(new java.awt.Color(204, 204, 204));
         btnModificar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -187,7 +188,7 @@ public class PanelPersonal extends javax.swing.JPanel {
         btnModificar.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnModificar.setColorTextPressed(new java.awt.Color(0, 0, 0));
         btnModificar.setEnabled(false);
-        btnModificar.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnModificar.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarActionPerformed(evt);
@@ -196,7 +197,7 @@ public class PanelPersonal extends javax.swing.JPanel {
         add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 210, -1));
 
         btnEliminar.setForeground(new java.awt.Color(0, 0, 0));
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconDesbloqueado.png"))); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/bloqueado.png"))); // NOI18N
         btnEliminar.setText(" Desactivar Personal");
         btnEliminar.setColorHover(new java.awt.Color(204, 204, 204));
         btnEliminar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -204,7 +205,7 @@ public class PanelPersonal extends javax.swing.JPanel {
         btnEliminar.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnEliminar.setColorTextPressed(new java.awt.Color(0, 0, 0));
         btnEliminar.setEnabled(false);
-        btnEliminar.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnEliminar.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
@@ -229,6 +230,7 @@ public class PanelPersonal extends javax.swing.JPanel {
             }
         });
         Tabla.setAltoHead(30);
+        Tabla.setColorBackgoundHead(new java.awt.Color(44, 47, 62));
         Tabla.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         Tabla.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         Tabla.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
@@ -263,13 +265,13 @@ public class PanelPersonal extends javax.swing.JPanel {
 
         jTFSueldo.setForeground(new java.awt.Color(0, 0, 0));
         jTFSueldo.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFSueldo.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFSueldo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFSueldo.setPlaceholder(" Sueldo Empleado*");
         add(jTFSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 220, 270, 40));
 
         jTFApellido.setForeground(new java.awt.Color(0, 0, 0));
         jTFApellido.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFApellido.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFApellido.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFApellido.setPlaceholder(" Apellido Empleado*");
         add(jTFApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 250, 40));
 
@@ -281,7 +283,7 @@ public class PanelPersonal extends javax.swing.JPanel {
 
         jTFDUI.setForeground(new java.awt.Color(0, 0, 0));
         jTFDUI.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFDUI.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFDUI.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFDUI.setPlaceholder(" DUI Empleado*");
         jTFDUI.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -293,15 +295,16 @@ public class PanelPersonal extends javax.swing.JPanel {
         jTFProfesion.setEditable(false);
         jTFProfesion.setForeground(new java.awt.Color(0, 0, 0));
         jTFProfesion.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFProfesion.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFProfesion.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFProfesion.setPlaceholder("");
         add(jTFProfesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 100, 270, 40));
 
         jTFNombre.setForeground(new java.awt.Color(0, 0, 0));
         jTFNombre.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFNombre.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFNombre.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFNombre.setPlaceholder(" Nombre Empleado*");
-        add(jTFNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 250, 40));
+        add(jTFNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 240, 40));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 380, 10));
     }// </editor-fold>//GEN-END:initComponents
 
     private void BorrarCampos() {
@@ -457,6 +460,7 @@ public class PanelPersonal extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSeparator jSeparator1;
     private LIB.FSTexFieldMD jTFAccion;
     private LIB.FSTexFieldMD jTFApellido;
     private LIB.FSTexFieldMD jTFDUI;

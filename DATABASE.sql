@@ -76,11 +76,12 @@ Correo_Electronico varchar(75) not null
 
 insert into Usuario values (default,1,1,true,'eb1eb9061e9f4cf31d3e0d5670a8704a','Diego@gmail.com');
 
-create view Vista_Usuario
+create view Vista_Usuarios
 as
-select Id_Usuario,u.Estado,Usuario,Clave,Correo_Electronico,p.Nombre,p.Apellido,p.DUI,t.Tipo_Usuario
-from Usuario u,Personal p,Tipo_Usuario t
-where u.Trabajador = p.Id_Personal and t.Id_Tipo = u.Tipo
+select u.id_usuario,u.estado,u.usuario,u.clave,u.correo_electronico,p.nombre,p.apellido,p.dui,t.tipo_usuario
+FROM usuario u
+INNER JOIN tipo_usuario t ON t.id_tipo = u.tipo
+INNER JOIN personal p ON p.id_personal = u.trabajador
 
 create table Cliente(
 Id_Cliente serial not null primary key,

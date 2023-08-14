@@ -65,9 +65,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="657" max="32767" attributes="0"/>
-                      <Component id="lblMinimizar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="654" max="32767" attributes="0"/>
+                      <Component id="lblMinimizar" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="lblCerrar" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -75,9 +75,9 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="lblMinimizar" alignment="0" max="32767" attributes="0"/>
-                          <Component id="lblCerrar" alignment="0" pref="38" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblCerrar" min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="lblMinimizar" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -88,7 +88,7 @@
             <Component class="javax.swing.JLabel" name="lblCerrar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Iconografia/Boton-Cerrar.png"/>
+                  <Image iconType="3" name="/Icons/iconCerrar.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -98,7 +98,7 @@
             <Component class="javax.swing.JLabel" name="lblMinimizar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Iconografia/Boton-Minimizar.png"/>
+                  <Image iconType="3" name="/Icons/IconMinimizar.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -128,6 +128,12 @@
                     <Column editable="true" title="ID" type="java.lang.Object"/>
                     <Column editable="false" title="Registro" type="java.lang.Object"/>
                   </Table>
+                </Property>
+                <Property name="backgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="2f" red="2c" type="rgb"/>
+                </Property>
+                <Property name="backgoundHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="2f" red="2c" type="rgb"/>
                 </Property>
                 <Property name="colorPrimaryText" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
@@ -180,7 +186,7 @@
               <Color blue="33" green="33" red="0" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="15" style="1"/>
+              <Font name="Segoe UI" size="15" style="1"/>
             </Property>
             <Property name="placeholder" type="java.lang.String" value=""/>
           </Properties>
@@ -196,7 +202,7 @@
         <Component class="javax.swing.JLabel" name="lblCampo1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="17" style="1"/>
+              <Font name="Segoe UI" size="17" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Campo 1"/>
           </Properties>
@@ -209,7 +215,7 @@
         <Component class="javax.swing.JLabel" name="lblSeleccionar">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Iconografia/Icono_Seleccionar.png"/>
+              <Image iconType="3" name="/Icons/seleccionar.png"/>
             </Property>
           </Properties>
           <Events>
@@ -224,10 +230,10 @@
         <Component class="javax.swing.JButton" name="btnModificar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
+              <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Iconografia/Iconos_Actualizar.png"/>
+              <Image iconType="3" name="/Icons/botonActualizar.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="  Modificar Registro"/>
           </Properties>
@@ -243,10 +249,10 @@
         <Component class="javax.swing.JButton" name="btnIngresar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
+              <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Iconografia/Icono_Agregar.png"/>
+              <Image iconType="3" name="/Icons/botonAgregar.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="  Ingresar Registro"/>
           </Properties>

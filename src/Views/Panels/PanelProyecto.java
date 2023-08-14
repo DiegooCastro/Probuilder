@@ -76,6 +76,7 @@ public class PanelProyecto extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jDateInicio = new rojeru_san.rsdate.RSDateChooser();
         jDateFin = new rojeru_san.rsdate.RSDateChooser();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -84,10 +85,10 @@ public class PanelProyecto extends javax.swing.JPanel {
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitulo.setText("GESTION PROYECTOS");
-        PanelContenedor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 292, 50));
+        PanelContenedor.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 292, 50));
 
-        lblIconoTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Proyectos2.png"))); // NOI18N
-        PanelContenedor.add(lblIconoTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, -1, 70));
+        lblIconoTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/proyecto.png"))); // NOI18N
+        PanelContenedor.add(lblIconoTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, -1, 50));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,6 +114,7 @@ public class PanelProyecto extends javax.swing.JPanel {
             }
         });
         jTable1.setAltoHead(30);
+        jTable1.setColorBackgoundHead(new java.awt.Color(44, 47, 62));
         jTable1.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         jTable1.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         jTable1.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
@@ -159,49 +161,49 @@ public class PanelProyecto extends javax.swing.JPanel {
 
         PanelContenedor.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 940, 280));
 
-        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel20.setText("Fecha Fin");
         PanelContenedor.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, -1, 30));
 
-        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel21.setText("Fecha Inicio");
         PanelContenedor.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, 30));
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel15.setText("Tipo Proyecto");
         PanelContenedor.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, -1, 50));
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel13.setText("Cliente");
         PanelContenedor.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, 30));
 
-        btnCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Add_Elemento.png"))); // NOI18N
+        btnCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/abrirCatalogo.png"))); // NOI18N
         btnCliente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnClienteMouseClicked(evt);
             }
         });
-        PanelContenedor.add(btnCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 180, -1, -1));
+        PanelContenedor.add(btnCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 168, -1, 40));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel14.setText("Supervisor");
         PanelContenedor.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, -1, 60));
 
-        btnSupervisor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Add_Elemento.png"))); // NOI18N
+        btnSupervisor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/abrirCatalogo.png"))); // NOI18N
         btnSupervisor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnSupervisorMouseClicked(evt);
             }
         });
-        PanelContenedor.add(btnSupervisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 170, -1, 50));
+        PanelContenedor.add(btnSupervisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 160, -1, 60));
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel18.setText("Proyecto");
         PanelContenedor.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, 30));
 
         jTFProyecto.setForeground(new java.awt.Color(0, 0, 0));
         jTFProyecto.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFProyecto.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFProyecto.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFProyecto.setPlaceholder(" Nombre Proyecto*");
         PanelContenedor.add(jTFProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 240, 40));
 
@@ -209,7 +211,7 @@ public class PanelProyecto extends javax.swing.JPanel {
         PanelContenedor.add(cmbTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 100, 270, -1));
 
         btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Agregar.png"))); // NOI18N
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonAgregar.png"))); // NOI18N
         btnIngresar.setText("  Ingresar Proyecto");
         btnIngresar.setColorHover(new java.awt.Color(204, 204, 204));
         btnIngresar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -225,7 +227,7 @@ public class PanelProyecto extends javax.swing.JPanel {
         PanelContenedor.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 220, -1));
 
         btnBorrarCampos.setForeground(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_BorrarCampos.png"))); // NOI18N
+        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonLimpiar.png"))); // NOI18N
         btnBorrarCampos.setText("  Borrar Campos");
         btnBorrarCampos.setColorHover(new java.awt.Color(204, 204, 204));
         btnBorrarCampos.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -241,7 +243,7 @@ public class PanelProyecto extends javax.swing.JPanel {
         PanelContenedor.add(btnBorrarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, 220, -1));
 
         btnModificar.setForeground(new java.awt.Color(0, 0, 0));
-        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonActualizar.png"))); // NOI18N
         btnModificar.setText("  Modificar Proyecto");
         btnModificar.setColorHover(new java.awt.Color(204, 204, 204));
         btnModificar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -257,7 +259,7 @@ public class PanelProyecto extends javax.swing.JPanel {
         PanelContenedor.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 220, -1));
 
         btnImagenes.setForeground(new java.awt.Color(0, 0, 0));
-        btnImagenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_AgregarImagen.png"))); // NOI18N
+        btnImagenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/agregarImagen.png"))); // NOI18N
         btnImagenes.setText("  Visualizar Imagenes");
         btnImagenes.setColorHover(new java.awt.Color(204, 204, 204));
         btnImagenes.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -275,18 +277,18 @@ public class PanelProyecto extends javax.swing.JPanel {
         jTFCliente.setEditable(false);
         jTFCliente.setForeground(new java.awt.Color(0, 0, 0));
         jTFCliente.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFCliente.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFCliente.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFCliente.setPlaceholder("");
         PanelContenedor.add(jTFCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 230, 40));
 
         jTFSupervisor.setEditable(false);
         jTFSupervisor.setForeground(new java.awt.Color(0, 0, 0));
         jTFSupervisor.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFSupervisor.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFSupervisor.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFSupervisor.setPlaceholder("");
         PanelContenedor.add(jTFSupervisor, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 160, 260, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconConfiguracion.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/configuracion.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -298,7 +300,7 @@ public class PanelProyecto extends javax.swing.JPanel {
         jDateInicio.setColorButtonHover(new java.awt.Color(0, 51, 153));
         jDateInicio.setColorForeground(new java.awt.Color(0, 0, 0));
         jDateInicio.setEnabled(false);
-        jDateInicio.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jDateInicio.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jDateInicio.setFuente(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jDateInicio.setPlaceholder("");
         PanelContenedor.add(jDateInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 280, 30));
@@ -307,10 +309,11 @@ public class PanelProyecto extends javax.swing.JPanel {
         jDateFin.setColorButtonHover(new java.awt.Color(0, 51, 153));
         jDateFin.setColorForeground(new java.awt.Color(0, 0, 0));
         jDateFin.setEnabled(false);
-        jDateFin.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jDateFin.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jDateFin.setFuente(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jDateFin.setPlaceholder("");
         PanelContenedor.add(jDateFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 300, 30));
+        PanelContenedor.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 450, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -483,6 +486,7 @@ public class PanelProyecto extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
     public static LIB.FSTexFieldMD jTFCliente;
     private LIB.FSTexFieldMD jTFProyecto;
     public static LIB.FSTexFieldMD jTFSupervisor;

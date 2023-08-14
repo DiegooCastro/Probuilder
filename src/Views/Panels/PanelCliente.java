@@ -67,11 +67,12 @@ public class PanelCliente extends javax.swing.JPanel {
         jTFEmpresa = new LIB.FSTexFieldMD();
         jTFBusqueda = new LIB.FSTexFieldMD();
         btnBusqueda = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblSelectEmpresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Add_Elemento.png"))); // NOI18N
+        lblSelectEmpresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/abrirCatalogo.png"))); // NOI18N
         lblSelectEmpresa.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSelectEmpresaMouseClicked(evt);
@@ -105,32 +106,32 @@ public class PanelCliente extends javax.swing.JPanel {
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitulo.setText("GESTION DE CLIENTES");
-        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 301, 39));
+        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 19, 301, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Clientes.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 30, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/iconClientes.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 12, -1, 60));
 
         jTFNombre.setForeground(new java.awt.Color(0, 0, 0));
         jTFNombre.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFNombre.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFNombre.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFNombre.setPlaceholder(" Nombre Cliente*");
         add(jTFNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 280, 40));
 
         jTFCorreo.setForeground(new java.awt.Color(0, 0, 0));
         jTFCorreo.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFCorreo.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFCorreo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFCorreo.setPlaceholder(" Correo Cliente*");
         add(jTFCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 280, 40));
 
         jTFApellido.setForeground(new java.awt.Color(0, 0, 0));
         jTFApellido.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFApellido.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFApellido.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFApellido.setPlaceholder(" Apellido Cliente*");
         add(jTFApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 280, 40));
 
         jTFDUI.setForeground(new java.awt.Color(0, 0, 0));
         jTFDUI.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFDUI.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFDUI.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFDUI.setPlaceholder(" DUI Cliente*");
         jTFDUI.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -141,7 +142,7 @@ public class PanelCliente extends javax.swing.JPanel {
 
         jTFTelefono.setForeground(new java.awt.Color(0, 0, 0));
         jTFTelefono.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFTelefono.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFTelefono.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFTelefono.setPlaceholder(" Telefono Cliente*");
         jTFTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -151,14 +152,14 @@ public class PanelCliente extends javax.swing.JPanel {
         add(jTFTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 280, 40));
 
         btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Agregar.png"))); // NOI18N
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonAgregar.png"))); // NOI18N
         btnIngresar.setText("  Ingresar Cliente");
         btnIngresar.setColorHover(new java.awt.Color(204, 204, 204));
         btnIngresar.setColorNormal(new java.awt.Color(255, 255, 255));
         btnIngresar.setColorPressed(new java.awt.Color(255, 255, 255));
         btnIngresar.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnIngresar.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnIngresar.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnIngresar.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarActionPerformed(evt);
@@ -167,7 +168,7 @@ public class PanelCliente extends javax.swing.JPanel {
         add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 210, -1));
 
         btnModificar.setForeground(new java.awt.Color(0, 0, 0));
-        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonActualizar.png"))); // NOI18N
         btnModificar.setText("  Modificar Cliente");
         btnModificar.setColorHover(new java.awt.Color(204, 204, 204));
         btnModificar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -175,7 +176,7 @@ public class PanelCliente extends javax.swing.JPanel {
         btnModificar.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnModificar.setColorTextPressed(new java.awt.Color(0, 0, 0));
         btnModificar.setEnabled(false);
-        btnModificar.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnModificar.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarActionPerformed(evt);
@@ -184,14 +185,14 @@ public class PanelCliente extends javax.swing.JPanel {
         add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 350, 220, -1));
 
         btnBorrarCampos.setForeground(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_BorrarCampos.png"))); // NOI18N
+        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonLimpiar.png"))); // NOI18N
         btnBorrarCampos.setText("  Borrar Campos");
         btnBorrarCampos.setColorHover(new java.awt.Color(204, 204, 204));
         btnBorrarCampos.setColorNormal(new java.awt.Color(255, 255, 255));
         btnBorrarCampos.setColorPressed(new java.awt.Color(255, 255, 255));
         btnBorrarCampos.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnBorrarCampos.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnBorrarCampos.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnBorrarCampos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBorrarCamposActionPerformed(evt);
@@ -216,6 +217,7 @@ public class PanelCliente extends javax.swing.JPanel {
             }
         });
         Tabla.setAltoHead(30);
+        Tabla.setColorBackgoundHead(new java.awt.Color(44, 47, 62));
         Tabla.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         Tabla.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         Tabla.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
@@ -248,13 +250,13 @@ public class PanelCliente extends javax.swing.JPanel {
         jTFEmpresa.setEditable(false);
         jTFEmpresa.setForeground(new java.awt.Color(0, 0, 0));
         jTFEmpresa.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFEmpresa.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFEmpresa.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFEmpresa.setPlaceholder("");
         add(jTFEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 110, 240, 40));
 
         jTFBusqueda.setForeground(new java.awt.Color(0, 0, 0));
         jTFBusqueda.setBordeColorFocus(new java.awt.Color(0, 0, 102));
-        jTFBusqueda.setFont(new java.awt.Font("Roboto Bold", 1, 15)); // NOI18N
+        jTFBusqueda.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jTFBusqueda.setPlaceholder(" Busqueda (DUI) ");
         jTFBusqueda.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -263,13 +265,14 @@ public class PanelCliente extends javax.swing.JPanel {
         });
         add(jTFBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 330, 170, 60));
 
-        btnBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Busqueda.png"))); // NOI18N
+        btnBusqueda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/busqueda.png"))); // NOI18N
         btnBusqueda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnBusquedaMouseClicked(evt);
             }
         });
         add(btnBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 340, -1, 50));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 420, 10));
     }// </editor-fold>//GEN-END:initComponents
 
     //Metodo para borrar los campos del formulario
@@ -406,6 +409,7 @@ public class PanelCliente extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private LIB.FSTexFieldMD jTFApellido;
     private LIB.FSTexFieldMD jTFBusqueda;
     private LIB.FSTexFieldMD jTFCorreo;

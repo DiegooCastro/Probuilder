@@ -88,9 +88,9 @@ public class frmCostoProyecto extends javax.swing.JFrame {
             }
         });
 
-        lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Boton-Minimizar.png"))); // NOI18N
+        lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconMinimizar.png"))); // NOI18N
 
-        lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Boton-Cerrar.png"))); // NOI18N
+        lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/iconCerrar.png"))); // NOI18N
         lblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblCerrarMouseClicked(evt);
@@ -103,10 +103,10 @@ public class frmCostoProyecto extends javax.swing.JFrame {
             PanelSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelSuperiorLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblMinimizar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblMinimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(2, 2, 2))
         );
         PanelSuperiorLayout.setVerticalGroup(
             PanelSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,7 +124,7 @@ public class frmCostoProyecto extends javax.swing.JFrame {
         jTFPreliminares.setPlaceholder("");
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconMiniPreliminares.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconPresupuesto.png"))); // NOI18N
 
         jTFMateriales.setEditable(false);
         jTFMateriales.setForeground(new java.awt.Color(0, 0, 0));
@@ -133,7 +133,7 @@ public class frmCostoProyecto extends javax.swing.JFrame {
         jTFMateriales.setPlaceholder("");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconMIniMateriales.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/mIniMateriales.png"))); // NOI18N
 
         jTFManoObra.setEditable(false);
         jTFManoObra.setForeground(new java.awt.Color(0, 0, 0));
@@ -142,7 +142,7 @@ public class frmCostoProyecto extends javax.swing.JFrame {
         jTFManoObra.setPlaceholder("");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconMiniManoObra.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/miniManoObra.png"))); // NOI18N
 
         jPanelTransparente2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

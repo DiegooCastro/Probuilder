@@ -65,9 +65,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="lblMinimizar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="638" max="32767" attributes="0"/>
+                      <Component id="lblMinimizar" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="lblCerrar" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   </Group>
@@ -89,14 +89,14 @@
             <Component class="javax.swing.JLabel" name="lblMinimizar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Iconografia/Boton-Minimizar.png"/>
+                  <Image iconType="3" name="/Icons/IconMinimizar.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblCerrar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Iconografia/Boton-Cerrar.png"/>
+                  <Image iconType="3" name="/Icons/iconCerrar.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -108,7 +108,7 @@
         <Component class="javax.swing.JLabel" name="lblCampo1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="17" style="1"/>
+              <Font name="Segoe UI" size="17" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Campo 1"/>
           </Properties>
@@ -121,12 +121,12 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Iconografia/Icono_SmallBusqueda.png"/>
+              <Image iconType="3" name="/Icons/busqueda.png"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="240" y="130" width="30" height="35"/>
+              <AbsoluteConstraints x="240" y="130" width="40" height="35"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -177,7 +177,7 @@
         <Component class="javax.swing.JLabel" name="lblCampo2">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="17" style="1"/>
+              <Font name="Segoe UI" size="17" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Campo 2"/>
           </Properties>
@@ -190,10 +190,10 @@
         <Component class="javax.swing.JButton" name="btnSeleccionarRegistro">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="14" style="1"/>
+              <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Iconografia/Icono_Seleccionar.png"/>
+              <Image iconType="3" name="/Icons/seleccionar.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Seleccionar Registro"/>
           </Properties>
@@ -229,6 +229,9 @@
                   </Table>
                 </Property>
                 <Property name="altoHead" type="int" value="30"/>
+                <Property name="colorBackgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="3e" green="2f" red="2c" type="rgb"/>
+                </Property>
                 <Property name="colorFilasBackgound2" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>

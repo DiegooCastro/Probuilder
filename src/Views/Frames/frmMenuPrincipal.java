@@ -246,7 +246,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnEmpresa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblEmpresa.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblEmpresa.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblEmpresa.setForeground(new java.awt.Color(255, 255, 255));
         lblEmpresa.setText("EMPRESA");
         btnEmpresa.add(lblEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
@@ -263,7 +263,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         btnTrabajadores.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnTrabajadores.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTrabajador.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTrabajador.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTrabajador.setForeground(new java.awt.Color(255, 255, 255));
         lblTrabajador.setText("TRABAJADOR");
         lblTrabajador.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -290,7 +290,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnPersonal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblPersonal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblPersonal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblPersonal.setForeground(new java.awt.Color(255, 255, 255));
         lblPersonal.setText("PERSONAL");
         btnPersonal.add(lblPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, 50));
@@ -307,7 +307,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnUsuarios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblUsuarios.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblUsuarios.setForeground(new java.awt.Color(255, 255, 255));
         lblUsuarios.setText("USUARIOS");
         btnUsuarios.add(lblUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, 50));
@@ -324,7 +324,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnClientes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblClientes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblClientes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblClientes.setForeground(new java.awt.Color(255, 255, 255));
         lblClientes.setText("CLIENTES");
         btnClientes.add(lblClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
@@ -338,7 +338,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnAlmacen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblAlmacenaje.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblAlmacenaje.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblAlmacenaje.setForeground(new java.awt.Color(255, 255, 255));
         lblAlmacenaje.setText("ALMACENAJE");
         lblAlmacenaje.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -365,7 +365,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnRegistroMat.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblRegistro.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblRegistro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblRegistro.setForeground(new java.awt.Color(255, 255, 255));
         lblRegistro.setText("REGISTRO ");
         btnRegistroMat.add(lblRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 100, 30));
@@ -382,7 +382,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnCompraMat.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblCompraMateriales.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblCompraMateriales.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblCompraMateriales.setForeground(new java.awt.Color(255, 255, 255));
         lblCompraMateriales.setText("COMPRA");
         btnCompraMat.add(lblCompraMateriales, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, 30));
@@ -399,7 +399,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnProyectos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblProyecto.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblProyecto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblProyecto.setForeground(new java.awt.Color(255, 255, 255));
         lblProyecto.setText("PROYECTOS");
         btnProyectos.add(lblProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
@@ -413,7 +413,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnPresupuesto.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblPresupuesto.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblPresupuesto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblPresupuesto.setForeground(new java.awt.Color(255, 255, 255));
         lblPresupuesto.setText("PRESUPUESTO");
         btnPresupuesto.add(lblPresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 150, 50));
@@ -430,7 +430,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         btnManoObra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnManoObra.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblManoObra.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblManoObra.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblManoObra.setForeground(new java.awt.Color(255, 255, 255));
         lblManoObra.setText("MANO OBRA");
         lblManoObra.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -447,7 +447,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         btnGastoPreliminar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnGastoPreliminar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblPreliminar.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblPreliminar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblPreliminar.setForeground(new java.awt.Color(255, 255, 255));
         lblPreliminar.setText("PRELIMINARES");
         lblPreliminar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -464,7 +464,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         btnMaterial.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnMaterial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblMaterial.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        lblMaterial.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         lblMaterial.setForeground(new java.awt.Color(255, 255, 255));
         lblMaterial.setText("MATERIALES");
         lblMaterial.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -486,7 +486,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         btnControlAsig.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblClientes1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblClientes1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblClientes1.setForeground(new java.awt.Color(153, 153, 153));
         lblClientes1.setText("ASIGNACIONES");
         btnControlAsig.add(lblClientes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
@@ -576,7 +576,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        lblUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblUsuario.setText("Usuario: Castroll");
 
@@ -609,7 +609,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblUsuario)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1004, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1014, Short.MAX_VALUE)
                 .addComponent(lblMinimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -770,7 +770,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
             mostrarSubMenu(pnlTrabajadores);
             mostrarTrabajador = 2;
         } else {
-            lblConTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconExpandir.png")));
+            lblConTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/expandirSubmenu.png")));
             mostrarTrabajador = 1;
         }
     }

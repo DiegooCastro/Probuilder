@@ -89,15 +89,15 @@ public class PanelPreliminares extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel1.setText("Gasto Preliminar");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, 40));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel2.setText("Descripcion");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel4.setText("Precio Total $:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, 40));
 
@@ -109,21 +109,21 @@ public class PanelPreliminares extends javax.swing.JPanel {
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 50, -1));
 
         jTFDescripcion.setColumns(20);
-        jTFDescripcion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jTFDescripcion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jTFDescripcion.setRows(5);
         jScrollPane2.setViewportView(jTFDescripcion);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 260, 190));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 270, 190));
 
         jTFGastoPreliminar.setForeground(new java.awt.Color(0, 0, 0));
         jTFGastoPreliminar.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFGastoPreliminar.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFGastoPreliminar.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFGastoPreliminar.setPlaceholder(" Gasto Preliminar*");
         jPanel1.add(jTFGastoPreliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 260, 40));
 
         jTFPrecioTotal.setForeground(new java.awt.Color(0, 0, 0));
         jTFPrecioTotal.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFPrecioTotal.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFPrecioTotal.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFPrecioTotal.setPlaceholder(" Precio Total*");
         jPanel1.add(jTFPrecioTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 260, 40));
 
@@ -210,6 +210,7 @@ public class PanelPreliminares extends javax.swing.JPanel {
             }
         });
         Tabla.setAltoHead(30);
+        Tabla.setColorBackgoundHead(new java.awt.Color(44, 47, 62));
         Tabla.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         Tabla.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         Tabla.setColorFilasForeground2(new java.awt.Color(0, 0, 0));

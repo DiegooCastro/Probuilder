@@ -90,9 +90,9 @@ public class frmBuscador extends javax.swing.JFrame {
             }
         });
 
-        lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Boton-Minimizar.png"))); // NOI18N
+        lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconMinimizar.png"))); // NOI18N
 
-        lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Boton-Cerrar.png"))); // NOI18N
+        lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/iconCerrar.png"))); // NOI18N
         lblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblCerrarMouseClicked(evt);
@@ -104,9 +104,9 @@ public class frmBuscador extends javax.swing.JFrame {
         PanelSuperiorLayout.setHorizontalGroup(
             PanelSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelSuperiorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblMinimizar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(638, Short.MAX_VALUE)
+                .addComponent(lblMinimizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6))
         );
@@ -121,12 +121,12 @@ public class frmBuscador extends javax.swing.JFrame {
 
         PanelPrincipal.add(PanelSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, -1));
 
-        lblCampo1.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        lblCampo1.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         lblCampo1.setText("Campo 1");
         PanelPrincipal.add(lblCampo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_SmallBusqueda.png"))); // NOI18N
-        PanelPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 30, 35));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/busqueda.png"))); // NOI18N
+        PanelPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 40, 35));
 
         jTFCampo1.setForeground(new java.awt.Color(0, 0, 0));
         jTFCampo1.setBordeColorFocus(new java.awt.Color(0, 51, 51));
@@ -150,12 +150,12 @@ public class frmBuscador extends javax.swing.JFrame {
         });
         PanelPrincipal.add(jTFCampo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 240, 40));
 
-        lblCampo2.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        lblCampo2.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         lblCampo2.setText("Campo 2");
         PanelPrincipal.add(lblCampo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, 50));
 
-        btnSeleccionarRegistro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSeleccionarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Seleccionar.png"))); // NOI18N
+        btnSeleccionarRegistro.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnSeleccionarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/seleccionar.png"))); // NOI18N
         btnSeleccionarRegistro.setText("Seleccionar Registro");
         btnSeleccionarRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +181,7 @@ public class frmBuscador extends javax.swing.JFrame {
             }
         });
         Tabla.setAltoHead(30);
+        Tabla.setColorBackgoundHead(new java.awt.Color(44, 47, 62));
         Tabla.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         Tabla.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         Tabla.setColorFilasForeground2(new java.awt.Color(0, 0, 0));

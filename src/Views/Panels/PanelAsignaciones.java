@@ -149,15 +149,15 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         });
         jPanel2.add(btnEncargado, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 90, -1, 50));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel5.setText("Encargado");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, -1, 40));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel9.setText("Fecha Inicio");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, -1, 50));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel11.setText("Fecha Fin");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, -1, 30));
 
@@ -169,11 +169,11 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         });
         jPanel2.add(lblCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 310, 30, -1));
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel12.setText("Pago Total $:");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, -1, 30));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel4.setText("Asignacion");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
 
@@ -185,43 +185,43 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         });
         jPanel2.add(btnAsignacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel3.setText("Proyecto");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, 30));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel7.setText("Estado");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, 30));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 17)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jLabel6.setText("Sueldo $:");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
 
         jTFSueldo.setEditable(false);
         jTFSueldo.setForeground(new java.awt.Color(0, 0, 0));
         jTFSueldo.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFSueldo.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFSueldo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFSueldo.setPlaceholder("");
         jPanel2.add(jTFSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 280, 40));
 
         jTFTotal.setEditable(false);
         jTFTotal.setForeground(new java.awt.Color(0, 0, 0));
         jTFTotal.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFTotal.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFTotal.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFTotal.setPlaceholder("");
         jPanel2.add(jTFTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 300, 250, 40));
 
         jTFAsignacion.setEditable(false);
         jTFAsignacion.setForeground(new java.awt.Color(0, 0, 0));
         jTFAsignacion.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFAsignacion.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFAsignacion.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFAsignacion.setPlaceholder("");
         jPanel2.add(jTFAsignacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 250, 40));
 
         jTFProyecto.setEditable(false);
         jTFProyecto.setForeground(new java.awt.Color(0, 0, 0));
         jTFProyecto.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFProyecto.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFProyecto.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFProyecto.setPlaceholder(" Nombre Proyecto*");
         jPanel2.add(jTFProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 280, 40));
 
@@ -233,12 +233,12 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         jTFEncargado.setEditable(false);
         jTFEncargado.setForeground(new java.awt.Color(0, 0, 0));
         jTFEncargado.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFEncargado.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFEncargado.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFEncargado.setPlaceholder("");
         jPanel2.add(jTFEncargado, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 240, 40));
 
         btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Agregar.png"))); // NOI18N
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonAgregar.png"))); // NOI18N
         btnIngresar.setText("  Ingresar Asignacion");
         btnIngresar.setColorHover(new java.awt.Color(204, 204, 204));
         btnIngresar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -254,7 +254,7 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         jPanel2.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 220, -1));
 
         btnBorrarCampos.setForeground(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_BorrarCampos.png"))); // NOI18N
+        btnBorrarCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonLimpiar.png"))); // NOI18N
         btnBorrarCampos.setText("  Borrar Campos");
         btnBorrarCampos.setColorHover(new java.awt.Color(204, 204, 204));
         btnBorrarCampos.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -270,7 +270,7 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         jPanel2.add(btnBorrarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 220, -1));
 
         btnModificar.setForeground(new java.awt.Color(0, 0, 0));
-        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Iconos_Actualizar.png"))); // NOI18N
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonActualizar.png"))); // NOI18N
         btnModificar.setText("  Modificar Asignacion");
         btnModificar.setColorHover(new java.awt.Color(204, 204, 204));
         btnModificar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -287,7 +287,7 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         jPanel2.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, 220, -1));
 
         btnEliminar.setForeground(new java.awt.Color(0, 0, 0));
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Icono_Eliminar.png"))); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/botonEliminar.png"))); // NOI18N
         btnEliminar.setText("  Eliminar Asignacion");
         btnEliminar.setColorHover(new java.awt.Color(204, 204, 204));
         btnEliminar.setColorNormal(new java.awt.Color(255, 255, 255));
@@ -320,6 +320,7 @@ public class PanelAsignaciones extends javax.swing.JPanel {
             }
         });
         Tabla.setAltoHead(30);
+        Tabla.setColorBackgoundHead(new java.awt.Color(44, 47, 62));
         Tabla.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         Tabla.setColorFilasForeground1(new java.awt.Color(0, 0, 0));
         Tabla.setColorFilasForeground2(new java.awt.Color(0, 0, 0));
@@ -362,8 +363,8 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         jDCFechaFin.setColorButtonHover(new java.awt.Color(0, 51, 153));
         jDCFechaFin.setColorForeground(new java.awt.Color(0, 0, 0));
         jDCFechaFin.setEnabled(false);
-        jDCFechaFin.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        jDCFechaFin.setFuente(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jDCFechaFin.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jDCFechaFin.setFuente(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jDCFechaFin.setPlaceholder("Seleccione la fecha");
         jPanel2.add(jDCFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 240, 290, 30));
 
@@ -371,8 +372,8 @@ public class PanelAsignaciones extends javax.swing.JPanel {
         jDCFechaInicio.setColorButtonHover(new java.awt.Color(0, 51, 153));
         jDCFechaInicio.setColorForeground(new java.awt.Color(0, 0, 0));
         jDCFechaInicio.setEnabled(false);
-        jDCFechaInicio.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        jDCFechaInicio.setFuente(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jDCFechaInicio.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jDCFechaInicio.setFuente(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jDCFechaInicio.setPlaceholder("Seleccione la fecha");
         jPanel2.add(jDCFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 170, 290, 30));
 

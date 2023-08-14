@@ -67,7 +67,7 @@ public class PanelPresupuesto extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblSelectProyecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Add_Elemento.png"))); // NOI18N
+        lblSelectProyecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/abrirCatalogo.png"))); // NOI18N
         lblSelectProyecto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSelectProyectoMouseClicked(evt);
@@ -78,10 +78,10 @@ public class PanelPresupuesto extends javax.swing.JPanel {
         jTFProyecto.setBackground(new java.awt.Color(255, 255, 255));
         jTFProyecto.setForeground(new java.awt.Color(0, 0, 0));
         jTFProyecto.setBordeColorFocus(new java.awt.Color(0, 0, 51));
-        jTFProyecto.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        jTFProyecto.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jTFProyecto.setPlaceholder("Seleccione un proyecto");
 
-        lblSelectProyecto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/IconMiniInstalaciones.png"))); // NOI18N
+        lblSelectProyecto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/IconMiniInstalaciones.png"))); // NOI18N
         lblSelectProyecto2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSelectProyecto2MouseClicked(evt);
@@ -89,14 +89,14 @@ public class PanelPresupuesto extends javax.swing.JPanel {
         });
 
         btnBorrarCampos1.setForeground(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconografia/Reporte4.png"))); // NOI18N
+        btnBorrarCampos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/estadistica.png"))); // NOI18N
         btnBorrarCampos1.setText("  Cargar Subtotales");
         btnBorrarCampos1.setColorHover(new java.awt.Color(204, 204, 204));
         btnBorrarCampos1.setColorNormal(new java.awt.Color(255, 255, 255));
         btnBorrarCampos1.setColorPressed(new java.awt.Color(255, 255, 255));
         btnBorrarCampos1.setColorTextNormal(new java.awt.Color(0, 0, 0));
         btnBorrarCampos1.setColorTextPressed(new java.awt.Color(0, 0, 0));
-        btnBorrarCampos1.setFont(new java.awt.Font("Arial", 1, 17)); // NOI18N
+        btnBorrarCampos1.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         btnBorrarCampos1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBorrarCampos1ActionPerformed(evt);
@@ -110,7 +110,7 @@ public class PanelPresupuesto extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(btnBorrarCampos1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(lblSelectProyecto2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
